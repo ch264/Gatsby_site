@@ -1,4 +1,4 @@
-console.log("sanity check")
+console.log(process.cwd())
 
 const markdownlint = require("markdownlint");
 
@@ -11,7 +11,7 @@ const options = {
 };
 
 markdownlint(options, function callback(err, result) {
-  console.log(result)
+  console.log("result", result)
   if (!err) {
     console.log(result.toString());
   }
