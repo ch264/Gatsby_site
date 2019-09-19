@@ -11,6 +11,7 @@ const options = {
 };
 
 markdownlint(options, function callback(err, result) {
+  console.log(result)
   if (!err) {
     console.log(result.toString());
   }
