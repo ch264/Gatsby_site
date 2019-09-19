@@ -1,3 +1,5 @@
+console.log("sanity check")
+
 const markdownlint = require("markdownlint");
 
 const options = {
