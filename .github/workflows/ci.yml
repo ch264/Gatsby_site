@@ -15,4 +15,4 @@ jobs:
     - name: Run a multi-line script
       run: |
         npm install
-        node markdownlint.js
+        node_modules/.bin/markdownlint **/*.md --ignore node_modules
