@@ -12,6 +12,7 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
+    - uses: actions/setup-node@master
     - name: Run a multi-line script
       run: |
         npm install
