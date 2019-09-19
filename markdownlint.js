@@ -5,7 +5,7 @@ console.log("contents", contents);
 const markdownlint = require("markdownlint");
 
 const options = {
-  "files": [ "ga-site/test2.md", "test.md" ],
+  "files": [ "/home/runner/work/Gatsby_site/Gatsby_site/test2.md", "test.md" ],
   "strings": {
     "good.string": "# good.string\n\nThis string passes all rules.",
     "bad.string": "#bad.string\n\n#This string fails\tsome rules."
