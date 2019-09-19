@@ -1,4 +1,6 @@
-console.log(process.cwd())
+var fs = require('fs');
+var contents = fs.readFileSync('test.md', 'utf8');
+console.log("contents", contents);
 
 const markdownlint = require("markdownlint");
 
