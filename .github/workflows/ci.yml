@@ -15,4 +15,4 @@ jobs:
     - name: lint all markdownfiles
       run: |
         npm install
-        node_modules/.bin/markdownlint **/**/**/*.md **/**/*.md **/*.md *.md --ignore node_modules 
+        node_modules/.bin/markdownlint ./ --ignore node_modules --ignore v5
