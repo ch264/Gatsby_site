@@ -1,5 +1,4 @@
 # add config from DavidAnsons Markdownlint library config
-
 {
   "default": true,
   "MD007": { "indent": 4 },
