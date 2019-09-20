@@ -15,5 +15,4 @@ $ this is a bash command
 this is the test
 
 for the last line
-
-editing
+editing last line
