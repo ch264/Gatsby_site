@@ -1,4 +1,4 @@
-# this is my md file?
+## this is my md file?
 
 ## Lorem Ipsum, you know it
 
@@ -8,6 +8,6 @@
 
 this is the **end**
 
-```bash
+```
 $ this is a bash command
 ```
