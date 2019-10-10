@@ -19,5 +19,4 @@ jobs:
 
     - name: checks for image urls
       runs: 
-        main: dist/index.js
         - regExp:" /(?:s3\.amazonaws\.com)(?:echo\:\ stop)/"
