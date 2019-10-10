@@ -1,7 +1,7 @@
 name: CI
 
 on: 
-  pull_request:
+  push:
     branches:
     - master
 
@@ -16,3 +16,8 @@ jobs:
       run: |
         npm install
         node_modules/.bin/markdownlint ./ --ignore node_modules --ignore v5
+
+    - name: checks for image urls
+      runs: 
+        main: dist/index.js
+        - regExp:" /(?:s3\.amazonaws\.com)(?:echo\:\ stop)/"
