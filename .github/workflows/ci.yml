@@ -29,6 +29,6 @@ jobs:
       # runs: 
         # main: dist/index.js
         # - regExp:" /(?:s3\.amazonaws\.com)(?:echo\:\ stop)/"
-  if: /(?:s3\.amazonaws\.com)
+  # if: /(?:s3\.amazonaws\.com)
   run: |
     echo Please use new image url
