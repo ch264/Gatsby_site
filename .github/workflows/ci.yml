@@ -18,7 +18,7 @@ jobs:
         node_modules/.bin/markdownlint ./ --ignore node_modules --ignore v5
 
     - name: checks for image urls
-      runs: 
+      # runs: 
         # main: dist/index.js
         # - regExp:" /(?:s3\.amazonaws\.com)(?:echo\:\ stop)/"
         if: /(?:s3\.amazonaws\.com)
