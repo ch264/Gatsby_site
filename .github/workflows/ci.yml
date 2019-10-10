@@ -19,4 +19,8 @@ jobs:
 
     - name: checks for image urls
       runs: 
-        - regExp:" /(?:s3\.amazonaws\.com)(?:echo\:\ stop)/"
+        # main: dist/index.js
+        # - regExp:" /(?:s3\.amazonaws\.com)(?:echo\:\ stop)/"
+        if: /(?:s3\.amazonaws\.com)
+        run: |
+          echo Please use new image url

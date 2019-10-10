@@ -3,3 +3,5 @@
 just one example
 
 <hr>
+
+S3.amazonaws.com
