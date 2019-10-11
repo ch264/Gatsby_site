@@ -13,4 +13,4 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: check for image url
-      run: /(?:s3\.amazonaws\.com) ? 'echo 'true' : 'echo false'
+      run: '/(?:s3\.amazonaws\.com)' ? 'echo true' : 'echo false'
