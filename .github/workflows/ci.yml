@@ -17,18 +17,14 @@ jobs:
         npm install
         node_modules/.bin/markdownlint ./ --ignore node_modules --ignore v5
 
-name: checks for image urls
-on: 
-  push:
-    branches:
-    - pull3
+# name: checks for image urls
+#       # runs: 
+#         # main: dist/index.js
+#         # - regExp:" /(?:s3\.amazonaws\.com)(?:echo\:\ stop)/"
+#   if: /(?:s3\.amazonaws\.com)
+#   run: |
+#     echo Please use new image url
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-      # runs: 
-        # main: dist/index.js
-        # - regExp:" /(?:s3\.amazonaws\.com)(?:echo\:\ stop)/"
-  # if: /(?:s3\.amazonaws\.com)
-  run: |
-    echo Please use new image url
+- name: 
+  run: '/(?:s3\.amazonaws\.com)' ? echo 'not this url' 
+
