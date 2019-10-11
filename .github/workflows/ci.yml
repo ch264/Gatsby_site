@@ -26,9 +26,4 @@ jobs:
 #   run: |
 #     echo Please use new image url
 
-name: 
-  run: |
-  /(?:s3\.amazonaws\.com)
-  if: true
-  run: echo 'this is false' 
 

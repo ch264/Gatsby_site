@@ -1,0 +1,16 @@
+name: URL
+
+on: 
+  push:
+    branches: 
+    - pull3
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+    - name: check for image url
+      run: /(?:s3\.amazonaws\.com) ? 'echo 'true' : 'echo false'
