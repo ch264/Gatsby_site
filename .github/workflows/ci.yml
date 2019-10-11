@@ -16,8 +16,7 @@ jobs:
       run: |
         npm install
         node_modules/.bin/markdownlint ./ --ignore node_modules --ignore v5
-        '/(?:s3\.amazonaws\.com)' ? echo 'not this url' 
-
+        
 
 # name: checks for image urls
 #       # runs: 
@@ -27,6 +26,8 @@ jobs:
 #   run: |
 #     echo Please use new image url
 
-# name: 
-#   run: 
+name: 
+  run: '/(?:s3\.amazonaws\.com)'
+  if: true
+  run: echo 'this is false' 
 
