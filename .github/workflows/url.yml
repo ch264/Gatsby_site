@@ -13,5 +13,6 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: check for image url
+      if: /(?:s3\.amazonaws\.com) === true
       # run: '/(?:s3\.amazonaws\.com)' ? 'echo true' : 'echo false'
       run: echo true
