@@ -15,7 +15,7 @@ jobs:
     - name: check for image url
       run: |
         grep -lr 's3.amazonaws.com'
-        if [grep -lr 's3.amazonaws.com']
+        if [grep -lr 's3.amazonaws.com' === 'true']
         then 
           echo grep is true
         echo grep is false
