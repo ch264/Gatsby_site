@@ -21,5 +21,6 @@ jobs:
         if grep -lri 's3.amazonaws.com' ./v6 ; 
         then echo "s3 references found"; 
           exit 1; 
-        else echo "no s3 references found"; fi
+        else echo "no s3 references found"; 
+        fi
         
