@@ -14,7 +14,7 @@ jobs:
     - uses: actions/checkout@v1
     - name: check for image url
       run: |
-        if grep -lrq 's3.amazonaws.com' . ; then echo "s3 references found"; exit 1; else echo "no s3 references found"; fi
+        if grep -lr 's3.amazonaws.com' . ; then echo "s3 references found"; exit 1; else echo "no s3 references found"; fi
 
 
         # grep -lr 's3.amazonaws.com'
