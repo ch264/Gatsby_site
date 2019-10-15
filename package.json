@@ -1,5 +1,9 @@
 {
   "dependencies": {
     "markdownlint-cli": "^0.18.0"
+  },
+  "scripts": {
+    "test:url": "if grep -lri 's3.amazonaws.com/postman-static-getpostman-com' ./v6 ; then echo invalid s3 references found. Please use format; exit 1; else echo no s3 references found; fi",
+    "lint": "node_modules/.bin/markdownlint ./ --ignore node_modules --ignore v5"
   }
 }
