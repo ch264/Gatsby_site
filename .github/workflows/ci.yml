@@ -20,5 +20,13 @@ jobs:
         # lint only files that changed on branch
         # git ls-files -m > temp && while read p; do node_modules/.bin/markdownlint "$p"; done < temp | rm temp
         # lint all recently modified md files by running bash script
-        npm run test
+        # npm run test
+        files=`git ls-files -m`
+        for x in $files;
+        do
+        if [ ${x: -3} == ".md" ]
+        then
+        node_modules/.bin/markdownlint $x
+        fi
+        done
 
