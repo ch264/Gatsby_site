@@ -15,6 +15,7 @@ jobs:
     - name: lint all markdownfiles
       run: |
         npm install
+        git branch
         npm run test
        
         
