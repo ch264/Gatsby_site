@@ -11,15 +11,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - with:
-        ref: master
     - uses: actions/setup-node@master
     - name: lint all markdownfiles
       run: |
         npm install
-        git branch
-        npm run test
-        
-       
-        
+        # lint all files
+        node_modules/.bin/markdownlint ./ --ignore node_modules --ignore v5 
+        # lint only files that changed on branch
+        git ls-files -m > temp && while read p; do node_modules/.bin/markdownlint "$p"; done < temp | rm temp\n
 
