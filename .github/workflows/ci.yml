@@ -11,9 +11,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - uses: actions/setup-node@master
     - with:
         ref: master
+    - uses: actions/setup-node@master
     - name: lint all markdownfiles
       run: |
         npm install
