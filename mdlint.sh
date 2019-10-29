@@ -7,4 +7,3 @@ do
 		node_modules/.bin/markdownlint $x
 	fi
 done
-
