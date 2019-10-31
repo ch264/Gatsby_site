@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "markdownlint-cli": "^0.18.0"
+  },
+  "scripts": {
+    "test": "bash mdlint.sh"
   }
 }
