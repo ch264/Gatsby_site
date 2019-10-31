@@ -3,6 +3,14 @@
     "markdownlint-cli": "^0.18.0"
   },
   "scripts": {
-    "test": "bash mdlint.sh"
+    "test": "bash mdlint.sh",
+    "test:jest": "jest"
+  },
+  "devDependencies": {
+    "babel-jest": "^24.9.0",
+    "babel-preset-gatsby": "^0.2.20",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.9.0",
+    "react-test-renderer": "^16.11.0"
   }
 }
