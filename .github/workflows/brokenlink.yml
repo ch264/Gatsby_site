@@ -1,0 +1,19 @@
+name: brokenlink
+
+on: 
+  push:
+    branches: master
+
+jobs: 
+
+ runs-on: ubuntu-18.04
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Link Checker
+      uses: peter-evans/link-checker@v1.0.1
+      with:
+        args: -v -r *
+
+    # - name: run link checker
+    #   run: blc https://learning.getpostman-beta.com/ -ro

@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "broken-link-checker": "^0.7.8",
+    "lodash": "^4.17.12",
     "markdownlint-cli": "^0.18.0"
   },
   "scripts": {
