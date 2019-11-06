@@ -32,6 +32,6 @@ jobs:
       - name: broken Link checker
       uses: ScholliYT/Broken-Links-Crawler-Action@v2.0.0
       with:
-        website_url: 'https://github.com/ScholliYT/Broken-Links-Crawler-Action'
+        website_url: 'https://learning.getpostman.com'
         verbose: 'true'
 
