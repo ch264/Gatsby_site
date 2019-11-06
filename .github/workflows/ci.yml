@@ -25,4 +25,6 @@ jobs:
     - name: run unit tests
       run: |
         npm run test:jest
+    - name: Link Checker
+      uses: peter-evans/link-checker@v1.0.1
 
