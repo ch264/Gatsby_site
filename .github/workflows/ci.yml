@@ -10,10 +10,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v1
       with:
         ref: ${{ github.head_ref }}
-    - uses: actions/setup-node@master
+    - uses: actions/setup-node@v1
     - name: lint all markdownfiles
       run: |
         npm install
@@ -22,9 +22,9 @@ jobs:
         node_modules/.bin/markdownlint ./ --ignore node_modules --ignore v5 
         # lint only files that changed on branch
         # git ls-files -m > temp && while read p; do node_modules/.bin/markdownlint "$p"; done < temp | rm temp\n
-    - name: run unit tests
-      run: |
-        npm run test:jest
+    # - name: run unit tests
+    #   run: |
+    #     npm run test:jest
     
     - name: 'deployment failure'
       if: failure()
