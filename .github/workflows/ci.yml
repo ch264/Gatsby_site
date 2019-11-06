@@ -25,13 +25,14 @@ jobs:
     - name: run unit tests
       run: |
         npm run test:jest
-    # - name: Link Checker
+    - name: broken Link checker
+      uses: ScholliYT/Broken-Links-Crawler-Action@v2.0.0
+      with:
+        website_url: 'https://learning.getpostman.com'
+        verbose: 'true'
+
+            # - name: Link Checker
     #   uses: peter-evans/link-checker@v1.0.1
     #   with:
     #     args: -v -r *
-      - name: broken Link checker
-        uses: ScholliYT/Broken-Links-Crawler-Action@v2.0.0
-        with:
-          website_url: 'https://learning.getpostman.com'
-          verbose: 'true'
 
