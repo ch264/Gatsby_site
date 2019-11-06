@@ -25,14 +25,14 @@ jobs:
     # - name: run unit tests
     #   run: |
     #     npm run test:jest
-    
-    - name: 'deployment failure'
+    - name: Deliverybot Deployment Status
+      uses: deliverybot/deployment-status@v1.0.0
       if: failure()
       uses: 'deliverybot/deployment-status@v1'
       with:
         state: 'failure'
         token: '${{ github.token }}'
-        issue-message: 'Thank you for creating your first issue'
+        # issue-message: 'Thank you for creating your first issue'
 
 # this link checker works but runs longer than 20min
     # - name: broken Link checker
