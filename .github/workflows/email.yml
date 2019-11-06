@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: deliverybot/deployment-status@v1.0.0
     - name: Deliverybot Deployment Status
-      uses: deliverybot/deployment-status@v1.0.0
       if: failure()
       uses: 'deliverybot/deployment-status@v1'
       with:
