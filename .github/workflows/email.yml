@@ -16,4 +16,4 @@ jobs:
       uses: 'deliverybot/deployment-status@v1'
       with:
         state: 'failure'
-      run: echo fail
+      
