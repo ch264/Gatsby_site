@@ -14,24 +14,35 @@ jobs:
       with:
         ref: ${{ github.head_ref }}
     - uses: actions/setup-node@master
-    # - name: lint all markdownfiles
-    #   run: |
-    #     npm install
-    #     npm run test
+    - name: lint all markdownfiles
+      run: |
+        npm install
+        npm run test
         # lint all files
-        # node_modules/.bin/markdownlint ./ --ignore node_modules --ignore v5 
+        node_modules/.bin/markdownlint ./ --ignore node_modules --ignore v5 
         # lint only files that changed on branch
         # git ls-files -m > temp && while read p; do node_modules/.bin/markdownlint "$p"; done < temp | rm temp\n
-    # - name: run unit tests
-    #   run: |
-    #     npm run test:jest
-    - name: broken Link checker
-      uses: ScholliYT/Broken-Links-Crawler-Action@v2.0.0
+    - name: run unit tests
+      run: |
+        npm run test:jest
+    
+    - name: 'deployment failure'
+      if: failure()
+      uses: 'deliverybot/deployment-status@v1'
       with:
-        website_url: 'https://learning.getpostman.com/'
-        verbose: 'true'
+        state: 'failure'
+        token: '${{ github.token }}'
+        issue-message: 'Thank you for creating your first issue'
 
-            # - name: Link Checker
+# this link checker works but runs longer than 20min
+    # - name: broken Link checker
+    #   uses: ScholliYT/Broken-Links-Crawler-Action@v2.0.0
+    #   with:
+    #     website_url: 'https://learning.getpostman.com/'
+    #     verbose: 'true'
+
+  # this link checker has vulnerabilities
+    # - name: Link Checker
     #   uses: peter-evans/link-checker@v1.0.1
     #   with:
     #     args: -v -r *
