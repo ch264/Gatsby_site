@@ -1,0 +1,19 @@
+name: Mail
+
+on: 
+  pull_request:
+    branches:
+    - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Deliverybot Deployment Status
+      uses: deliverybot/deployment-status@v1.0.0
+      if: failure()
+      uses: 'deliverybot/deployment-status@v1'
+      with:
+        state: 'failure'
+        token: '${{ github.token }}'
