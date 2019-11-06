@@ -16,4 +16,4 @@ jobs:
       uses: 'deliverybot/deployment-status@v1'
       with:
         state: 'failure'
-        token: '${{ github.token }}'
+      run: echo fail
