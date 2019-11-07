@@ -3,7 +3,9 @@ name: manually re-running actions
 on: repository_dispatch
 
 jobs:
+
   manual_deploy:
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout master
         uses: actions/checkout@v1
@@ -13,4 +15,3 @@ jobs:
         run: |
           npm install
           npm run test
-          
