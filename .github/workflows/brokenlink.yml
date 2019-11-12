@@ -16,7 +16,7 @@ jobs:
     - name: Link Checker
       uses: peter-evans/link-checker@v1.0.1
       with:
-        args: -v -r /v6
+        args: -v -r ./v6
 
     # - name: run link checker
     #   run: blc https://learning.getpostman-beta.com/ -ro
