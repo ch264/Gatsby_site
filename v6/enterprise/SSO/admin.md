@@ -18,6 +18,6 @@ Before you start, download and [import](/docs/postman/collections/data-formats/)
 
 Let's assume that we have a collection with four requests. If you run this collection directly, the collection runner runs all four requests in order.
 
-[![setNextRequest in tests tab](https://assets.postman.com/postman-docs/Collection_Runs_pg23.png)](https://assets.postman.com/postman-docs/Collection_Runs_pg23.png)
+[![setNextRequest in tests tab](https://assets.postman.com/postman-docs/Collection_Runs_pg23.png)](https://assets.postman.com/postman-docs/Collection_Runs_pg23.pg)
 
 [![collection runner view](https://assets.postman.com/postman-docs/58793861.png)](https://assets.postman.com/postman-docs/58793861.png)
