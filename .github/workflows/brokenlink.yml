@@ -5,7 +5,7 @@ on:
     branches: linkchecker
 
 jobs: 
-  build:
+  linkChecker:
     runs-on: ubuntu-18.04
 
     steps:
@@ -13,10 +13,10 @@ jobs:
     # - name: Broken-Links-Crawler
     #   uses: ScholliYT/Broken-Links-Crawler-Action@v2.0.0
 
-    # - name: Link Checker
-    #   uses: peter-evans/link-checker@v1.0.1
-      # with:
-      #   args: -v -r *
+    - name: Link Checker
+      uses: peter-evans/link-checker@v1.0.1
+      with:
+        args: -v -r *
 
-    - name: run link checker
-      run: blc https://learning.getpostman-beta.com/ -ro
+    # - name: run link checker
+    #   run: blc https://learning.getpostman-beta.com/ -ro
