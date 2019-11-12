@@ -2,7 +2,7 @@ name: brokenlink
 
 on: 
   push:
-    branches: master
+    branches: linkchecker
 
 jobs: 
   build:
