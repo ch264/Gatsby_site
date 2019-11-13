@@ -1,8 +1,8 @@
 name: brokenlink
 
 on: 
-  push:
-    branches: linkchecker
+  schedules:
+  - cron: 2 * * * *
 
 jobs: 
   linkChecker:
@@ -15,7 +15,8 @@ jobs:
       uses: peter-evans/link-checker@v1.0.1
       with:
         args: -v -r ./v6
-        
+       
+    # issue is created and assigned to me, but the error is not logged in the description
     - name: Create Issue From File
       uses: peter-evans/create-issue-from-file@v1.0.1
       env:
