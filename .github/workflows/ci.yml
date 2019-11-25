@@ -17,7 +17,7 @@ jobs:
     - name: lint all markdownfiles
       run: |
         npm install
-        npm run test
+        # npm run test
         # lint all files
         node_modules/.bin/markdownlint ./ --ignore node_modules --ignore v5 
         # lint only files that changed on branch
