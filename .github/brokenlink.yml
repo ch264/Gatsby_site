@@ -2,7 +2,7 @@ name: brokenlink
 
 on: 
   schedule:
-  - cron: '*/15 * * * *'
+  - cron: '*/13 * * * *'
 
 jobs: 
   linkChecker:
