@@ -22,7 +22,14 @@ jobs:
         node_modules/.bin/markdownlint ./ --ignore node_modules --ignore v5 
         # lint only files that changed on branch
         # git ls-files -m > temp && while read p; do node_modules/.bin/markdownlint "$p"; done < temp | rm temp\n
-        
+    - name: Testing linkcheck
+      jobs:
+        markdown-link-check:
+          runs-on: ubuntu-latest
+          steps:
+          - uses: actions/checkout@master
+          - name: md-linkcheck
+            uses: ./
         
     # - name: run unit tests
     #   run: |
@@ -45,11 +52,4 @@ jobs:
     #     npm run test:jest
 
 
-name: Testing linkcheck
-jobs:
-  markdown-link-check:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@master
-    - name: md-linkcheck
-      uses: ./
+
