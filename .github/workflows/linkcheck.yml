@@ -2,7 +2,6 @@ on:
   push:
     paths:
     - '*.md'
-    - '/docs/*'
 name: Testing linkcheck
 jobs:
   markdown-link-check:
