@@ -9,4 +9,4 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: md-linkcheck
-      uses: ./
+      uses: ocular-d/md-linkcheck-action@1.0.1
