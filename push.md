@@ -5,3 +5,5 @@ This is a good link
 ## this is a bad link
 
 too bad
+
+http://www.404.co/
