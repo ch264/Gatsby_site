@@ -1,10 +1,10 @@
-# name: brokenlink
+name: brokenlink
 
-# on: 
-  # schedule:
-  # - cron: '*/15 * * * *'
+on: 
+  schedule:
+  - cron: '*/15 * * * *'
 
-# jobs: 
+jobs: 
 #   linkChecker:
 #     runs-on: ubuntu-18.04
 
