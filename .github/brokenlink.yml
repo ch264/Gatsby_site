@@ -5,16 +5,16 @@ on:
   - cron: '*/15 * * * *'
 
 jobs: 
-#   linkChecker:
-#     runs-on: ubuntu-18.04
+  linkChecker:
+    runs-on: ubuntu-18.04
 
-#     steps:
-#     - uses: actions/checkout@v1
+    steps:
+    - uses: actions/checkout@v1
 
-#     - name: Link Checker
-#       uses: peter-evans/link-checker@v1.0.1
-#       with:
-#         args: -v -r ./v6
+    - name: Link Checker
+      uses: peter-evans/link-checker@v1.0.1
+      with:
+        args: -v -r ./v6
        
     # issue is created and assigned to me, but the error is not logged in the description
     # - name: Create Issue From File
