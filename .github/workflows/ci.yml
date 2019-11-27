@@ -28,7 +28,7 @@ jobs:
     #     npm run test:jest
 
 # this link checker works but runs longer than 20min
-    - name: broken Link checker
+    - name: broken Link checker Scholli
       uses: ScholliYT/Broken-Links-Crawler-Action@v2.0.0
       with:
         website_url: 'https://learning.getpostman.com/'
