@@ -4,7 +4,7 @@ name: brokenlink
 
 on: 
   schedule:
-  - cron: '*/13 * * * *'
+  # - cron: '*/13 * * * *'
 
 jobs: 
   linkChecker:
