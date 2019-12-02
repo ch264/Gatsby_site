@@ -17,13 +17,16 @@ jobs:
       uses: peter-evans/link-checker@v1.0.1
       with:
         args: -v -r ./v6
-       
-    # issue is created and assigned to me, but the error is not logged in the description
     - name: Create Issue From File
       uses: peter-evans/create-issue-from-file@v1.0.1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        ISSUE_TITLE: broken link or image found
+        ISSUE_TITLE: Link Checker Report
         ISSUE_CONTENT_FILEPATH: ./link-checker/out.md
-        ISSUE_ASSIGNEES: ch264
+        ISSUE_LABELS: report, automated issue
+
+    # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    #     ISSUE_TITLE: broken link or image found
+    #     ISSUE_CONTENT_FILEPATH: ./link-checker/out.md
+    #     ISSUE_ASSIGNEES: ch264
     
