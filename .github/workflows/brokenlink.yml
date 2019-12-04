@@ -1,4 +1,5 @@
 # I am not sure if this actually checks the right links
+# This link checker does not count 404 pages as broken links. This is how Lichen works, where it is build on. Therefore this is not suitable for our usecase.
 
 name: brokenlink
 
