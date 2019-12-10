@@ -1,0 +1,167 @@
+<!-- Algolia Instantsearch -->
+<!-- <div class="ais-SearchBox">
+  <form class="ais-SearchBox-form">
+    <input id="searchbox" class="ais-SearchBox-input"/>
+    <button class="ais-SearchBox-submit" type="submit" title="Submit the search query."></button>
+    <button class="ais-SearchBox-reset" type="reset" title="Clear the search query." hidden></button>
+    <span class="ais-SearchBox-loadingIndicator" hidden>
+    </span>
+  </form>
+  <div id="clear-refinements"></div>
+  <div id="hits" style='color: white'></div>
+  <div id="pagination"></div>
+  <div id="brand-list"></div>
+</div> -->
+
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/selectize@0.12.6/dist/css/selectize.css"> -->
+
+<div class="container" style='background-color: white'>
+  <h3>InstantSearch.js - Results page with an autocomplete</h3>
+  <input id="autocomplete" style='border: 3px solid red'></input >
+  <div id="hits" style='border: 3px solid green'></div>
+</div>
+
+<style>
+  h1 {
+    margin-bottom: 1rem;
+  }
+
+  em {
+    background: cyan;
+    font-style: normal;
+  }
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 1em;
+  }
+
+  .ais-hits {
+    margin-top: 1em;
+  }
+
+  .hit-name {
+    margin-bottom: 0.5em;
+  }
+
+  .hit-description {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 0.5em;
+  }
+</style>
+
+
+<script src="https://cdn.jsdelivr.net/npm/selectize@0.12.6/dist/js/standalone/selectize.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@3.30.0/dist/algoliasearchLite.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@^4.0.0"></script>
+
+
+<script>
+  window.setTimeout( function() {
+  const searchClient = algoliasearch(
+    '4A5N71XYH0',
+    '4495d2606ed017c1c724d6210a717cc7'
+  );
+
+  const autocomplete = instantsearch.connectors.connectAutocomplete(
+    ({ indices, refine, widgetParams }, isFirstRendering) => {
+      const { container, onSelectChange } = widgetParams;
+
+      if (isFirstRendering) {
+        container.html('<select id="ais-autocomplete"></select>');
+
+        container.find('select').selectize({
+          options: [],
+          valueField: 'title',
+          labelField: 'description',
+          highlight: false,
+          onType: refine,
+          onBlur() {
+            refine(this.getValue());
+          },
+          score() {
+            return function() {
+              return 1;
+            };
+          },
+          onChange(value) {
+            onSelectChange(value);
+            refine(value);
+          },
+        });
+
+        return;
+      }
+
+      const [select] = container.find('select');
+
+      indices.forEach(index => {
+        select.selectize.clearOptions();
+        index.results.hits.forEach(h => select.selectize.addOption(h));
+        select.selectize.refreshOptions(select.selectize.isOpen);
+      });
+    }
+  );
+
+  const suggestions = instantsearch({
+    indexName: 'web',
+    searchClient,
+  });
+
+  suggestions.addWidget(
+    instantsearch.widgets.configure({
+      hitsPerPage: 5,
+    })
+  );
+
+  suggestions.addWidget(
+    autocomplete({
+      container: $('#autocomplete'),
+      onSelectChange(value) {
+        search.helper.setQuery(value).search();
+      },
+    })
+  );
+
+  const search = instantsearch({
+    indexName: 'web',
+    searchClient,
+  });
+
+  search.addWidget(
+    instantsearch.widgets.configure({
+      hitsPerPage: 10,
+    })
+  );
+
+  search.addWidget(
+    instantsearch.widgets.hits({
+      container: '#hits',
+      templates: {
+        item: `
+        <h3 class="hit-name h4">
+          {{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}
+        </h3>
+        
+        <p class="hit-description mb-0">
+          {{#helpers.highlight}}{ "attribute": "description" }{{/helpers.highlight}}
+        </p>
+
+        <div>
+          <a class="v5_link" href="{{{url}}}">
+              Go to: {{{title}}}
+          </a>
+        </div>  
+        `,
+      },
+    })
+  );
+
+  suggestions.start();
+  search.start();
+
+}, 3000) // setTimeout finish
+
+</script>
