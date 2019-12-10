@@ -1,0 +1,21 @@
+9:-# name: brokenlink
+10:+name: brokenlink
+31:-#     - name: Link Checker
+37:-#     - name: Create Issue From File
+44:+    - name: Link Checker
+48:+    - name: Create Issue From File
+72:     # - name: run unit tests
+77:-    - name: broken Link checker
+79:+    - name: broken Link checker Scholli
+132:+  .hit-name {
+232:+        <h3 class="hit-name h4">
+274:+  result=$(grep -n 'name' "$log")
+296:+-# name: brokenlink
+297:++name: brokenlink
+318:+-#     - name: Link Checker
+324:+-#     - name: Create Issue From File
+331:++    - name: Link Checker
+335:++    - name: Create Issue From File
+359:+     # - name: run unit tests
+364:+-    - name: broken Link checker
+366:++    - name: broken Link checker Scholli
