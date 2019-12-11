@@ -9,16 +9,15 @@ printf "Log File - " > $log
 # append git diff to log file
 git diff master...branch >> $log 
 
-result=$(grep -n 'name' && '+' "$log")
+# find H2 tag in diff
+result=$(grep -n 'name' "$log")
 size=${#result}
- 
   if [ $size > 0 ]
   then
-  # append data to email file
-  printf '%s\n' "${result[@]}" > $email
-  # email the file to an email address
-	mail -s "H2 changes" "christina.hastenrath@getpostman.com" < $email
+    # append data to email
+    printf '%s\n' "${result[@]}" > $email
+    # send mail to email address
+    mail -s "H2 changes have been made" "christina.hastenrath@getpostman.com" < $email
   else
-    echo no H2 diffs between master and dev
-	fi
-
+    echo no data
+  fi

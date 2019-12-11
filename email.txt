@@ -7,15 +7,48 @@
 72:     # - name: run unit tests
 77:-    - name: broken Link checker
 79:+    - name: broken Link checker Scholli
-132:+  .hit-name {
-232:+        <h3 class="hit-name h4">
-274:+  result=$(grep -n 'name' "$log")
-296:+-# name: brokenlink
-297:++name: brokenlink
-318:+-#     - name: Link Checker
-324:+-#     - name: Create Issue From File
-331:++    - name: Link Checker
-335:++    - name: Create Issue From File
-359:+     # - name: run unit tests
-364:+-    - name: broken Link checker
-366:++    - name: broken Link checker Scholli
+135:+  .hit-name {
+235:+        <h3 class="hit-name h4">
+266:+9:-# name: brokenlink
+267:+10:+name: brokenlink
+268:+31:-#     - name: Link Checker
+269:+37:-#     - name: Create Issue From File
+270:+44:+    - name: Link Checker
+271:+48:+    - name: Create Issue From File
+272:+72:     # - name: run unit tests
+273:+77:-    - name: broken Link checker
+274:+79:+    - name: broken Link checker Scholli
+275:+132:+  .hit-name {
+276:+232:+        <h3 class="hit-name h4">
+277:+274:+  result=$(grep -n 'name' "$log")
+278:+296:+-# name: brokenlink
+279:+297:++name: brokenlink
+280:+318:+-#     - name: Link Checker
+281:+324:+-#     - name: Create Issue From File
+282:+331:++    - name: Link Checker
+283:+335:++    - name: Create Issue From File
+284:+359:+     # - name: run unit tests
+285:+364:+-    - name: broken Link checker
+286:+366:++    - name: broken Link checker Scholli
+304:+result=$(grep -n 'name' && '+' "$log")
+331:+-# name: brokenlink
+332:++name: brokenlink
+353:+-#     - name: Link Checker
+359:+-#     - name: Create Issue From File
+366:++    - name: Link Checker
+370:++    - name: Create Issue From File
+394:+     # - name: run unit tests
+399:+-    - name: broken Link checker
+401:++    - name: broken Link checker Scholli
+454:++  .hit-name {
+554:++        <h3 class="hit-name h4">
+596:++  result=$(grep -n 'name' "$log")
+618:++-# name: brokenlink
+619:+++name: brokenlink
+640:++-#     - name: Link Checker
+646:++-#     - name: Create Issue From File
+653:+++    - name: Link Checker
+657:+++    - name: Create Issue From File
+681:++     # - name: run unit tests
+686:++-    - name: broken Link checker
+688:+++    - name: broken Link checker Scholli
