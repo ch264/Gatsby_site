@@ -1,0 +1,469 @@
+Log File - diff --git a/.github/brokenlink.yml b/.github/brokenlink.yml
+index 1350eee..3c248a7 100644
+--- a/.github/brokenlink.yml
++++ b/.github/brokenlink.yml
+@@ -1,29 +1,33 @@
+ # I am not sure if this actually checks the right links
++# This link checker does not count 404 pages as broken links. This is how Lichen works, where it is build on. Therefore this is not suitable for our usecase.
+ 
+-# name: brokenlink
++name: brokenlink
+ 
+-# on: 
+-#   schedule:
+-#   - cron: '*/13 * * * *'
++on: 
++  schedule:
++  # - cron: '*/13 * * * *'
+ 
+-# jobs: 
+-#   linkChecker:
+-#     runs-on: ubuntu-18.04
++jobs: 
++  linkChecker:
++    runs-on: ubuntu-18.04
+ 
+-#     steps:
+-#     - uses: actions/checkout@v1
++    steps:
++    - uses: actions/checkout@v1
+ 
+-#     - name: Link Checker
+-#       uses: peter-evans/link-checker@v1.0.1
+-#       with:
+-#         args: -v -r ./v6
+-       
+-#     # issue is created and assigned to me, but the error is not logged in the description
+-#     - name: Create Issue From File
+-#       uses: peter-evans/create-issue-from-file@v1.0.1
+-#       env:
+-#         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+-#         ISSUE_TITLE: broken link or image found
+-#         ISSUE_CONTENT_FILEPATH: ./example-content/output.md
+-#         ISSUE_ASSIGNEES: ch264
++    - name: Link Checker
++      uses: peter-evans/link-checker@v1.0.1
++      with:
++        args: -v -r ./v6
++    - name: Create Issue From File
++      uses: peter-evans/create-issue-from-file@v1.0.1
++      env:
++        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
++        ISSUE_TITLE: Link Checker Report
++        ISSUE_CONTENT_FILEPATH: ./link-checker/out.md
++        ISSUE_LABELS: report, automated issue
++
++    # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
++    #     ISSUE_TITLE: broken link or image found
++    #     ISSUE_CONTENT_FILEPATH: ./link-checker/out.md
++    #     ISSUE_ASSIGNEES: ch264
+     
+diff --git a/.github/workflows/ci.yml b/.github/workflows/ci.yml
+index 168fe91..bb92b1a 100644
+--- a/.github/workflows/ci.yml
++++ b/.github/workflows/ci.yml
+@@ -22,15 +22,13 @@ jobs:
+         node_modules/.bin/markdownlint ./ --ignore node_modules --ignore v5 
+         # lint only files that changed on branch
+         # git ls-files -m > temp && while read p; do node_modules/.bin/markdownlint "$p"; done < temp | rm temp\n
+-
+-
+         
+     # - name: run unit tests
+     #   run: |
+     #     npm run test:jest
+ 
+-# this link checker works but runs longer than 20min
+-    - name: broken Link checker
++# this link checker works but runs longer than 2hours
++    - name: broken Link checker Scholli
+       uses: ScholliYT/Broken-Links-Crawler-Action@v2.0.0
+       with:
+         website_url: 'https://learning.getpostman.com/'
+diff --git a/aloglia.ejs b/aloglia.ejs
+new file mode 100644
+index 0000000..a6ed32a
+--- /dev/null
++++ b/aloglia.ejs
+@@ -0,0 +1,167 @@
++<!-- Algolia Instantsearch -->
++<!-- <div class="ais-SearchBox">
++  <form class="ais-SearchBox-form">
++    <input id="searchbox" class="ais-SearchBox-input"/>
++    <button class="ais-SearchBox-submit" type="submit" title="Submit the search query."></button>
++    <button class="ais-SearchBox-reset" type="reset" title="Clear the search query." hidden></button>
++    <span class="ais-SearchBox-loadingIndicator" hidden>
++    </span>
++  </form>
++  <div id="clear-refinements"></div>
++  <div id="hits" style='color: white'></div>
++  <div id="pagination"></div>
++  <div id="brand-list"></div>
++</div> -->
++
++<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/selectize@0.12.6/dist/css/selectize.css"> -->
++
++<div class="container" style='background-color: white'>
++  <h3>InstantSearch.js - Results page with an autocomplete</h3>
++  <input id="autocomplete" style='border: 3px solid red'></input >
++  <div id="hits" style='border: 3px solid green'></div>
++</div>
++
++<style>
++  h1 {
++    margin-bottom: 1rem;
++  }
++
++  em {
++    background: cyan;
++    font-style: normal;
++  }
++
++  .container {
++    max-width: 960px;
++    margin: 0 auto;
++    padding: 1em;
++  }
++
++  .ais-hits {
++    margin-top: 1em;
++  }
++
++  .hit-name {
++    margin-bottom: 0.5em;
++  }
++
++  .hit-description {
++    color: #888;
++    font-size: 14px;
++    margin-bottom: 0.5em;
++  }
++</style>
++
++
++<script src="https://cdn.jsdelivr.net/npm/selectize@0.12.6/dist/js/standalone/selectize.min.js"></script>
++<script src="https://cdn.jsdelivr.net/npm/algoliasearch@3.30.0/dist/algoliasearchLite.min.js"></script>
++<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@^4.0.0"></script>
++
++
++<script>
++  window.setTimeout( function() {
++  const searchClient = algoliasearch(
++    '4A5N71XYH0',
++    '4495d2606ed017c1c724d6210a717cc7'
++  );
++
++  const autocomplete = instantsearch.connectors.connectAutocomplete(
++    ({ indices, refine, widgetParams }, isFirstRendering) => {
++      const { container, onSelectChange } = widgetParams;
++
++      if (isFirstRendering) {
++        container.html('<select id="ais-autocomplete"></select>');
++
++        container.find('select').selectize({
++          options: [],
++          valueField: 'title',
++          labelField: 'description',
++          highlight: false,
++          onType: refine,
++          onBlur() {
++            refine(this.getValue());
++          },
++          score() {
++            return function() {
++              return 1;
++            };
++          },
++          onChange(value) {
++            onSelectChange(value);
++            refine(value);
++          },
++        });
++
++        return;
++      }
++
++      const [select] = container.find('select');
++
++      indices.forEach(index => {
++        select.selectize.clearOptions();
++        index.results.hits.forEach(h => select.selectize.addOption(h));
++        select.selectize.refreshOptions(select.selectize.isOpen);
++      });
++    }
++  );
++
++  const suggestions = instantsearch({
++    indexName: 'web',
++    searchClient,
++  });
++
++  suggestions.addWidget(
++    instantsearch.widgets.configure({
++      hitsPerPage: 5,
++    })
++  );
++
++  suggestions.addWidget(
++    autocomplete({
++      container: $('#autocomplete'),
++      onSelectChange(value) {
++        search.helper.setQuery(value).search();
++      },
++    })
++  );
++
++  const search = instantsearch({
++    indexName: 'web',
++    searchClient,
++  });
++
++  search.addWidget(
++    instantsearch.widgets.configure({
++      hitsPerPage: 10,
++    })
++  );
++
++  search.addWidget(
++    instantsearch.widgets.hits({
++      container: '#hits',
++      templates: {
++        item: `
++        <h3 class="hit-name h4">
++          {{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}
++        </h3>
++        
++        <p class="hit-description mb-0">
++          {{#helpers.highlight}}{ "attribute": "description" }{{/helpers.highlight}}
++        </p>
++
++        <div>
++          <a class="v5_link" href="{{{url}}}">
++              Go to: {{{title}}}
++          </a>
++        </div>  
++        `,
++      },
++    })
++  );
++
++  suggestions.start();
++  search.start();
++
++}, 3000) // setTimeout finish
++
++</script>
+\ No newline at end of file
+diff --git a/logFile.sh b/logFile.sh
+new file mode 100644
+index 0000000..0832c45
+--- /dev/null
++++ b/logFile.sh
+@@ -0,0 +1,19 @@
++#!/bin/bash
++
++log=log_file.txt
++
++ 
++# create log file or overrite if already present
++printf "Log File - " > $log
++ 
++# append git diff to log file
++git diff master...branch >> $log 
++
++  result=$(grep -n 'name' "$log")
++  if "$result" = true
++  then
++		mail -s "H2 changes were found" "christina.hastenrath@getpostman.com" < "$result"
++  else
++    echo no H2 changes
++	fi
++
+diff --git a/log_file.txt b/log_file.txt
+new file mode 100644
+index 0000000..69479be
+--- /dev/null
++++ b/log_file.txt
+@@ -0,0 +1,132 @@
++Log File - diff --git a/.github/brokenlink.yml b/.github/brokenlink.yml
++index 1350eee..3c248a7 100644
++--- a/.github/brokenlink.yml
+++++ b/.github/brokenlink.yml
++@@ -1,29 +1,33 @@
++ # I am not sure if this actually checks the right links
+++# This link checker does not count 404 pages as broken links. This is how Lichen works, where it is build on. Therefore this is not suitable for our usecase.
++ 
++-# name: brokenlink
+++name: brokenlink
++ 
++-# on: 
++-#   schedule:
++-#   - cron: '*/13 * * * *'
+++on: 
+++  schedule:
+++  # - cron: '*/13 * * * *'
++ 
++-# jobs: 
++-#   linkChecker:
++-#     runs-on: ubuntu-18.04
+++jobs: 
+++  linkChecker:
+++    runs-on: ubuntu-18.04
++ 
++-#     steps:
++-#     - uses: actions/checkout@v1
+++    steps:
+++    - uses: actions/checkout@v1
++ 
++-#     - name: Link Checker
++-#       uses: peter-evans/link-checker@v1.0.1
++-#       with:
++-#         args: -v -r ./v6
++-       
++-#     # issue is created and assigned to me, but the error is not logged in the description
++-#     - name: Create Issue From File
++-#       uses: peter-evans/create-issue-from-file@v1.0.1
++-#       env:
++-#         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
++-#         ISSUE_TITLE: broken link or image found
++-#         ISSUE_CONTENT_FILEPATH: ./example-content/output.md
++-#         ISSUE_ASSIGNEES: ch264
+++    - name: Link Checker
+++      uses: peter-evans/link-checker@v1.0.1
+++      with:
+++        args: -v -r ./v6
+++    - name: Create Issue From File
+++      uses: peter-evans/create-issue-from-file@v1.0.1
+++      env:
+++        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+++        ISSUE_TITLE: Link Checker Report
+++        ISSUE_CONTENT_FILEPATH: ./link-checker/out.md
+++        ISSUE_LABELS: report, automated issue
+++
+++    # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+++    #     ISSUE_TITLE: broken link or image found
+++    #     ISSUE_CONTENT_FILEPATH: ./link-checker/out.md
+++    #     ISSUE_ASSIGNEES: ch264
++     
++diff --git a/.github/workflows/ci.yml b/.github/workflows/ci.yml
++index 168fe91..bb92b1a 100644
++--- a/.github/workflows/ci.yml
+++++ b/.github/workflows/ci.yml
++@@ -22,15 +22,13 @@ jobs:
++         node_modules/.bin/markdownlint ./ --ignore node_modules --ignore v5 
++         # lint only files that changed on branch
++         # git ls-files -m > temp && while read p; do node_modules/.bin/markdownlint "$p"; done < temp | rm temp\n
++-
++-
++         
++     # - name: run unit tests
++     #   run: |
++     #     npm run test:jest
++ 
++-# this link checker works but runs longer than 20min
++-    - name: broken Link checker
+++# this link checker works but runs longer than 2hours
+++    - name: broken Link checker Scholli
++       uses: ScholliYT/Broken-Links-Crawler-Action@v2.0.0
++       with:
++         website_url: 'https://learning.getpostman.com/'
++diff --git a/package-lock.json b/package-lock.json
++index 9945277..024be58 100644
++--- a/package-lock.json
+++++ b/package-lock.json
++@@ -3130,9 +3130,9 @@
++       "dev": true
++     },
++     "handlebars": {
++-      "version": "4.5.1",
++-      "resolved": "https://registry.npmjs.org/handlebars/-/handlebars-4.5.1.tgz",
++-      "integrity": "sha512-C29UoFzHe9yM61lOsIlCE5/mQVGrnIOrOq7maQl76L7tYPCgC1og0Ajt6uWnX4ZTxBPnjw+CUvawphwCfJgUnA==",
+++      "version": "4.5.3",
+++      "resolved": "https://registry.npmjs.org/handlebars/-/handlebars-4.5.3.tgz",
+++      "integrity": "sha512-3yPecJoJHK/4c6aZhSvxOyG4vJKDshV36VHp0iVCDVh7o9w2vwi3NSnL2MMPj3YdduqaBcu7cGbggJQM0br9xA==",
++       "dev": true,
++       "requires": {
++         "neo-async": "^2.6.0",
++@@ -5789,9 +5789,9 @@
++       "integrity": "sha512-8Y75pvTYkLJW2hWQHXxoqRgV7qb9B+9vFEtidML+7koHUFapnVJAZ6cKs+Qjz5Aw3aZWHMC6u0wJE3At+nSGwA=="
++     },
++     "uglify-js": {
++-      "version": "3.6.5",
++-      "resolved": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.6.5.tgz",
++-      "integrity": "sha512-7L3W+Npia1OCr5Blp4/Vw83tK1mu5gnoIURtT1fUVfQ3Kf8WStWV6NJz0fdoBJZls0KlweruRTLVe6XLafmy5g==",
+++      "version": "3.7.0",
+++      "resolved": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.7.0.tgz",
+++      "integrity": "sha512-PC/ee458NEMITe1OufAjal65i6lB58R1HWMRcxwvdz1UopW0DYqlRL3xdu3IcTvTXsB02CRHykidkTRL+A3hQA==",
++       "dev": true,
++       "optional": true,
++       "requires": {
++diff --git a/test.md b/test.md
++index bf976fa..7b8ff91 100644
++--- a/test.md
+++++ b/test.md
++@@ -16,4 +16,4 @@ this is the test
++ 
++ for the last line
++ 
++-https://learning.getpostman-beta.com/docs/postman/launching-postman/introduction/ere
+++<https://learning.getpostman-beta.com/docs/postman/launching-postman/introduction/ere>
++diff --git a/v6/enterprise/Intro.md b/v6/enterprise/Intro.md
++index 22f0bfc..5afce92 100644
++--- a/v6/enterprise/Intro.md
+++++ b/v6/enterprise/Intro.md
++@@ -5,4 +5,4 @@ also modified
++ 
++ d
++ 
++-https://learning.getpostman.com/docs/postman/launching-postman/introduction/de
+++<https://learning.getpostman.com/docs/postman/launching-postman/introduction/de>
+diff --git a/package-lock.json b/package-lock.json
+index 9945277..024be58 100644
+--- a/package-lock.json
++++ b/package-lock.json
+@@ -3130,9 +3130,9 @@
+       "dev": true
+     },
+     "handlebars": {
+-      "version": "4.5.1",
+-      "resolved": "https://registry.npmjs.org/handlebars/-/handlebars-4.5.1.tgz",
+-      "integrity": "sha512-C29UoFzHe9yM61lOsIlCE5/mQVGrnIOrOq7maQl76L7tYPCgC1og0Ajt6uWnX4ZTxBPnjw+CUvawphwCfJgUnA==",
++      "version": "4.5.3",
++      "resolved": "https://registry.npmjs.org/handlebars/-/handlebars-4.5.3.tgz",
++      "integrity": "sha512-3yPecJoJHK/4c6aZhSvxOyG4vJKDshV36VHp0iVCDVh7o9w2vwi3NSnL2MMPj3YdduqaBcu7cGbggJQM0br9xA==",
+       "dev": true,
+       "requires": {
+         "neo-async": "^2.6.0",
+@@ -5789,9 +5789,9 @@
+       "integrity": "sha512-8Y75pvTYkLJW2hWQHXxoqRgV7qb9B+9vFEtidML+7koHUFapnVJAZ6cKs+Qjz5Aw3aZWHMC6u0wJE3At+nSGwA=="
+     },
+     "uglify-js": {
+-      "version": "3.6.5",
+-      "resolved": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.6.5.tgz",
+-      "integrity": "sha512-7L3W+Npia1OCr5Blp4/Vw83tK1mu5gnoIURtT1fUVfQ3Kf8WStWV6NJz0fdoBJZls0KlweruRTLVe6XLafmy5g==",
++      "version": "3.7.0",
++      "resolved": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.7.0.tgz",
++      "integrity": "sha512-PC/ee458NEMITe1OufAjal65i6lB58R1HWMRcxwvdz1UopW0DYqlRL3xdu3IcTvTXsB02CRHykidkTRL+A3hQA==",
+       "dev": true,
+       "optional": true,
+       "requires": {
+diff --git a/test.md b/test.md
+index bf976fa..7b8ff91 100644
+--- a/test.md
++++ b/test.md
+@@ -16,4 +16,4 @@ this is the test
+ 
+ for the last line
+ 
+-https://learning.getpostman-beta.com/docs/postman/launching-postman/introduction/ere
++<https://learning.getpostman-beta.com/docs/postman/launching-postman/introduction/ere>
+diff --git a/v6/enterprise/Intro.md b/v6/enterprise/Intro.md
+index 22f0bfc..5afce92 100644
+--- a/v6/enterprise/Intro.md
++++ b/v6/enterprise/Intro.md
+@@ -5,4 +5,4 @@ also modified
+ 
+ d
+ 
+-https://learning.getpostman.com/docs/postman/launching-postman/introduction/de
++<https://learning.getpostman.com/docs/postman/launching-postman/introduction/de>
