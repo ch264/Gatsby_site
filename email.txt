@@ -4,51 +4,118 @@
 37:-#     - name: Create Issue From File
 44:+    - name: Link Checker
 48:+    - name: Create Issue From File
-72:     # - name: run unit tests
-77:-    - name: broken Link checker
-79:+    - name: broken Link checker Scholli
-135:+  .hit-name {
-235:+        <h3 class="hit-name h4">
-266:+9:-# name: brokenlink
-267:+10:+name: brokenlink
-268:+31:-#     - name: Link Checker
-269:+37:-#     - name: Create Issue From File
-270:+44:+    - name: Link Checker
-271:+48:+    - name: Create Issue From File
-272:+72:     # - name: run unit tests
-273:+77:-    - name: broken Link checker
-274:+79:+    - name: broken Link checker Scholli
-275:+132:+  .hit-name {
-276:+232:+        <h3 class="hit-name h4">
-277:+274:+  result=$(grep -n 'name' "$log")
-278:+296:+-# name: brokenlink
-279:+297:++name: brokenlink
-280:+318:+-#     - name: Link Checker
-281:+324:+-#     - name: Create Issue From File
-282:+331:++    - name: Link Checker
-283:+335:++    - name: Create Issue From File
-284:+359:+     # - name: run unit tests
-285:+364:+-    - name: broken Link checker
-286:+366:++    - name: broken Link checker Scholli
-304:+result=$(grep -n 'name' && '+' "$log")
-331:+-# name: brokenlink
-332:++name: brokenlink
-353:+-#     - name: Link Checker
-359:+-#     - name: Create Issue From File
-366:++    - name: Link Checker
-370:++    - name: Create Issue From File
-394:+     # - name: run unit tests
-399:+-    - name: broken Link checker
-401:++    - name: broken Link checker Scholli
-454:++  .hit-name {
-554:++        <h3 class="hit-name h4">
-596:++  result=$(grep -n 'name' "$log")
-618:++-# name: brokenlink
-619:+++name: brokenlink
-640:++-#     - name: Link Checker
-646:++-#     - name: Create Issue From File
-653:+++    - name: Link Checker
-657:+++    - name: Create Issue From File
-681:++     # - name: run unit tests
-686:++-    - name: broken Link checker
-688:+++    - name: broken Link checker Scholli
+72:+    - name: h2 changes email
+74:     # - name: run unit tests
+79:-    - name: broken Link checker
+81:+    - name: broken Link checker Scholli
+137:+  .hit-name {
+237:+        <h3 class="hit-name h4">
+268:+9:-# name: brokenlink
+269:+10:+name: brokenlink
+270:+31:-#     - name: Link Checker
+271:+37:-#     - name: Create Issue From File
+272:+44:+    - name: Link Checker
+273:+48:+    - name: Create Issue From File
+274:+72:     # - name: run unit tests
+275:+77:-    - name: broken Link checker
+276:+79:+    - name: broken Link checker Scholli
+277:+135:+  .hit-name {
+278:+235:+        <h3 class="hit-name h4">
+279:+266:+9:-# name: brokenlink
+280:+267:+10:+name: brokenlink
+281:+268:+31:-#     - name: Link Checker
+282:+269:+37:-#     - name: Create Issue From File
+283:+270:+44:+    - name: Link Checker
+284:+271:+48:+    - name: Create Issue From File
+285:+272:+72:     # - name: run unit tests
+286:+273:+77:-    - name: broken Link checker
+287:+274:+79:+    - name: broken Link checker Scholli
+288:+275:+132:+  .hit-name {
+289:+276:+232:+        <h3 class="hit-name h4">
+290:+277:+274:+  result=$(grep -n 'name' "$log")
+291:+278:+296:+-# name: brokenlink
+292:+279:+297:++name: brokenlink
+293:+280:+318:+-#     - name: Link Checker
+294:+281:+324:+-#     - name: Create Issue From File
+295:+282:+331:++    - name: Link Checker
+296:+283:+335:++    - name: Create Issue From File
+297:+284:+359:+     # - name: run unit tests
+298:+285:+364:+-    - name: broken Link checker
+299:+286:+366:++    - name: broken Link checker Scholli
+300:+304:+result=$(grep -n 'name' && '+' "$log")
+301:+331:+-# name: brokenlink
+302:+332:++name: brokenlink
+303:+353:+-#     - name: Link Checker
+304:+359:+-#     - name: Create Issue From File
+305:+366:++    - name: Link Checker
+306:+370:++    - name: Create Issue From File
+307:+394:+     # - name: run unit tests
+308:+399:+-    - name: broken Link checker
+309:+401:++    - name: broken Link checker Scholli
+310:+454:++  .hit-name {
+311:+554:++        <h3 class="hit-name h4">
+312:+596:++  result=$(grep -n 'name' "$log")
+313:+618:++-# name: brokenlink
+314:+619:+++name: brokenlink
+315:+640:++-#     - name: Link Checker
+316:+646:++-#     - name: Create Issue From File
+317:+653:+++    - name: Link Checker
+318:+657:+++    - name: Create Issue From File
+319:+681:++     # - name: run unit tests
+320:+686:++-    - name: broken Link checker
+321:+688:+++    - name: broken Link checker Scholli
+340:+result=$(grep -n 'name' "$log")
+365:+-# name: brokenlink
+366:++name: brokenlink
+387:+-#     - name: Link Checker
+393:+-#     - name: Create Issue From File
+400:++    - name: Link Checker
+404:++    - name: Create Issue From File
+428:+     # - name: run unit tests
+433:+-    - name: broken Link checker
+435:++    - name: broken Link checker Scholli
+491:++  .hit-name {
+591:++        <h3 class="hit-name h4">
+622:++9:-# name: brokenlink
+623:++10:+name: brokenlink
+624:++31:-#     - name: Link Checker
+625:++37:-#     - name: Create Issue From File
+626:++44:+    - name: Link Checker
+627:++48:+    - name: Create Issue From File
+628:++72:     # - name: run unit tests
+629:++77:-    - name: broken Link checker
+630:++79:+    - name: broken Link checker Scholli
+631:++132:+  .hit-name {
+632:++232:+        <h3 class="hit-name h4">
+633:++274:+  result=$(grep -n 'name' "$log")
+634:++296:+-# name: brokenlink
+635:++297:++name: brokenlink
+636:++318:+-#     - name: Link Checker
+637:++324:+-#     - name: Create Issue From File
+638:++331:++    - name: Link Checker
+639:++335:++    - name: Create Issue From File
+640:++359:+     # - name: run unit tests
+641:++364:+-    - name: broken Link checker
+642:++366:++    - name: broken Link checker Scholli
+660:++result=$(grep -n 'name' && '+' "$log")
+687:++-# name: brokenlink
+688:+++name: brokenlink
+709:++-#     - name: Link Checker
+715:++-#     - name: Create Issue From File
+722:+++    - name: Link Checker
+726:+++    - name: Create Issue From File
+750:++     # - name: run unit tests
+755:++-    - name: broken Link checker
+757:+++    - name: broken Link checker Scholli
+810:+++  .hit-name {
+910:+++        <h3 class="hit-name h4">
+952:+++  result=$(grep -n 'name' "$log")
+974:+++-# name: brokenlink
+975:++++name: brokenlink
+996:+++-#     - name: Link Checker
+1002:+++-#     - name: Create Issue From File
+1009:++++    - name: Link Checker
+1013:++++    - name: Create Issue From File
+1037:+++     # - name: run unit tests
+1042:+++-    - name: broken Link checker
+1044:++++    - name: broken Link checker Scholli
