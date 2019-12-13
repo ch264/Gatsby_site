@@ -18,7 +18,7 @@ size=${#result}
     # append data to email
     printf '%s\n' "${result[@]}" > $email
     # send mail to email address
-    /bin/mail -s "H2 changes have been made" "christina.hastenrath@getpostman.com" < $email
+    mail -s "H2 changes have been made" "christina.hastenrath@getpostman.com" < $email
   else
     echo no data
   fi
