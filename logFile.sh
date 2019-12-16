@@ -11,12 +11,12 @@ git diff branch >> $log
 # git diff master...branch >> $log 
 
 # find H2 tag in diff
-result=$(grep -n 'name' "$log")
+result=$(grep -n '###' "$log")
 size=${#result}
   if [ $size > 0 ]
   then
     # # append data to email
-    # printf '%s\n' "${result[@]}" > $email
+    printf '%s\n' "${result[@]}" > $email
     # # send mail to email address
     # mail -s "H2 changes have been made" "christina.hastenrath@getpostman.com" < $email
     node email.js

@@ -1,1730 +1,3206 @@
-Log File - diff --git a/email.txt b/email.txt
-index 45a3264..9d67fc3 100644
+Log File - diff --git a/.github/workflows/ci.yml b/.github/workflows/ci.yml
+index 63ef26d..3bc068b 100644
+--- a/.github/workflows/ci.yml
++++ b/.github/workflows/ci.yml
+@@ -29,11 +29,11 @@ jobs:
+     #     npm run test:jest
+ 
+ # this link checker works but runs longer than 2hours
+-    - name: broken Link checker Scholli
+-      uses: ScholliYT/Broken-Links-Crawler-Action@v2.0.0
+-      with:
+-        website_url: 'https://learning.getpostman.com/'
+-        verbose: 'true'
++    # - name: broken Link checker Scholli
++    #   uses: ScholliYT/Broken-Links-Crawler-Action@v2.0.0
++    #   with:
++    #     website_url: 'https://learning.getpostman.com/'
++    #     verbose: 'true'
+ 
+   # this link checker has vulnerabilities
+     # - name: Link Checker
+diff --git a/email.txt b/email.txt
+index 9d67fc3..06ec470 100644
 --- a/email.txt
 +++ b/email.txt
-@@ -1,3 +1,5 @@
-+
-+
- 11:--9:-# name: brokenlink
- 12:--10:+name: brokenlink
- 13:--31:-#     - name: Link Checker
-@@ -340,3 +342,5 @@
- 1499:-+-641:++364:+-    - name: broken Link checker
- 1500:-+-642:++366:++    - name: broken Link checker Scholli
- 1501:-+-660:++result=$(grep -n 'name' && '+'
-+
-+
+@@ -1,346 +1,352 @@
+-
+-
+-11:--9:-# name: brokenlink
+-12:--10:+name: brokenlink
+-13:--31:-#     - name: Link Checker
+-14:--37:-#     - name: Create Issue From File
+-15:--44:+    - name: Link Checker
+-16:--48:+    - name: Create Issue From File
+-17:--72:+    - name: h2 changes email
+-18:--74:     # - name: run unit tests
+-19:--79:-    - name: broken Link checker
+-20:--81:+    - name: broken Link checker Scholli
+-21:--137:+  .hit-name {
+-22:--237:+        <h3 class="hit-name h4">
+-23:--268:+9:-# name: brokenlink
+-24:--269:+10:+name: brokenlink
+-25:--270:+31:-#     - name: Link Checker
+-26:--271:+37:-#     - name: Create Issue From File
+-27:--272:+44:+    - name: Link Checker
+-28:--273:+48:+    - name: Create Issue From File
+-29:--274:+72:     # - name: run unit tests
+-30:--275:+77:-    - name: broken Link checker
+-31:--276:+79:+    - name: broken Link checker Scholli
+-32:--277:+135:+  .hit-name {
+-33:--278:+235:+        <h3 class="hit-name h4">
+-34:--279:+266:+9:-# name: brokenlink
+-35:--280:+267:+10:+name: brokenlink
+-36:--281:+268:+31:-#     - name: Link Checker
+-37:--282:+269:+37:-#     - name: Create Issue From File
+-38:--283:+270:+44:+    - name: Link Checker
+-39:--284:+271:+48:+    - name: Create Issue From File
+-40:--285:+272:+72:     # - name: run unit tests
+-41:--286:+273:+77:-    - name: broken Link checker
+-42:--287:+274:+79:+    - name: broken Link checker Scholli
+-43:--288:+275:+132:+  .hit-name {
+-44:--289:+276:+232:+        <h3 class="hit-name h4">
+-45:--290:+277:+274:+  result=$(grep -n 'name' "$log")
+-46:--291:+278:+296:+-# name: brokenlink
+-47:--292:+279:+297:++name: brokenlink
+-48:--293:+280:+318:+-#     - name: Link Checker
+-49:--294:+281:+324:+-#     - name: Create Issue From File
+-50:--295:+282:+331:++    - name: Link Checker
+-51:--296:+283:+335:++    - name: Create Issue From File
+-52:--297:+284:+359:+     # - name: run unit tests
+-53:--298:+285:+364:+-    - name: broken Link checker
+-54:--299:+286:+366:++    - name: broken Link checker Scholli
+-55:--300:+304:+result=$(grep -n 'name' && '+' "$log")
+-56:--301:+331:+-# name: brokenlink
+-57:--302:+332:++name: brokenlink
+-58:--303:+353:+-#     - name: Link Checker
+-59:--304:+359:+-#     - name: Create Issue From File
+-60:--305:+366:++    - name: Link Checker
+-61:--306:+370:++    - name: Create Issue From File
+-62:--307:+394:+     # - name: run unit tests
+-63:--308:+399:+-    - name: broken Link checker
+-64:--309:+401:++    - name: broken Link checker Scholli
+-65:--310:+454:++  .hit-name {
+-66:--311:+554:++        <h3 class="hit-name h4">
+-67:--312:+596:++  result=$(grep -n 'name' "$log")
+-68:--313:+618:++-# name: brokenlink
+-69:--314:+619:+++name: brokenlink
+-70:--315:+640:++-#     - name: Link Checker
+-71:--316:+646:++-#     - name: Create Issue From File
+-72:--317:+653:+++    - name: Link Checker
+-73:--318:+657:+++    - name: Create Issue From File
+-74:--319:+681:++     # - name: run unit tests
+-75:--320:+686:++-    - name: broken Link checker
+-76:--321:+688:+++    - name: broken Link checker Scholli
+-77:--340:+result=$(grep -n 'name' "$log")
+-78:--365:+-# name: brokenlink
+-79:--366:++name: brokenlink
+-80:--387:+-#     - name: Link Checker
+-81:--393:+-#     - name: Create Issue From File
+-82:--400:++    - name: Link Checker
+-83:--404:++    - name: Create Issue From File
+-84:--428:+     # - name: run unit tests
+-85:--433:+-    - name: broken Link checker
+-86:--435:++    - name: broken Link checker Scholli
+-87:--491:++  .hit-name {
+-88:--591:++        <h3 class="hit-name h4">
+-89:--622:++9:-# name: brokenlink
+-90:--623:++10:+name: brokenlink
+-91:--624:++31:-#     - name: Link Checker
+-92:--625:++37:-#     - name: Create Issue From File
+-93:--626:++44:+    - name: Link Checker
+-94:--627:++48:+    - name: Create Issue From File
+-95:--628:++72:     # - name: run unit tests
+-96:--629:++77:-    - name: broken Link checker
+-97:--630:++79:+    - name: broken Link checker Scholli
+-98:--631:++132:+  .hit-name {
+-99:--632:++232:+        <h3 class="hit-name h4">
+-100:--633:++274:+  result=$(grep -n 'name' "$log")
+-101:--634:++296:+-# name: brokenlink
+-102:--635:++297:++name: brokenlink
+-103:--636:++318:+-#     - name: Link Checker
+-104:--637:++324:+-#     - name: Create Issue From File
+-105:--638:++331:++    - name: Link Checker
+-106:--639:++335:++    - name: Create Issue From File
+-107:--640:++359:+     # - name: run unit tests
+-108:--641:++364:+-    - name: broken Link checker
+-109:--642:++366:++    - name: broken Link checker Scholli
+-110:--660:++result=$(grep -n 'name' && '+' "$log")
+-111:--687:++-# name: brokenlink
+-112:--688:+++name: brokenlink
+-113:--709:++-#     - name: Link Checker
+-114:--715:++-#     - name: Create Issue From File
+-115:--722:+++    - name: Link Checker
+-116:--726:+++    - name: Create Issue From File
+-117:--750:++     # - name: run unit tests
+-118:--755:++-    - name: broken Link checker
+-119:--757:+++    - name: broken Link checker Scholli
+-120:--810:+++  .hit-name {
+-121:--910:+++        <h3 class="hit-name h4">
+-122:--952:+++  result=$(grep -n 'name' "$log")
+-123:--974:+++-# name: brokenlink
+-124:--975:++++name: brokenlink
+-125:--996:+++-#     - name: Link Checker
+-126:--1002:+++-#     - name: Create Issue From File
+-127:--1009:++++    - name: Link Checker
+-128:--1013:++++    - name: Create Issue From File
+-129:--1037:+++     # - name: run unit tests
+-130:--1042:+++-    - name: broken Link checker
+-131:--1044:++++    - name: broken Link checker Scholli
+-159:---# name: brokenlink
+-160:--+name: brokenlink
+-181:---#     - name: Link Checker
+-187:---#     - name: Create Issue From File
+-194:--+    - name: Link Checker
+-198:--+    - name: Create Issue From File
+-222:--+    - name: h2 changes email
+-224:--     # - name: run unit tests
+-229:---    - name: broken Link checker
+-231:--+    - name: broken Link checker Scholli
+-287:--+  .hit-name {
+-387:--+        <h3 class="hit-name h4">
+-421:--+9:-# name: brokenlink
+-422:--+10:+name: brokenlink
+-423:--+31:-#     - name: Link Checker
+-424:--+37:-#     - name: Create Issue From File
+-425:--+44:+    - name: Link Checker
+-426:--+48:+    - name: Create Issue From File
+-427:--+72:     # - name: run unit tests
+-428:--+77:-    - name: broken Link checker
+-429:--+79:+    - name: broken Link checker Scholli
+-430:--+135:+  .hit-name {
+-431:--+235:+        <h3 class="hit-name h4">
+-432:--+266:+9:-# name: brokenlink
+-433:--+267:+10:+name: brokenlink
+-434:--+268:+31:-#     - name: Link Checker
+-435:--+269:+37:-#     - name: Create Issue From File
+-436:--+270:+44:+    - name: Link Checker
+-437:--+271:+48:+    - name: Create Issue From File
+-438:--+272:+72:     # - name: run unit tests
+-439:--+273:+77:-    - name: broken Link checker
+-440:--+274:+79:+    - name: broken Link checker Scholli
+-441:--+275:+132:+  .hit-name {
+-442:--+276:+232:+        <h3 class="hit-name h4">
+-443:--+277:+274:+  result=$(grep -n 'name' "$log")
+-444:--+278:+296:+-# name: brokenlink
+-445:--+279:+297:++name: brokenlink
+-446:--+280:+318:+-#     - name: Link Checker
+-447:--+281:+324:+-#     - name: Create Issue From File
+-448:--+282:+331:++    - name: Link Checker
+-449:--+283:+335:++    - name: Create Issue From File
+-450:--+284:+359:+     # - name: run unit tests
+-451:--+285:+364:+-    - name: broken Link checker
+-452:--+286:+366:++    - name: broken Link checker Scholli
+-453:--+304:+result=$(grep -n 'name' && '+' "$log")
+-454:--+331:+-# name: brokenlink
+-455:--+332:++name: brokenlink
+-456:--+353:+-#     - name: Link Checker
+-457:--+359:+-#     - name: Create Issue From File
+-458:--+366:++    - name: Link Checker
+-459:--+370:++    - name: Create Issue From File
+-460:--+394:+     # - name: run unit tests
+-461:--+399:+-    - name: broken Link checker
+-462:--+401:++    - name: broken Link checker Scholli
+-463:--+454:++  .hit-name {
+-464:--+554:++        <h3 class="hit-name h4">
+-465:--+596:++  result=$(grep -n 'name' "$log")
+-466:--+618:++-# name: brokenlink
+-467:--+619:+++name: brokenlink
+-468:--+640:++-#     - name: Link Checker
+-469:--+646:++-#     - name: Create Issue From File
+-470:--+653:+++    - name: Link Checker
+-471:--+657:+++    - name: Create Issue From File
+-472:--+681:++     # - name: run unit tests
+-473:--+686:++-    - name: broken Link checker
+-474:--+688:+++    - name: broken Link checker Scholli
+-493:--+result=$(grep -n 'name' "$log")
+-518:--+-# name: brokenlink
+-519:--++name: brokenlink
+-540:--+-#     - name: Link Checker
+-546:--+-#     - name: Create Issue From File
+-553:--++    - name: Link Checker
+-557:--++    - name: Create Issue From File
+-581:--+     # - name: run unit tests
+-586:--+-    - name: broken Link checker
+-588:--++    - name: broken Link checker Scholli
+-644:--++  .hit-name {
+-744:--++        <h3 class="hit-name h4">
+-775:--++9:-# name: brokenlink
+-776:--++10:+name: brokenlink
+-777:--++31:-#     - name: Link Checker
+-778:--++37:-#     - name: Create Issue From File
+-779:--++44:+    - name: Link Checker
+-780:--++48:+    - name: Create Issue From File
+-781:--++72:     # - name: run unit tests
+-782:--++77:-    - name: broken Link checker
+-783:--++79:+    - name: broken Link checker Scholli
+-784:--++132:+  .hit-name {
+-785:--++232:+        <h3 class="hit-name h4">
+-786:--++274:+  result=$(grep -n 'name' "$log")
+-787:--++296:+-# name: brokenlink
+-788:--++297:++name: brokenlink
+-789:--++318:+-#     - name: Link Checker
+-790:--++324:+-#     - name: Create Issue From File
+-791:--++331:++    - name: Link Checker
+-792:--++335:++    - name: Create Issue From File
+-793:--++359:+     # - name: run unit tests
+-794:--++364:+-    - name: broken Link checker
+-795:--++366:++    - name: broken Link checker Scholli
+-813:--++result=$(grep -n 'name' && '+' "$log")
+-840:--++-# name: brokenlink
+-841:--+++name: brokenlink
+-862:--++-#     - name: Link Checker
+-868:--++-#     - name: Create Issue From File
+-875:--+++    - name: Link Checker
+-879:--+++    - name: Create Issue From File
+-903:--++     # - name: run unit tests
+-908:--++-    - name: broken Link checker
+-910:--+++    - name: broken Link checker Scholli
+-963:--+++  .hit-name {
+-1063:--+++        <h3 class="hit-name h4">
+-1105:--+++  result=$(grep -n 'name' "$log")
+-1127:--+++-# name: brokenlink
+-1128:--++++name: brokenlink
+-1149:--+++-#     - name: Link Checker
+-1155:--+++-#     - name: Create Issue From File
+-1162:--++++    - name: Link Checker
+-1166:--++++    - name: Create Issue From File
+-1190:--+++     # - name: run unit tests
+-1195:--+++-    - name: broken Link checker
+-1197:--++++    - name: broken Link checker Scholli
+-1402:-+-9:-# name: brokenlink
+-1403:-+-10:+name: brokenlink
+-1404:-+-31:-#     - name: Link Checker
+-1405:-+-37:-#     - name: Create Issue From File
+-1406:-+-44:+    - name: Link Checker
+-1407:-+-48:+    - name: Create Issue From File
+-1408:-+-72:+    - name: h2 changes email
+-1409:-+-74:     # - name: run unit tests
+-1410:-+-79:-    - name: broken Link checker
+-1411:-+-81:+    - name: broken Link checker Scholli
+-1412:-+-137:+  .hit-name {
+-1413:-+-237:+        <h3 class="hit-name h4">
+-1414:-+-268:+9:-# name: brokenlink
+-1415:-+-269:+10:+name: brokenlink
+-1416:-+-270:+31:-#     - name: Link Checker
+-1417:-+-271:+37:-#     - name: Create Issue From File
+-1418:-+-272:+44:+    - name: Link Checker
+-1419:-+-273:+48:+    - name: Create Issue From File
+-1420:-+-274:+72:     # - name: run unit tests
+-1421:-+-275:+77:-    - name: broken Link checker
+-1422:-+-276:+79:+    - name: broken Link checker Scholli
+-1423:-+-277:+135:+  .hit-name {
+-1424:-+-278:+235:+        <h3 class="hit-name h4">
+-1425:-+-279:+266:+9:-# name: brokenlink
+-1426:-+-280:+267:+10:+name: brokenlink
+-1427:-+-281:+268:+31:-#     - name: Link Checker
+-1428:-+-282:+269:+37:-#     - name: Create Issue From File
+-1429:-+-283:+270:+44:+    - name: Link Checker
+-1430:-+-284:+271:+48:+    - name: Create Issue From File
+-1431:-+-285:+272:+72:     # - name: run unit tests
+-1432:-+-286:+273:+77:-    - name: broken Link checker
+-1433:-+-287:+274:+79:+    - name: broken Link checker Scholli
+-1434:-+-288:+275:+132:+  .hit-name {
+-1435:-+-289:+276:+232:+        <h3 class="hit-name h4">
+-1436:-+-290:+277:+274:+  result=$(grep -n 'name' "$log")
+-1437:-+-291:+278:+296:+-# name: brokenlink
+-1438:-+-292:+279:+297:++name: brokenlink
+-1439:-+-293:+280:+318:+-#     - name: Link Checker
+-1440:-+-294:+281:+324:+-#     - name: Create Issue From File
+-1441:-+-295:+282:+331:++    - name: Link Checker
+-1442:-+-296:+283:+335:++    - name: Create Issue From File
+-1443:-+-297:+284:+359:+     # - name: run unit tests
+-1444:-+-298:+285:+364:+-    - name: broken Link checker
+-1445:-+-299:+286:+366:++    - name: broken Link checker Scholli
+-1446:-+-300:+304:+result=$(grep -n 'name' && '+' "$log")
+-1447:-+-301:+331:+-# name: brokenlink
+-1448:-+-302:+332:++name: brokenlink
+-1449:-+-303:+353:+-#     - name: Link Checker
+-1450:-+-304:+359:+-#     - name: Create Issue From File
+-1451:-+-305:+366:++    - name: Link Checker
+-1452:-+-306:+370:++    - name: Create Issue From File
+-1453:-+-307:+394:+     # - name: run unit tests
+-1454:-+-308:+399:+-    - name: broken Link checker
+-1455:-+-309:+401:++    - name: broken Link checker Scholli
+-1456:-+-310:+454:++  .hit-name {
+-1457:-+-311:+554:++        <h3 class="hit-name h4">
+-1458:-+-312:+596:++  result=$(grep -n 'name' "$log")
+-1459:-+-313:+618:++-# name: brokenlink
+-1460:-+-314:+619:+++name: brokenlink
+-1461:-+-315:+640:++-#     - name: Link Checker
+-1462:-+-316:+646:++-#     - name: Create Issue From File
+-1463:-+-317:+653:+++    - name: Link Checker
+-1464:-+-318:+657:+++    - name: Create Issue From File
+-1465:-+-319:+681:++     # - name: run unit tests
+-1466:-+-320:+686:++-    - name: broken Link checker
+-1467:-+-321:+688:+++    - name: broken Link checker Scholli
+-1468:-+-340:+result=$(grep -n 'name' "$log")
+-1469:-+-365:+-# name: brokenlink
+-1470:-+-366:++name: brokenlink
+-1471:-+-387:+-#     - name: Link Checker
+-1472:-+-393:+-#     - name: Create Issue From File
+-1473:-+-400:++    - name: Link Checker
+-1474:-+-404:++    - name: Create Issue From File
+-1475:-+-428:+     # - name: run unit tests
+-1476:-+-433:+-    - name: broken Link checker
+-1477:-+-435:++    - name: broken Link checker Scholli
+-1478:-+-491:++  .hit-name {
+-1479:-+-591:++        <h3 class="hit-name h4">
+-1480:-+-622:++9:-# name: brokenlink
+-1481:-+-623:++10:+name: brokenlink
+-1482:-+-624:++31:-#     - name: Link Checker
+-1483:-+-625:++37:-#     - name: Create Issue From File
+-1484:-+-626:++44:+    - name: Link Checker
+-1485:-+-627:++48:+    - name: Create Issue From File
+-1486:-+-628:++72:     # - name: run unit tests
+-1487:-+-629:++77:-    - name: broken Link checker
+-1488:-+-630:++79:+    - name: broken Link checker Scholli
+-1489:-+-631:++132:+  .hit-name {
+-1490:-+-632:++232:+        <h3 class="hit-name h4">
+-1491:-+-633:++274:+  result=$(grep -n 'name' "$log")
+-1492:-+-634:++296:+-# name: brokenlink
+-1493:-+-635:++297:++name: brokenlink
+-1494:-+-636:++318:+-#     - name: Link Checker
+-1495:-+-637:++324:+-#     - name: Create Issue From File
+-1496:-+-638:++331:++    - name: Link Checker
+-1497:-+-639:++335:++    - name: Create Issue From File
+-1498:-+-640:++359:+     # - name: run unit tests
+-1499:-+-641:++364:+-    - name: broken Link checker
+-1500:-+-642:++366:++    - name: broken Link checker Scholli
+-1501:-+-660:++result=$(grep -n 'name' && '+'
+-
+-
++9:-    - name: broken Link checker Scholli
++14:+    # - name: broken Link checker Scholli
++21:     # - name: Link Checker
++47:- 11:--9:-# name: brokenlink
++48:- 12:--10:+name: brokenlink
++49:- 13:--31:-#     - name: Link Checker
++51:- 1499:-+-641:++364:+-    - name: broken Link checker
++52:- 1500:-+-642:++366:++    - name: broken Link checker Scholli
++53:- 1501:-+-660:++result=$(grep -n 'name' && '+'
++60:-@@ -15,10 +15,11 @@ result=$(grep -n 'name' "$log")
++91:----9:-# name: brokenlink
++92:----10:+name: brokenlink
++93:----31:-#     - name: Link Checker
++94:----37:-#     - name: Create Issue From File
++95:----44:+    - name: Link Checker
++96:----48:+    - name: Create Issue From File
++97:----72:+    - name: h2 changes email
++98:----74:     # - name: run unit tests
++99:----79:-    - name: broken Link checker
++100:----81:+    - name: broken Link checker Scholli
++101:----137:+  .hit-name {
++102:----237:+        <h3 class="hit-name h4">
++103:----268:+9:-# name: brokenlink
++104:----269:+10:+name: brokenlink
++105:----270:+31:-#     - name: Link Checker
++106:----271:+37:-#     - name: Create Issue From File
++107:----272:+44:+    - name: Link Checker
++108:----273:+48:+    - name: Create Issue From File
++109:----274:+72:     # - name: run unit tests
++110:----275:+77:-    - name: broken Link checker
++111:----276:+79:+    - name: broken Link checker Scholli
++112:----277:+135:+  .hit-name {
++113:----278:+235:+        <h3 class="hit-name h4">
++114:----279:+266:+9:-# name: brokenlink
++115:----280:+267:+10:+name: brokenlink
++116:----281:+268:+31:-#     - name: Link Checker
++117:----282:+269:+37:-#     - name: Create Issue From File
++118:----283:+270:+44:+    - name: Link Checker
++119:----284:+271:+48:+    - name: Create Issue From File
++120:----285:+272:+72:     # - name: run unit tests
++121:----286:+273:+77:-    - name: broken Link checker
++122:----287:+274:+79:+    - name: broken Link checker Scholli
++123:----288:+275:+132:+  .hit-name {
++124:----289:+276:+232:+        <h3 class="hit-name h4">
++125:----290:+277:+274:+  result=$(grep -n 'name' "$log")
++126:----291:+278:+296:+-# name: brokenlink
++127:----292:+279:+297:++name: brokenlink
++128:----293:+280:+318:+-#     - name: Link Checker
++129:----294:+281:+324:+-#     - name: Create Issue From File
++130:----295:+282:+331:++    - name: Link Checker
++131:----296:+283:+335:++    - name: Create Issue From File
++132:----297:+284:+359:+     # - name: run unit tests
++133:----298:+285:+364:+-    - name: broken Link checker
++134:----299:+286:+366:++    - name: broken Link checker Scholli
++135:----300:+304:+result=$(grep -n 'name' && '+' "$log")
++136:----301:+331:+-# name: brokenlink
++137:----302:+332:++name: brokenlink
++138:----303:+353:+-#     - name: Link Checker
++139:----304:+359:+-#     - name: Create Issue From File
++140:----305:+366:++    - name: Link Checker
++141:----306:+370:++    - name: Create Issue From File
++142:----307:+394:+     # - name: run unit tests
++143:----308:+399:+-    - name: broken Link checker
++144:----309:+401:++    - name: broken Link checker Scholli
++145:----310:+454:++  .hit-name {
++146:----311:+554:++        <h3 class="hit-name h4">
++147:----312:+596:++  result=$(grep -n 'name' "$log")
++148:----313:+618:++-# name: brokenlink
++149:----314:+619:+++name: brokenlink
++150:----315:+640:++-#     - name: Link Checker
++151:----316:+646:++-#     - name: Create Issue From File
++152:----317:+653:+++    - name: Link Checker
++153:----318:+657:+++    - name: Create Issue From File
++154:----319:+681:++     # - name: run unit tests
++155:----320:+686:++-    - name: broken Link checker
++156:----321:+688:+++    - name: broken Link checker Scholli
++157:----340:+result=$(grep -n 'name' "$log")
++158:----365:+-# name: brokenlink
++159:----366:++name: brokenlink
++160:----387:+-#     - name: Link Checker
++161:----393:+-#     - name: Create Issue From File
++162:----400:++    - name: Link Checker
++163:----404:++    - name: Create Issue From File
++164:----428:+     # - name: run unit tests
++165:----433:+-    - name: broken Link checker
++166:----435:++    - name: broken Link checker Scholli
++167:----491:++  .hit-name {
++168:----591:++        <h3 class="hit-name h4">
++169:----622:++9:-# name: brokenlink
++170:----623:++10:+name: brokenlink
++171:----624:++31:-#     - name: Link Checker
++172:----625:++37:-#     - name: Create Issue From File
++173:----626:++44:+    - name: Link Checker
++174:----627:++48:+    - name: Create Issue From File
++175:----628:++72:     # - name: run unit tests
++176:----629:++77:-    - name: broken Link checker
++177:----630:++79:+    - name: broken Link checker Scholli
++178:----631:++132:+  .hit-name {
++179:----632:++232:+        <h3 class="hit-name h4">
++180:----633:++274:+  result=$(grep -n 'name' "$log")
++181:----634:++296:+-# name: brokenlink
++182:----635:++297:++name: brokenlink
++183:----636:++318:+-#     - name: Link Checker
++184:----637:++324:+-#     - name: Create Issue From File
++185:----638:++331:++    - name: Link Checker
++186:----639:++335:++    - name: Create Issue From File
++187:----640:++359:+     # - name: run unit tests
++188:----641:++364:+-    - name: broken Link checker
++189:----642:++366:++    - name: broken Link checker Scholli
++190:----660:++result=$(grep -n 'name' && '+' "$log")
++191:----687:++-# name: brokenlink
++192:----688:+++name: brokenlink
++193:----709:++-#     - name: Link Checker
++194:----715:++-#     - name: Create Issue From File
++195:----722:+++    - name: Link Checker
++196:----726:+++    - name: Create Issue From File
++197:----750:++     # - name: run unit tests
++198:----755:++-    - name: broken Link checker
++199:----757:+++    - name: broken Link checker Scholli
++200:----810:+++  .hit-name {
++201:----910:+++        <h3 class="hit-name h4">
++202:----952:+++  result=$(grep -n 'name' "$log")
++203:----974:+++-# name: brokenlink
++204:----975:++++name: brokenlink
++205:----996:+++-#     - name: Link Checker
++206:----1002:+++-#     - name: Create Issue From File
++207:----1009:++++    - name: Link Checker
++208:----1013:++++    - name: Create Issue From File
++209:----1037:+++     # - name: run unit tests
++210:----1042:+++-    - name: broken Link checker
++211:----1044:++++    - name: broken Link checker Scholli
++239:-----# name: brokenlink
++240:----+name: brokenlink
++261:-----#     - name: Link Checker
++267:-----#     - name: Create Issue From File
++274:----+    - name: Link Checker
++278:----+    - name: Create Issue From File
++302:----+    - name: h2 changes email
++304:----     # - name: run unit tests
++309:-----    - name: broken Link checker
++311:----+    - name: broken Link checker Scholli
++367:----+  .hit-name {
++467:----+        <h3 class="hit-name h4">
++501:----+9:-# name: brokenlink
++502:----+10:+name: brokenlink
++503:----+31:-#     - name: Link Checker
++504:----+37:-#     - name: Create Issue From File
++505:----+44:+    - name: Link Checker
++506:----+48:+    - name: Create Issue From File
++507:----+72:     # - name: run unit tests
++508:----+77:-    - name: broken Link checker
++509:----+79:+    - name: broken Link checker Scholli
++510:----+135:+  .hit-name {
++511:----+235:+        <h3 class="hit-name h4">
++512:----+266:+9:-# name: brokenlink
++513:----+267:+10:+name: brokenlink
++514:----+268:+31:-#     - name: Link Checker
++515:----+269:+37:-#     - name: Create Issue From File
++516:----+270:+44:+    - name: Link Checker
++517:----+271:+48:+    - name: Create Issue From File
++518:----+272:+72:     # - name: run unit tests
++519:----+273:+77:-    - name: broken Link checker
++520:----+274:+79:+    - name: broken Link checker Scholli
++521:----+275:+132:+  .hit-name {
++522:----+276:+232:+        <h3 class="hit-name h4">
++523:----+277:+274:+  result=$(grep -n 'name' "$log")
++524:----+278:+296:+-# name: brokenlink
++525:----+279:+297:++name: brokenlink
++526:----+280:+318:+-#     - name: Link Checker
++527:----+281:+324:+-#     - name: Create Issue From File
++528:----+282:+331:++    - name: Link Checker
++529:----+283:+335:++    - name: Create Issue From File
++530:----+284:+359:+     # - name: run unit tests
++531:----+285:+364:+-    - name: broken Link checker
++532:----+286:+366:++    - name: broken Link checker Scholli
++533:----+304:+result=$(grep -n 'name' && '+' "$log")
++534:----+331:+-# name: brokenlink
++535:----+332:++name: brokenlink
++536:----+353:+-#     - name: Link Checker
++537:----+359:+-#     - name: Create Issue From File
++538:----+366:++    - name: Link Checker
++539:----+370:++    - name: Create Issue From File
++540:----+394:+     # - name: run unit tests
++541:----+399:+-    - name: broken Link checker
++542:----+401:++    - name: broken Link checker Scholli
++543:----+454:++  .hit-name {
++544:----+554:++        <h3 class="hit-name h4">
++545:----+596:++  result=$(grep -n 'name' "$log")
++546:----+618:++-# name: brokenlink
++547:----+619:+++name: brokenlink
++548:----+640:++-#     - name: Link Checker
++549:----+646:++-#     - name: Create Issue From File
++550:----+653:+++    - name: Link Checker
++551:----+657:+++    - name: Create Issue From File
++552:----+681:++     # - name: run unit tests
++553:----+686:++-    - name: broken Link checker
++554:----+688:+++    - name: broken Link checker Scholli
++573:----+result=$(grep -n 'name' "$log")
++598:----+-# name: brokenlink
++599:----++name: brokenlink
++620:----+-#     - name: Link Checker
++626:----+-#     - name: Create Issue From File
++633:----++    - name: Link Checker
++637:----++    - name: Create Issue From File
++661:----+     # - name: run unit tests
++666:----+-    - name: broken Link checker
++668:----++    - name: broken Link checker Scholli
++724:----++  .hit-name {
++824:----++        <h3 class="hit-name h4">
++855:----++9:-# name: brokenlink
++856:----++10:+name: brokenlink
++857:----++31:-#     - name: Link Checker
++858:----++37:-#     - name: Create Issue From File
++859:----++44:+    - name: Link Checker
++860:----++48:+    - name: Create Issue From File
++861:----++72:     # - name: run unit tests
++862:----++77:-    - name: broken Link checker
++863:----++79:+    - name: broken Link checker Scholli
++864:----++132:+  .hit-name {
++865:----++232:+        <h3 class="hit-name h4">
++866:----++274:+  result=$(grep -n 'name' "$log")
++867:----++296:+-# name: brokenlink
++868:----++297:++name: brokenlink
++869:----++318:+-#     - name: Link Checker
++870:----++324:+-#     - name: Create Issue From File
++871:----++331:++    - name: Link Checker
++872:----++335:++    - name: Create Issue From File
++873:----++359:+     # - name: run unit tests
++874:----++364:+-    - name: broken Link checker
++875:----++366:++    - name: broken Link checker Scholli
++893:----++result=$(grep -n 'name' && '+' "$log")
++920:----++-# name: brokenlink
++921:----+++name: brokenlink
++942:----++-#     - name: Link Checker
++948:----++-#     - name: Create Issue From File
++955:----+++    - name: Link Checker
++959:----+++    - name: Create Issue From File
++983:----++     # - name: run unit tests
++988:----++-    - name: broken Link checker
++990:----+++    - name: broken Link checker Scholli
++1043:----+++  .hit-name {
++1143:----+++        <h3 class="hit-name h4">
++1185:----+++  result=$(grep -n 'name' "$log")
++1207:----+++-# name: brokenlink
++1208:----++++name: brokenlink
++1229:----+++-#     - name: Link Checker
++1235:----+++-#     - name: Create Issue From File
++1242:----++++    - name: Link Checker
++1246:----++++    - name: Create Issue From File
++1270:----+++     # - name: run unit tests
++1275:----+++-    - name: broken Link checker
++1277:----++++    - name: broken Link checker Scholli
++1482:---+-9:-# name: brokenlink
++1483:---+-10:+name: brokenlink
++1484:---+-31:-#     - name: Link Checker
++1485:---+-37:-#     - name: Create Issue From File
++1486:---+-44:+    - name: Link Checker
++1487:---+-48:+    - name: Create Issue From File
++1488:---+-72:+    - name: h2 changes email
++1489:---+-74:     # - name: run unit tests
++1490:---+-79:-    - name: broken Link checker
++1491:---+-81:+    - name: broken Link checker Scholli
++1492:---+-137:+  .hit-name {
++1493:---+-237:+        <h3 class="hit-name h4">
++1494:---+-268:+9:-# name: brokenlink
++1495:---+-269:+10:+name: brokenlink
++1496:---+-270:+31:-#     - name: Link Checker
++1497:---+-271:+37:-#     - name: Create Issue From File
++1498:---+-272:+44:+    - name: Link Checker
++1499:---+-273:+48:+    - name: Create Issue From File
++1500:---+-274:+72:     # - name: run unit tests
++1501:---+-275:+77:-    - name: broken Link checker
++1502:---+-276:+79:+    - name: broken Link checker Scholli
++1503:---+-277:+135:+  .hit-name {
++1504:---+-278:+235:+        <h3 class="hit-name h4">
++1505:---+-279:+266:+9:-# name: brokenlink
++1506:---+-280:+267:+10:+name: brokenlink
++1507:---+-281:+268:+31:-#     - name: Link Checker
++1508:---+-282:+269:+37:-#     - name: Create Issue From File
++1509:---+-283:+270:+44:+    - name: Link Checker
++1510:---+-284:+271:+48:+    - name: Create Issue From File
++1511:---+-285:+272:+72:     # - name: run unit tests
++1512:---+-286:+273:+77:-    - name: broken Link checker
++1513:---+-287:+274:+79:+    - name: broken Link checker Scholli
++1514:---+-288:+275:+132:+  .hit-name {
++1515:---+-289:+276:+232:+        <h3 class="hit-name h4">
++1516:---+-290:+277:+274:+  result=$(grep -n 'name' "$log")
++1517:---+-291:+278:+296:+-# name: brokenlink
++1518:---+-292:+279:+297:++name: brokenlink
++1519:---+-293:+280:+318:+-#     - name: Link Checker
++1520:---+-294:+281:+324:+-#     - name: Create Issue From File
++1521:---+-295:+282:+331:++    - name: Link Checker
++1522:---+-296:+283:+335:++    - name: Create Issue From File
++1523:---+-297:+284:+359:+     # - name: run unit tests
++1524:---+-298:+285:+364:+-    - name: broken Link checker
++1525:---+-299:+286:+366:++    - name: broken Link checker Scholli
++1526:---+-300:+304:+result=$(grep -n 'name' && '+' "$log")
++1527:---+-301:+331:+-# name: brokenlink
++1528:---+-302:+332:++name: brokenlink
++1529:---+-303:+353:+-#     - name: Link Checker
++1530:---+-304:+359:+-#     - name: Create Issue From File
++1531:---+-305:+366:++    - name: Link Checker
++1532:---+-306:+370:++    - name: Create Issue From File
++1533:---+-307:+394:+     # - name: run unit tests
++1534:---+-308:+399:+-    - name: broken Link checker
++1535:---+-309:+401:++    - name: broken Link checker Scholli
++1536:---+-310:+454:++  .hit-name {
++1537:---+-311:+554:++        <h3 class="hit-name h4">
++1538:---+-312:+596:++  result=$(grep -n 'name' "$log")
++1539:---+-313:+618:++-# name: brokenlink
++1540:---+-314:+619:+++name: brokenlink
++1541:---+-315:+640:++-#     - name: Link Checker
++1542:---+-316:+646:++-#     - name: Create Issue From File
++1543:---+-317:+653:+++    - name: Link Checker
++1544:---+-318:+657:+++    - name: Create Issue From File
++1545:---+-319:+681:++     # - name: run unit tests
++1546:---+-320:+686:++-    - name: broken Link checker
++1547:---+-321:+688:+++    - name: broken Link checker Scholli
++1548:---+-340:+result=$(grep -n 'name' "$log")
++1549:---+-365:+-# name: brokenlink
++1550:---+-366:++name: brokenlink
++1551:---+-387:+-#     - name: Link Checker
++1552:---+-393:+-#     - name: Create Issue From File
++1553:---+-400:++    - name: Link Checker
++1554:---+-404:++    - name: Create Issue From File
++1555:---+-428:+     # - name: run unit tests
++1556:---+-433:+-    - name: broken Link checker
++1557:---+-435:++    - name: broken Link checker Scholli
++1558:---+-491:++  .hit-name {
++1559:---+-591:++        <h3 class="hit-name h4">
++1560:---+-622:++9:-# name: brokenlink
++1561:---+-623:++10:+name: brokenlink
++1562:---+-624:++31:-#     - name: Link Checker
++1563:---+-625:++37:-#     - name: Create Issue From File
++1564:---+-626:++44:+    - name: Link Checker
++1565:---+-627:++48:+    - name: Create Issue From File
++1566:---+-628:++72:     # - name: run unit tests
++1567:---+-629:++77:-    - name: broken Link checker
++1568:---+-630:++79:+    - name: broken Link checker Scholli
++1569:---+-631:++132:+  .hit-name {
++1570:---+-632:++232:+        <h3 class="hit-name h4">
++1571:---+-633:++274:+  result=$(grep -n 'name' "$log")
++1572:---+-634:++296:+-# name: brokenlink
++1573:---+-635:++297:++name: brokenlink
++1574:---+-636:++318:+-#     - name: Link Checker
++1575:---+-637:++324:+-#     - name: Create Issue From File
++1576:---+-638:++331:++    - name: Link Checker
++1577:---+-639:++335:++    - name: Create Issue From File
++1578:---+-640:++359:+     # - name: run unit tests
++1579:---+-641:++364:+-    - name: broken Link checker
++1580:---+-642:++366:++    - name: broken Link checker Scholli
++1581:---+-660:++result=$(grep -n 'name' && '+'
 diff --git a/logFile.sh b/logFile.sh
-index 6204d82..744d575 100644
+index 744d575..ee73ea8 100644
 --- a/logFile.sh
 +++ b/logFile.sh
-@@ -15,10 +15,11 @@ result=$(grep -n 'name' "$log")
+@@ -11,12 +11,12 @@ git diff branch >> $log
+ # git diff master...branch >> $log 
+ 
+ # find H2 tag in diff
+-result=$(grep -n 'name' "$log")
++result=$(grep -n '###' "$log")
  size=${#result}
    if [ $size > 0 ]
    then
--    # append data to email
--    printf '%s\n' "${result[@]}" > $email
--    # send mail to email address
--    mail -s "H2 changes have been made" "christina.hastenrath@getpostman.com" < $email
-+    # # append data to email
-+    # printf '%s\n' "${result[@]}" > $email
-+    # # send mail to email address
-+    # mail -s "H2 changes have been made" "christina.hastenrath@getpostman.com" < $email
-+    node email.js
-   else
-     echo no data
-   fi
+     # # append data to email
+-    # printf '%s\n' "${result[@]}" > $email
++    printf '%s\n' "${result[@]}" > $email
+     # # send mail to email address
+     # mail -s "H2 changes have been made" "christina.hastenrath@getpostman.com" < $email
+     node email.js
 diff --git a/log_file.txt b/log_file.txt
-index 6d6a86c..e1f1fd6 100644
+index a1b1f9d..f045b59 100644
 --- a/log_file.txt
 +++ b/log_file.txt
-@@ -1,1504 +1 @@
--Log File - diff --git a/log_file.txt b/log_file.txt
--index 25a55c9..e1f1fd6 100644
+@@ -1,1730 +1,732 @@
+-Log File - diff --git a/email.txt b/email.txt
+-index 45a3264..9d67fc3 100644
++Log File - diff --git a/.github/workflows/ci.yml b/.github/workflows/ci.yml
++index 63ef26d..3bc068b 100644
++--- a/.github/workflows/ci.yml
+++++ b/.github/workflows/ci.yml
++@@ -29,11 +29,11 @@ jobs:
++     #     npm run test:jest
++ 
++ # this link checker works but runs longer than 2hours
++-    - name: broken Link checker Scholli
++-      uses: ScholliYT/Broken-Links-Crawler-Action@v2.0.0
++-      with:
++-        website_url: 'https://learning.getpostman.com/'
++-        verbose: 'true'
+++    # - name: broken Link checker Scholli
+++    #   uses: ScholliYT/Broken-Links-Crawler-Action@v2.0.0
+++    #   with:
+++    #     website_url: 'https://learning.getpostman.com/'
+++    #     verbose: 'true'
++ 
++   # this link checker has vulnerabilities
++     # - name: Link Checker
++diff --git a/email.txt b/email.txt
++index 9d67fc3..06ec470 100644
+ --- a/email.txt
+ +++ b/email.txt
+-@@ -1,3 +1,5 @@
+-+
+-+
+- 11:--9:-# name: brokenlink
+- 12:--10:+name: brokenlink
+- 13:--31:-#     - name: Link Checker
+-@@ -340,3 +342,5 @@
+- 1499:-+-641:++364:+-    - name: broken Link checker
+- 1500:-+-642:++366:++    - name: broken Link checker Scholli
+- 1501:-+-660:++result=$(grep -n 'name' && '+'
+-+
+-+
++@@ -1,346 +1,352 @@
++-
++-
++-11:--9:-# name: brokenlink
++-12:--10:+name: brokenlink
++-13:--31:-#     - name: Link Checker
++-14:--37:-#     - name: Create Issue From File
++-15:--44:+    - name: Link Checker
++-16:--48:+    - name: Create Issue From File
++-17:--72:+    - name: h2 changes email
++-18:--74:     # - name: run unit tests
++-19:--79:-    - name: broken Link checker
++-20:--81:+    - name: broken Link checker Scholli
++-21:--137:+  .hit-name {
++-22:--237:+        <h3 class="hit-name h4">
++-23:--268:+9:-# name: brokenlink
++-24:--269:+10:+name: brokenlink
++-25:--270:+31:-#     - name: Link Checker
++-26:--271:+37:-#     - name: Create Issue From File
++-27:--272:+44:+    - name: Link Checker
++-28:--273:+48:+    - name: Create Issue From File
++-29:--274:+72:     # - name: run unit tests
++-30:--275:+77:-    - name: broken Link checker
++-31:--276:+79:+    - name: broken Link checker Scholli
++-32:--277:+135:+  .hit-name {
++-33:--278:+235:+        <h3 class="hit-name h4">
++-34:--279:+266:+9:-# name: brokenlink
++-35:--280:+267:+10:+name: brokenlink
++-36:--281:+268:+31:-#     - name: Link Checker
++-37:--282:+269:+37:-#     - name: Create Issue From File
++-38:--283:+270:+44:+    - name: Link Checker
++-39:--284:+271:+48:+    - name: Create Issue From File
++-40:--285:+272:+72:     # - name: run unit tests
++-41:--286:+273:+77:-    - name: broken Link checker
++-42:--287:+274:+79:+    - name: broken Link checker Scholli
++-43:--288:+275:+132:+  .hit-name {
++-44:--289:+276:+232:+        <h3 class="hit-name h4">
++-45:--290:+277:+274:+  result=$(grep -n 'name' "$log")
++-46:--291:+278:+296:+-# name: brokenlink
++-47:--292:+279:+297:++name: brokenlink
++-48:--293:+280:+318:+-#     - name: Link Checker
++-49:--294:+281:+324:+-#     - name: Create Issue From File
++-50:--295:+282:+331:++    - name: Link Checker
++-51:--296:+283:+335:++    - name: Create Issue From File
++-52:--297:+284:+359:+     # - name: run unit tests
++-53:--298:+285:+364:+-    - name: broken Link checker
++-54:--299:+286:+366:++    - name: broken Link checker Scholli
++-55:--300:+304:+result=$(grep -n 'name' && '+' "$log")
++-56:--301:+331:+-# name: brokenlink
++-57:--302:+332:++name: brokenlink
++-58:--303:+353:+-#     - name: Link Checker
++-59:--304:+359:+-#     - name: Create Issue From File
++-60:--305:+366:++    - name: Link Checker
++-61:--306:+370:++    - name: Create Issue From File
++-62:--307:+394:+     # - name: run unit tests
++-63:--308:+399:+-    - name: broken Link checker
++-64:--309:+401:++    - name: broken Link checker Scholli
++-65:--310:+454:++  .hit-name {
++-66:--311:+554:++        <h3 class="hit-name h4">
++-67:--312:+596:++  result=$(grep -n 'name' "$log")
++-68:--313:+618:++-# name: brokenlink
++-69:--314:+619:+++name: brokenlink
++-70:--315:+640:++-#     - name: Link Checker
++-71:--316:+646:++-#     - name: Create Issue From File
++-72:--317:+653:+++    - name: Link Checker
++-73:--318:+657:+++    - name: Create Issue From File
++-74:--319:+681:++     # - name: run unit tests
++-75:--320:+686:++-    - name: broken Link checker
++-76:--321:+688:+++    - name: broken Link checker Scholli
++-77:--340:+result=$(grep -n 'name' "$log")
++-78:--365:+-# name: brokenlink
++-79:--366:++name: brokenlink
++-80:--387:+-#     - name: Link Checker
++-81:--393:+-#     - name: Create Issue From File
++-82:--400:++    - name: Link Checker
++-83:--404:++    - name: Create Issue From File
++-84:--428:+     # - name: run unit tests
++-85:--433:+-    - name: broken Link checker
++-86:--435:++    - name: broken Link checker Scholli
++-87:--491:++  .hit-name {
++-88:--591:++        <h3 class="hit-name h4">
++-89:--622:++9:-# name: brokenlink
++-90:--623:++10:+name: brokenlink
++-91:--624:++31:-#     - name: Link Checker
++-92:--625:++37:-#     - name: Create Issue From File
++-93:--626:++44:+    - name: Link Checker
++-94:--627:++48:+    - name: Create Issue From File
++-95:--628:++72:     # - name: run unit tests
++-96:--629:++77:-    - name: broken Link checker
++-97:--630:++79:+    - name: broken Link checker Scholli
++-98:--631:++132:+  .hit-name {
++-99:--632:++232:+        <h3 class="hit-name h4">
++-100:--633:++274:+  result=$(grep -n 'name' "$log")
++-101:--634:++296:+-# name: brokenlink
++-102:--635:++297:++name: brokenlink
++-103:--636:++318:+-#     - name: Link Checker
++-104:--637:++324:+-#     - name: Create Issue From File
++-105:--638:++331:++    - name: Link Checker
++-106:--639:++335:++    - name: Create Issue From File
++-107:--640:++359:+     # - name: run unit tests
++-108:--641:++364:+-    - name: broken Link checker
++-109:--642:++366:++    - name: broken Link checker Scholli
++-110:--660:++result=$(grep -n 'name' && '+' "$log")
++-111:--687:++-# name: brokenlink
++-112:--688:+++name: brokenlink
++-113:--709:++-#     - name: Link Checker
++-114:--715:++-#     - name: Create Issue From File
++-115:--722:+++    - name: Link Checker
++-116:--726:+++    - name: Create Issue From File
++-117:--750:++     # - name: run unit tests
++-118:--755:++-    - name: broken Link checker
++-119:--757:+++    - name: broken Link checker Scholli
++-120:--810:+++  .hit-name {
++-121:--910:+++        <h3 class="hit-name h4">
++-122:--952:+++  result=$(grep -n 'name' "$log")
++-123:--974:+++-# name: brokenlink
++-124:--975:++++name: brokenlink
++-125:--996:+++-#     - name: Link Checker
++-126:--1002:+++-#     - name: Create Issue From File
++-127:--1009:++++    - name: Link Checker
++-128:--1013:++++    - name: Create Issue From File
++-129:--1037:+++     # - name: run unit tests
++-130:--1042:+++-    - name: broken Link checker
++-131:--1044:++++    - name: broken Link checker Scholli
++-159:---# name: brokenlink
++-160:--+name: brokenlink
++-181:---#     - name: Link Checker
++-187:---#     - name: Create Issue From File
++-194:--+    - name: Link Checker
++-198:--+    - name: Create Issue From File
++-222:--+    - name: h2 changes email
++-224:--     # - name: run unit tests
++-229:---    - name: broken Link checker
++-231:--+    - name: broken Link checker Scholli
++-287:--+  .hit-name {
++-387:--+        <h3 class="hit-name h4">
++-421:--+9:-# name: brokenlink
++-422:--+10:+name: brokenlink
++-423:--+31:-#     - name: Link Checker
++-424:--+37:-#     - name: Create Issue From File
++-425:--+44:+    - name: Link Checker
++-426:--+48:+    - name: Create Issue From File
++-427:--+72:     # - name: run unit tests
++-428:--+77:-    - name: broken Link checker
++-429:--+79:+    - name: broken Link checker Scholli
++-430:--+135:+  .hit-name {
++-431:--+235:+        <h3 class="hit-name h4">
++-432:--+266:+9:-# name: brokenlink
++-433:--+267:+10:+name: brokenlink
++-434:--+268:+31:-#     - name: Link Checker
++-435:--+269:+37:-#     - name: Create Issue From File
++-436:--+270:+44:+    - name: Link Checker
++-437:--+271:+48:+    - name: Create Issue From File
++-438:--+272:+72:     # - name: run unit tests
++-439:--+273:+77:-    - name: broken Link checker
++-440:--+274:+79:+    - name: broken Link checker Scholli
++-441:--+275:+132:+  .hit-name {
++-442:--+276:+232:+        <h3 class="hit-name h4">
++-443:--+277:+274:+  result=$(grep -n 'name' "$log")
++-444:--+278:+296:+-# name: brokenlink
++-445:--+279:+297:++name: brokenlink
++-446:--+280:+318:+-#     - name: Link Checker
++-447:--+281:+324:+-#     - name: Create Issue From File
++-448:--+282:+331:++    - name: Link Checker
++-449:--+283:+335:++    - name: Create Issue From File
++-450:--+284:+359:+     # - name: run unit tests
++-451:--+285:+364:+-    - name: broken Link checker
++-452:--+286:+366:++    - name: broken Link checker Scholli
++-453:--+304:+result=$(grep -n 'name' && '+' "$log")
++-454:--+331:+-# name: brokenlink
++-455:--+332:++name: brokenlink
++-456:--+353:+-#     - name: Link Checker
++-457:--+359:+-#     - name: Create Issue From File
++-458:--+366:++    - name: Link Checker
++-459:--+370:++    - name: Create Issue From File
++-460:--+394:+     # - name: run unit tests
++-461:--+399:+-    - name: broken Link checker
++-462:--+401:++    - name: broken Link checker Scholli
++-463:--+454:++  .hit-name {
++-464:--+554:++        <h3 class="hit-name h4">
++-465:--+596:++  result=$(grep -n 'name' "$log")
++-466:--+618:++-# name: brokenlink
++-467:--+619:+++name: brokenlink
++-468:--+640:++-#     - name: Link Checker
++-469:--+646:++-#     - name: Create Issue From File
++-470:--+653:+++    - name: Link Checker
++-471:--+657:+++    - name: Create Issue From File
++-472:--+681:++     # - name: run unit tests
++-473:--+686:++-    - name: broken Link checker
++-474:--+688:+++    - name: broken Link checker Scholli
++-493:--+result=$(grep -n 'name' "$log")
++-518:--+-# name: brokenlink
++-519:--++name: brokenlink
++-540:--+-#     - name: Link Checker
++-546:--+-#     - name: Create Issue From File
++-553:--++    - name: Link Checker
++-557:--++    - name: Create Issue From File
++-581:--+     # - name: run unit tests
++-586:--+-    - name: broken Link checker
++-588:--++    - name: broken Link checker Scholli
++-644:--++  .hit-name {
++-744:--++        <h3 class="hit-name h4">
++-775:--++9:-# name: brokenlink
++-776:--++10:+name: brokenlink
++-777:--++31:-#     - name: Link Checker
++-778:--++37:-#     - name: Create Issue From File
++-779:--++44:+    - name: Link Checker
++-780:--++48:+    - name: Create Issue From File
++-781:--++72:     # - name: run unit tests
++-782:--++77:-    - name: broken Link checker
++-783:--++79:+    - name: broken Link checker Scholli
++-784:--++132:+  .hit-name {
++-785:--++232:+        <h3 class="hit-name h4">
++-786:--++274:+  result=$(grep -n 'name' "$log")
++-787:--++296:+-# name: brokenlink
++-788:--++297:++name: brokenlink
++-789:--++318:+-#     - name: Link Checker
++-790:--++324:+-#     - name: Create Issue From File
++-791:--++331:++    - name: Link Checker
++-792:--++335:++    - name: Create Issue From File
++-793:--++359:+     # - name: run unit tests
++-794:--++364:+-    - name: broken Link checker
++-795:--++366:++    - name: broken Link checker Scholli
++-813:--++result=$(grep -n 'name' && '+' "$log")
++-840:--++-# name: brokenlink
++-841:--+++name: brokenlink
++-862:--++-#     - name: Link Checker
++-868:--++-#     - name: Create Issue From File
++-875:--+++    - name: Link Checker
++-879:--+++    - name: Create Issue From File
++-903:--++     # - name: run unit tests
++-908:--++-    - name: broken Link checker
++-910:--+++    - name: broken Link checker Scholli
++-963:--+++  .hit-name {
++-1063:--+++        <h3 class="hit-name h4">
++-1105:--+++  result=$(grep -n 'name' "$log")
++-1127:--+++-# name: brokenlink
++-1128:--++++name: brokenlink
++-1149:--+++-#     - name: Link Checker
++-1155:--+++-#     - name: Create Issue From File
++-1162:--++++    - name: Link Checker
++-1166:--++++    - name: Create Issue From File
++-1190:--+++     # - name: run unit tests
++-1195:--+++-    - name: broken Link checker
++-1197:--++++    - name: broken Link checker Scholli
++-1402:-+-9:-# name: brokenlink
++-1403:-+-10:+name: brokenlink
++-1404:-+-31:-#     - name: Link Checker
++-1405:-+-37:-#     - name: Create Issue From File
++-1406:-+-44:+    - name: Link Checker
++-1407:-+-48:+    - name: Create Issue From File
++-1408:-+-72:+    - name: h2 changes email
++-1409:-+-74:     # - name: run unit tests
++-1410:-+-79:-    - name: broken Link checker
++-1411:-+-81:+    - name: broken Link checker Scholli
++-1412:-+-137:+  .hit-name {
++-1413:-+-237:+        <h3 class="hit-name h4">
++-1414:-+-268:+9:-# name: brokenlink
++-1415:-+-269:+10:+name: brokenlink
++-1416:-+-270:+31:-#     - name: Link Checker
++-1417:-+-271:+37:-#     - name: Create Issue From File
++-1418:-+-272:+44:+    - name: Link Checker
++-1419:-+-273:+48:+    - name: Create Issue From File
++-1420:-+-274:+72:     # - name: run unit tests
++-1421:-+-275:+77:-    - name: broken Link checker
++-1422:-+-276:+79:+    - name: broken Link checker Scholli
++-1423:-+-277:+135:+  .hit-name {
++-1424:-+-278:+235:+        <h3 class="hit-name h4">
++-1425:-+-279:+266:+9:-# name: brokenlink
++-1426:-+-280:+267:+10:+name: brokenlink
++-1427:-+-281:+268:+31:-#     - name: Link Checker
++-1428:-+-282:+269:+37:-#     - name: Create Issue From File
++-1429:-+-283:+270:+44:+    - name: Link Checker
++-1430:-+-284:+271:+48:+    - name: Create Issue From File
++-1431:-+-285:+272:+72:     # - name: run unit tests
++-1432:-+-286:+273:+77:-    - name: broken Link checker
++-1433:-+-287:+274:+79:+    - name: broken Link checker Scholli
++-1434:-+-288:+275:+132:+  .hit-name {
++-1435:-+-289:+276:+232:+        <h3 class="hit-name h4">
++-1436:-+-290:+277:+274:+  result=$(grep -n 'name' "$log")
++-1437:-+-291:+278:+296:+-# name: brokenlink
++-1438:-+-292:+279:+297:++name: brokenlink
++-1439:-+-293:+280:+318:+-#     - name: Link Checker
++-1440:-+-294:+281:+324:+-#     - name: Create Issue From File
++-1441:-+-295:+282:+331:++    - name: Link Checker
++-1442:-+-296:+283:+335:++    - name: Create Issue From File
++-1443:-+-297:+284:+359:+     # - name: run unit tests
++-1444:-+-298:+285:+364:+-    - name: broken Link checker
++-1445:-+-299:+286:+366:++    - name: broken Link checker Scholli
++-1446:-+-300:+304:+result=$(grep -n 'name' && '+' "$log")
++-1447:-+-301:+331:+-# name: brokenlink
++-1448:-+-302:+332:++name: brokenlink
++-1449:-+-303:+353:+-#     - name: Link Checker
++-1450:-+-304:+359:+-#     - name: Create Issue From File
++-1451:-+-305:+366:++    - name: Link Checker
++-1452:-+-306:+370:++    - name: Create Issue From File
++-1453:-+-307:+394:+     # - name: run unit tests
++-1454:-+-308:+399:+-    - name: broken Link checker
++-1455:-+-309:+401:++    - name: broken Link checker Scholli
++-1456:-+-310:+454:++  .hit-name {
++-1457:-+-311:+554:++        <h3 class="hit-name h4">
++-1458:-+-312:+596:++  result=$(grep -n 'name' "$log")
++-1459:-+-313:+618:++-# name: brokenlink
++-1460:-+-314:+619:+++name: brokenlink
++-1461:-+-315:+640:++-#     - name: Link Checker
++-1462:-+-316:+646:++-#     - name: Create Issue From File
++-1463:-+-317:+653:+++    - name: Link Checker
++-1464:-+-318:+657:+++    - name: Create Issue From File
++-1465:-+-319:+681:++     # - name: run unit tests
++-1466:-+-320:+686:++-    - name: broken Link checker
++-1467:-+-321:+688:+++    - name: broken Link checker Scholli
++-1468:-+-340:+result=$(grep -n 'name' "$log")
++-1469:-+-365:+-# name: brokenlink
++-1470:-+-366:++name: brokenlink
++-1471:-+-387:+-#     - name: Link Checker
++-1472:-+-393:+-#     - name: Create Issue From File
++-1473:-+-400:++    - name: Link Checker
++-1474:-+-404:++    - name: Create Issue From File
++-1475:-+-428:+     # - name: run unit tests
++-1476:-+-433:+-    - name: broken Link checker
++-1477:-+-435:++    - name: broken Link checker Scholli
++-1478:-+-491:++  .hit-name {
++-1479:-+-591:++        <h3 class="hit-name h4">
++-1480:-+-622:++9:-# name: brokenlink
++-1481:-+-623:++10:+name: brokenlink
++-1482:-+-624:++31:-#     - name: Link Checker
++-1483:-+-625:++37:-#     - name: Create Issue From File
++-1484:-+-626:++44:+    - name: Link Checker
++-1485:-+-627:++48:+    - name: Create Issue From File
++-1486:-+-628:++72:     # - name: run unit tests
++-1487:-+-629:++77:-    - name: broken Link checker
++-1488:-+-630:++79:+    - name: broken Link checker Scholli
++-1489:-+-631:++132:+  .hit-name {
++-1490:-+-632:++232:+        <h3 class="hit-name h4">
++-1491:-+-633:++274:+  result=$(grep -n 'name' "$log")
++-1492:-+-634:++296:+-# name: brokenlink
++-1493:-+-635:++297:++name: brokenlink
++-1494:-+-636:++318:+-#     - name: Link Checker
++-1495:-+-637:++324:+-#     - name: Create Issue From File
++-1496:-+-638:++331:++    - name: Link Checker
++-1497:-+-639:++335:++    - name: Create Issue From File
++-1498:-+-640:++359:+     # - name: run unit tests
++-1499:-+-641:++364:+-    - name: broken Link checker
++-1500:-+-642:++366:++    - name: broken Link checker Scholli
++-1501:-+-660:++result=$(grep -n 'name' && '+'
++-
++-
+++9:-    - name: broken Link checker Scholli
+++14:+    # - name: broken Link checker Scholli
+++21:     # - name: Link Checker
+++47:- 11:--9:-# name: brokenlink
+++48:- 12:--10:+name: brokenlink
+++49:- 13:--31:-#     - name: Link Checker
+++51:- 1499:-+-641:++364:+-    - name: broken Link checker
+++52:- 1500:-+-642:++366:++    - name: broken Link checker Scholli
+++53:- 1501:-+-660:++result=$(grep -n 'name' && '+'
+++60:-@@ -15,10 +15,11 @@ result=$(grep -n 'name' "$log")
+++91:----9:-# name: brokenlink
+++92:----10:+name: brokenlink
+++93:----31:-#     - name: Link Checker
+++94:----37:-#     - name: Create Issue From File
+++95:----44:+    - name: Link Checker
+++96:----48:+    - name: Create Issue From File
+++97:----72:+    - name: h2 changes email
+++98:----74:     # - name: run unit tests
+++99:----79:-    - name: broken Link checker
+++100:----81:+    - name: broken Link checker Scholli
+++101:----137:+  .hit-name {
+++102:----237:+        <h3 class="hit-name h4">
+++103:----268:+9:-# name: brokenlink
+++104:----269:+10:+name: brokenlink
+++105:----270:+31:-#     - name: Link Checker
+++106:----271:+37:-#     - name: Create Issue From File
+++107:----272:+44:+    - name: Link Checker
+++108:----273:+48:+    - name: Create Issue From File
+++109:----274:+72:     # - name: run unit tests
+++110:----275:+77:-    - name: broken Link checker
+++111:----276:+79:+    - name: broken Link checker Scholli
+++112:----277:+135:+  .hit-name {
+++113:----278:+235:+        <h3 class="hit-name h4">
+++114:----279:+266:+9:-# name: brokenlink
+++115:----280:+267:+10:+name: brokenlink
+++116:----281:+268:+31:-#     - name: Link Checker
+++117:----282:+269:+37:-#     - name: Create Issue From File
+++118:----283:+270:+44:+    - name: Link Checker
+++119:----284:+271:+48:+    - name: Create Issue From File
+++120:----285:+272:+72:     # - name: run unit tests
+++121:----286:+273:+77:-    - name: broken Link checker
+++122:----287:+274:+79:+    - name: broken Link checker Scholli
+++123:----288:+275:+132:+  .hit-name {
+++124:----289:+276:+232:+        <h3 class="hit-name h4">
+++125:----290:+277:+274:+  result=$(grep -n 'name' "$log")
+++126:----291:+278:+296:+-# name: brokenlink
+++127:----292:+279:+297:++name: brokenlink
+++128:----293:+280:+318:+-#     - name: Link Checker
+++129:----294:+281:+324:+-#     - name: Create Issue From File
+++130:----295:+282:+331:++    - name: Link Checker
+++131:----296:+283:+335:++    - name: Create Issue From File
+++132:----297:+284:+359:+     # - name: run unit tests
+++133:----298:+285:+364:+-    - name: broken Link checker
+++134:----299:+286:+366:++    - name: broken Link checker Scholli
+++135:----300:+304:+result=$(grep -n 'name' && '+' "$log")
+++136:----301:+331:+-# name: brokenlink
+++137:----302:+332:++name: brokenlink
+++138:----303:+353:+-#     - name: Link Checker
+++139:----304:+359:+-#     - name: Create Issue From File
+++140:----305:+366:++    - name: Link Checker
+++141:----306:+370:++    - name: Create Issue From File
+++142:----307:+394:+     # - name: run unit tests
+++143:----308:+399:+-    - name: broken Link checker
+++144:----309:+401:++    - name: broken Link checker Scholli
+++145:----310:+454:++  .hit-name {
+++146:----311:+554:++        <h3 class="hit-name h4">
+++147:----312:+596:++  result=$(grep -n 'name' "$log")
+++148:----313:+618:++-# name: brokenlink
+++149:----314:+619:+++name: brokenlink
+++150:----315:+640:++-#     - name: Link Checker
+++151:----316:+646:++-#     - name: Create Issue From File
+++152:----317:+653:+++    - name: Link Checker
+++153:----318:+657:+++    - name: Create Issue From File
+++154:----319:+681:++     # - name: run unit tests
+++155:----320:+686:++-    - name: broken Link checker
+++156:----321:+688:+++    - name: broken Link checker Scholli
+++157:----340:+result=$(grep -n 'name' "$log")
+++158:----365:+-# name: brokenlink
+++159:----366:++name: brokenlink
+++160:----387:+-#     - name: Link Checker
+++161:----393:+-#     - name: Create Issue From File
+++162:----400:++    - name: Link Checker
+++163:----404:++    - name: Create Issue From File
+++164:----428:+     # - name: run unit tests
+++165:----433:+-    - name: broken Link checker
+++166:----435:++    - name: broken Link checker Scholli
+++167:----491:++  .hit-name {
+++168:----591:++        <h3 class="hit-name h4">
+++169:----622:++9:-# name: brokenlink
+++170:----623:++10:+name: brokenlink
+++171:----624:++31:-#     - name: Link Checker
+++172:----625:++37:-#     - name: Create Issue From File
+++173:----626:++44:+    - name: Link Checker
+++174:----627:++48:+    - name: Create Issue From File
+++175:----628:++72:     # - name: run unit tests
+++176:----629:++77:-    - name: broken Link checker
+++177:----630:++79:+    - name: broken Link checker Scholli
+++178:----631:++132:+  .hit-name {
+++179:----632:++232:+        <h3 class="hit-name h4">
+++180:----633:++274:+  result=$(grep -n 'name' "$log")
+++181:----634:++296:+-# name: brokenlink
+++182:----635:++297:++name: brokenlink
+++183:----636:++318:+-#     - name: Link Checker
+++184:----637:++324:+-#     - name: Create Issue From File
+++185:----638:++331:++    - name: Link Checker
+++186:----639:++335:++    - name: Create Issue From File
+++187:----640:++359:+     # - name: run unit tests
+++188:----641:++364:+-    - name: broken Link checker
+++189:----642:++366:++    - name: broken Link checker Scholli
+++190:----660:++result=$(grep -n 'name' && '+' "$log")
+++191:----687:++-# name: brokenlink
+++192:----688:+++name: brokenlink
+++193:----709:++-#     - name: Link Checker
+++194:----715:++-#     - name: Create Issue From File
+++195:----722:+++    - name: Link Checker
+++196:----726:+++    - name: Create Issue From File
+++197:----750:++     # - name: run unit tests
+++198:----755:++-    - name: broken Link checker
+++199:----757:+++    - name: broken Link checker Scholli
+++200:----810:+++  .hit-name {
+++201:----910:+++        <h3 class="hit-name h4">
+++202:----952:+++  result=$(grep -n 'name' "$log")
+++203:----974:+++-# name: brokenlink
+++204:----975:++++name: brokenlink
+++205:----996:+++-#     - name: Link Checker
+++206:----1002:+++-#     - name: Create Issue From File
+++207:----1009:++++    - name: Link Checker
+++208:----1013:++++    - name: Create Issue From File
+++209:----1037:+++     # - name: run unit tests
+++210:----1042:+++-    - name: broken Link checker
+++211:----1044:++++    - name: broken Link checker Scholli
+++239:-----# name: brokenlink
+++240:----+name: brokenlink
+++261:-----#     - name: Link Checker
+++267:-----#     - name: Create Issue From File
+++274:----+    - name: Link Checker
+++278:----+    - name: Create Issue From File
+++302:----+    - name: h2 changes email
+++304:----     # - name: run unit tests
+++309:-----    - name: broken Link checker
+++311:----+    - name: broken Link checker Scholli
+++367:----+  .hit-name {
+++467:----+        <h3 class="hit-name h4">
+++501:----+9:-# name: brokenlink
+++502:----+10:+name: brokenlink
+++503:----+31:-#     - name: Link Checker
+++504:----+37:-#     - name: Create Issue From File
+++505:----+44:+    - name: Link Checker
+++506:----+48:+    - name: Create Issue From File
+++507:----+72:     # - name: run unit tests
+++508:----+77:-    - name: broken Link checker
+++509:----+79:+    - name: broken Link checker Scholli
+++510:----+135:+  .hit-name {
+++511:----+235:+        <h3 class="hit-name h4">
+++512:----+266:+9:-# name: brokenlink
+++513:----+267:+10:+name: brokenlink
+++514:----+268:+31:-#     - name: Link Checker
+++515:----+269:+37:-#     - name: Create Issue From File
+++516:----+270:+44:+    - name: Link Checker
+++517:----+271:+48:+    - name: Create Issue From File
+++518:----+272:+72:     # - name: run unit tests
+++519:----+273:+77:-    - name: broken Link checker
+++520:----+274:+79:+    - name: broken Link checker Scholli
+++521:----+275:+132:+  .hit-name {
+++522:----+276:+232:+        <h3 class="hit-name h4">
+++523:----+277:+274:+  result=$(grep -n 'name' "$log")
+++524:----+278:+296:+-# name: brokenlink
+++525:----+279:+297:++name: brokenlink
+++526:----+280:+318:+-#     - name: Link Checker
+++527:----+281:+324:+-#     - name: Create Issue From File
+++528:----+282:+331:++    - name: Link Checker
+++529:----+283:+335:++    - name: Create Issue From File
+++530:----+284:+359:+     # - name: run unit tests
+++531:----+285:+364:+-    - name: broken Link checker
+++532:----+286:+366:++    - name: broken Link checker Scholli
+++533:----+304:+result=$(grep -n 'name' && '+' "$log")
+++534:----+331:+-# name: brokenlink
+++535:----+332:++name: brokenlink
+++536:----+353:+-#     - name: Link Checker
+++537:----+359:+-#     - name: Create Issue From File
+++538:----+366:++    - name: Link Checker
+++539:----+370:++    - name: Create Issue From File
+++540:----+394:+     # - name: run unit tests
+++541:----+399:+-    - name: broken Link checker
+++542:----+401:++    - name: broken Link checker Scholli
+++543:----+454:++  .hit-name {
+++544:----+554:++        <h3 class="hit-name h4">
+++545:----+596:++  result=$(grep -n 'name' "$log")
+++546:----+618:++-# name: brokenlink
+++547:----+619:+++name: brokenlink
+++548:----+640:++-#     - name: Link Checker
+++549:----+646:++-#     - name: Create Issue From File
+++550:----+653:+++    - name: Link Checker
+++551:----+657:+++    - name: Create Issue From File
+++552:----+681:++     # - name: run unit tests
+++553:----+686:++-    - name: broken Link checker
+++554:----+688:+++    - name: broken Link checker Scholli
+++573:----+result=$(grep -n 'name' "$log")
+++598:----+-# name: brokenlink
+++599:----++name: brokenlink
+++620:----+-#     - name: Link Checker
+++626:----+-#     - name: Create Issue From File
+++633:----++    - name: Link Checker
+++637:----++    - name: Create Issue From File
+++661:----+     # - name: run unit tests
+++666:----+-    - name: broken Link checker
+++668:----++    - name: broken Link checker Scholli
+++724:----++  .hit-name {
+++824:----++        <h3 class="hit-name h4">
+++855:----++9:-# name: brokenlink
+++856:----++10:+name: brokenlink
+++857:----++31:-#     - name: Link Checker
+++858:----++37:-#     - name: Create Issue From File
+++859:----++44:+    - name: Link Checker
+++860:----++48:+    - name: Create Issue From File
+++861:----++72:     # - name: run unit tests
+++862:----++77:-    - name: broken Link checker
+++863:----++79:+    - name: broken Link checker Scholli
+++864:----++132:+  .hit-name {
+++865:----++232:+        <h3 class="hit-name h4">
+++866:----++274:+  result=$(grep -n 'name' "$log")
+++867:----++296:+-# name: brokenlink
+++868:----++297:++name: brokenlink
+++869:----++318:+-#     - name: Link Checker
+++870:----++324:+-#     - name: Create Issue From File
+++871:----++331:++    - name: Link Checker
+++872:----++335:++    - name: Create Issue From File
+++873:----++359:+     # - name: run unit tests
+++874:----++364:+-    - name: broken Link checker
+++875:----++366:++    - name: broken Link checker Scholli
+++893:----++result=$(grep -n 'name' && '+' "$log")
+++920:----++-# name: brokenlink
+++921:----+++name: brokenlink
+++942:----++-#     - name: Link Checker
+++948:----++-#     - name: Create Issue From File
+++955:----+++    - name: Link Checker
+++959:----+++    - name: Create Issue From File
+++983:----++     # - name: run unit tests
+++988:----++-    - name: broken Link checker
+++990:----+++    - name: broken Link checker Scholli
+++1043:----+++  .hit-name {
+++1143:----+++        <h3 class="hit-name h4">
+++1185:----+++  result=$(grep -n 'name' "$log")
+++1207:----+++-# name: brokenlink
+++1208:----++++name: brokenlink
+++1229:----+++-#     - name: Link Checker
+++1235:----+++-#     - name: Create Issue From File
+++1242:----++++    - name: Link Checker
+++1246:----++++    - name: Create Issue From File
+++1270:----+++     # - name: run unit tests
+++1275:----+++-    - name: broken Link checker
+++1277:----++++    - name: broken Link checker Scholli
+++1482:---+-9:-# name: brokenlink
+++1483:---+-10:+name: brokenlink
+++1484:---+-31:-#     - name: Link Checker
+++1485:---+-37:-#     - name: Create Issue From File
+++1486:---+-44:+    - name: Link Checker
+++1487:---+-48:+    - name: Create Issue From File
+++1488:---+-72:+    - name: h2 changes email
+++1489:---+-74:     # - name: run unit tests
+++1490:---+-79:-    - name: broken Link checker
+++1491:---+-81:+    - name: broken Link checker Scholli
+++1492:---+-137:+  .hit-name {
+++1493:---+-237:+        <h3 class="hit-name h4">
+++1494:---+-268:+9:-# name: brokenlink
+++1495:---+-269:+10:+name: brokenlink
+++1496:---+-270:+31:-#     - name: Link Checker
+++1497:---+-271:+37:-#     - name: Create Issue From File
+++1498:---+-272:+44:+    - name: Link Checker
+++1499:---+-273:+48:+    - name: Create Issue From File
+++1500:---+-274:+72:     # - name: run unit tests
+++1501:---+-275:+77:-    - name: broken Link checker
+++1502:---+-276:+79:+    - name: broken Link checker Scholli
+++1503:---+-277:+135:+  .hit-name {
+++1504:---+-278:+235:+        <h3 class="hit-name h4">
+++1505:---+-279:+266:+9:-# name: brokenlink
+++1506:---+-280:+267:+10:+name: brokenlink
+++1507:---+-281:+268:+31:-#     - name: Link Checker
+++1508:---+-282:+269:+37:-#     - name: Create Issue From File
+++1509:---+-283:+270:+44:+    - name: Link Checker
+++1510:---+-284:+271:+48:+    - name: Create Issue From File
+++1511:---+-285:+272:+72:     # - name: run unit tests
+++1512:---+-286:+273:+77:-    - name: broken Link checker
+++1513:---+-287:+274:+79:+    - name: broken Link checker Scholli
+++1514:---+-288:+275:+132:+  .hit-name {
+++1515:---+-289:+276:+232:+        <h3 class="hit-name h4">
+++1516:---+-290:+277:+274:+  result=$(grep -n 'name' "$log")
+++1517:---+-291:+278:+296:+-# name: brokenlink
+++1518:---+-292:+279:+297:++name: brokenlink
+++1519:---+-293:+280:+318:+-#     - name: Link Checker
+++1520:---+-294:+281:+324:+-#     - name: Create Issue From File
+++1521:---+-295:+282:+331:++    - name: Link Checker
+++1522:---+-296:+283:+335:++    - name: Create Issue From File
+++1523:---+-297:+284:+359:+     # - name: run unit tests
+++1524:---+-298:+285:+364:+-    - name: broken Link checker
+++1525:---+-299:+286:+366:++    - name: broken Link checker Scholli
+++1526:---+-300:+304:+result=$(grep -n 'name' && '+' "$log")
+++1527:---+-301:+331:+-# name: brokenlink
+++1528:---+-302:+332:++name: brokenlink
+++1529:---+-303:+353:+-#     - name: Link Checker
+++1530:---+-304:+359:+-#     - name: Create Issue From File
+++1531:---+-305:+366:++    - name: Link Checker
+++1532:---+-306:+370:++    - name: Create Issue From File
+++1533:---+-307:+394:+     # - name: run unit tests
+++1534:---+-308:+399:+-    - name: broken Link checker
+++1535:---+-309:+401:++    - name: broken Link checker Scholli
+++1536:---+-310:+454:++  .hit-name {
+++1537:---+-311:+554:++        <h3 class="hit-name h4">
+++1538:---+-312:+596:++  result=$(grep -n 'name' "$log")
+++1539:---+-313:+618:++-# name: brokenlink
+++1540:---+-314:+619:+++name: brokenlink
+++1541:---+-315:+640:++-#     - name: Link Checker
+++1542:---+-316:+646:++-#     - name: Create Issue From File
+++1543:---+-317:+653:+++    - name: Link Checker
+++1544:---+-318:+657:+++    - name: Create Issue From File
+++1545:---+-319:+681:++     # - name: run unit tests
+++1546:---+-320:+686:++-    - name: broken Link checker
+++1547:---+-321:+688:+++    - name: broken Link checker Scholli
+++1548:---+-340:+result=$(grep -n 'name' "$log")
+++1549:---+-365:+-# name: brokenlink
+++1550:---+-366:++name: brokenlink
+++1551:---+-387:+-#     - name: Link Checker
+++1552:---+-393:+-#     - name: Create Issue From File
+++1553:---+-400:++    - name: Link Checker
+++1554:---+-404:++    - name: Create Issue From File
+++1555:---+-428:+     # - name: run unit tests
+++1556:---+-433:+-    - name: broken Link checker
+++1557:---+-435:++    - name: broken Link checker Scholli
+++1558:---+-491:++  .hit-name {
+++1559:---+-591:++        <h3 class="hit-name h4">
+++1560:---+-622:++9:-# name: brokenlink
+++1561:---+-623:++10:+name: brokenlink
+++1562:---+-624:++31:-#     - name: Link Checker
+++1563:---+-625:++37:-#     - name: Create Issue From File
+++1564:---+-626:++44:+    - name: Link Checker
+++1565:---+-627:++48:+    - name: Create Issue From File
+++1566:---+-628:++72:     # - name: run unit tests
+++1567:---+-629:++77:-    - name: broken Link checker
+++1568:---+-630:++79:+    - name: broken Link checker Scholli
+++1569:---+-631:++132:+  .hit-name {
+++1570:---+-632:++232:+        <h3 class="hit-name h4">
+++1571:---+-633:++274:+  result=$(grep -n 'name' "$log")
+++1572:---+-634:++296:+-# name: brokenlink
+++1573:---+-635:++297:++name: brokenlink
+++1574:---+-636:++318:+-#     - name: Link Checker
+++1575:---+-637:++324:+-#     - name: Create Issue From File
+++1576:---+-638:++331:++    - name: Link Checker
+++1577:---+-639:++335:++    - name: Create Issue From File
+++1578:---+-640:++359:+     # - name: run unit tests
+++1579:---+-641:++364:+-    - name: broken Link checker
+++1580:---+-642:++366:++    - name: broken Link checker Scholli
+++1581:---+-660:++result=$(grep -n 'name' && '+'
+ diff --git a/logFile.sh b/logFile.sh
+-index 6204d82..744d575 100644
++index 744d575..ee73ea8 100644
+ --- a/logFile.sh
+ +++ b/logFile.sh
+-@@ -15,10 +15,11 @@ result=$(grep -n 'name' "$log")
+- size=${#result}
+-   if [ $size > 0 ]
+-   then
+--    # append data to email
+--    printf '%s\n' "${result[@]}" > $email
+--    # send mail to email address
+--    mail -s "H2 changes have been made" "christina.hastenrath@getpostman.com" < $email
+-+    # # append data to email
+-+    # printf '%s\n' "${result[@]}" > $email
+-+    # # send mail to email address
+-+    # mail -s "H2 changes have been made" "christina.hastenrath@getpostman.com" < $email
+-+    node email.js
+-   else
+-     echo no data
+-   fi
+-diff --git a/log_file.txt b/log_file.txt
+-index 6d6a86c..e1f1fd6 100644
 ---- a/log_file.txt
 -+++ b/log_file.txt
--@@ -1,1497 +1 @@
---Log File - diff --git a/email.txt b/email.txt
---index 6bdc45f..8e74570 100644
------ a/email.txt
---+++ b/email.txt
---@@ -1,121 +1 @@
----9:-# name: brokenlink
----10:+name: brokenlink
----31:-#     - name: Link Checker
----37:-#     - name: Create Issue From File
----44:+    - name: Link Checker
----48:+    - name: Create Issue From File
----72:+    - name: h2 changes email
----74:     # - name: run unit tests
----79:-    - name: broken Link checker
----81:+    - name: broken Link checker Scholli
----137:+  .hit-name {
----237:+        <h3 class="hit-name h4">
----268:+9:-# name: brokenlink
----269:+10:+name: brokenlink
----270:+31:-#     - name: Link Checker
----271:+37:-#     - name: Create Issue From File
----272:+44:+    - name: Link Checker
----273:+48:+    - name: Create Issue From File
----274:+72:     # - name: run unit tests
----275:+77:-    - name: broken Link checker
----276:+79:+    - name: broken Link checker Scholli
----277:+135:+  .hit-name {
----278:+235:+        <h3 class="hit-name h4">
----279:+266:+9:-# name: brokenlink
----280:+267:+10:+name: brokenlink
----281:+268:+31:-#     - name: Link Checker
----282:+269:+37:-#     - name: Create Issue From File
----283:+270:+44:+    - name: Link Checker
----284:+271:+48:+    - name: Create Issue From File
----285:+272:+72:     # - name: run unit tests
----286:+273:+77:-    - name: broken Link checker
----287:+274:+79:+    - name: broken Link checker Scholli
----288:+275:+132:+  .hit-name {
----289:+276:+232:+        <h3 class="hit-name h4">
----290:+277:+274:+  result=$(grep -n 'name' "$log")
----291:+278:+296:+-# name: brokenlink
----292:+279:+297:++name: brokenlink
----293:+280:+318:+-#     - name: Link Checker
----294:+281:+324:+-#     - name: Create Issue From File
----295:+282:+331:++    - name: Link Checker
----296:+283:+335:++    - name: Create Issue From File
----297:+284:+359:+     # - name: run unit tests
----298:+285:+364:+-    - name: broken Link checker
----299:+286:+366:++    - name: broken Link checker Scholli
----300:+304:+result=$(grep -n 'name' && '+' "$log")
----301:+331:+-# name: brokenlink
----302:+332:++name: brokenlink
----303:+353:+-#     - name: Link Checker
----304:+359:+-#     - name: Create Issue From File
----305:+366:++    - name: Link Checker
----306:+370:++    - name: Create Issue From File
----307:+394:+     # - name: run unit tests
----308:+399:+-    - name: broken Link checker
----309:+401:++    - name: broken Link checker Scholli
----310:+454:++  .hit-name {
----311:+554:++        <h3 class="hit-name h4">
----312:+596:++  result=$(grep -n 'name' "$log")
----313:+618:++-# name: brokenlink
----314:+619:+++name: brokenlink
----315:+640:++-#     - name: Link Checker
----316:+646:++-#     - name: Create Issue From File
----317:+653:+++    - name: Link Checker
----318:+657:+++    - name: Create Issue From File
----319:+681:++     # - name: run unit tests
----320:+686:++-    - name: broken Link checker
----321:+688:+++    - name: broken Link checker Scholli
----340:+result=$(grep -n 'name' "$log")
----365:+-# name: brokenlink
----366:++name: brokenlink
----387:+-#     - name: Link Checker
----393:+-#     - name: Create Issue From File
----400:++    - name: Link Checker
----404:++    - name: Create Issue From File
----428:+     # - name: run unit tests
----433:+-    - name: broken Link checker
----435:++    - name: broken Link checker Scholli
----491:++  .hit-name {
----591:++        <h3 class="hit-name h4">
----622:++9:-# name: brokenlink
----623:++10:+name: brokenlink
----624:++31:-#     - name: Link Checker
----625:++37:-#     - name: Create Issue From File
----626:++44:+    - name: Link Checker
----627:++48:+    - name: Create Issue From File
----628:++72:     # - name: run unit tests
----629:++77:-    - name: broken Link checker
----630:++79:+    - name: broken Link checker Scholli
----631:++132:+  .hit-name {
----632:++232:+        <h3 class="hit-name h4">
----633:++274:+  result=$(grep -n 'name' "$log")
----634:++296:+-# name: brokenlink
----635:++297:++name: brokenlink
----636:++318:+-#     - name: Link Checker
----637:++324:+-#     - name: Create Issue From File
----638:++331:++    - name: Link Checker
----639:++335:++    - name: Create Issue From File
----640:++359:+     # - name: run unit tests
----641:++364:+-    - name: broken Link checker
----642:++366:++    - name: broken Link checker Scholli
----660:++result=$(grep -n 'name' && '+' "$log")
----687:++-# name: brokenlink
----688:+++name: brokenlink
----709:++-#     - name: Link Checker
----715:++-#     - name: Create Issue From File
----722:+++    - name: Link Checker
----726:+++    - name: Create Issue From File
----750:++     # - name: run unit tests
----755:++-    - name: broken Link checker
----757:+++    - name: broken Link checker Scholli
----810:+++  .hit-name {
----910:+++        <h3 class="hit-name h4">
----952:+++  result=$(grep -n 'name' "$log")
----974:+++-# name: brokenlink
----975:++++name: brokenlink
----996:+++-#     - name: Link Checker
----1002:+++-#     - name: Create Issue From File
----1009:++++    - name: Link Checker
----1013:++++    - name: Create Issue From File
----1037:+++     # - name: run unit tests
----1042:+++-    - name: broken Link checker
----1044:++++    - name: broken Link checker Scholli
---+262:+result=$(grep -n 'cag' "$log")
---diff --git a/logFile.sh b/logFile.sh
---index ff7baba..6204d82 100644
------ a/logFile.sh
---+++ b/logFile.sh
---@@ -7,7 +7,7 @@ email=email.txt
--- printf "Log File - " > $log
---  
--- # append git diff to log file
----git diff master origin/branch >> $log 
---+git diff branch >> $log 
--- # git diff master...branch >> $log 
--- 
--- # find H2 tag in diff
---diff --git a/log_file.txt b/log_file.txt
---index efdabb3..7c42310 100644
+-@@ -1,1504 +1 @@
+--Log File - diff --git a/log_file.txt b/log_file.txt
+--index 25a55c9..e1f1fd6 100644
 ----- a/log_file.txt
 --+++ b/log_file.txt
---@@ -1,1247 +1,105 @@
----Log File - diff --git a/.github/brokenlink.yml b/.github/brokenlink.yml
----index 1350eee..3c248a7 100644
------- a/.github/brokenlink.yml
----+++ b/.github/brokenlink.yml
----@@ -1,29 +1,33 @@
---- # I am not sure if this actually checks the right links
----+# This link checker does not count 404 pages as broken links. This is how Lichen works, where it is build on. Therefore this is not suitable for our usecase.
---- 
-----# name: brokenlink
----+name: brokenlink
---- 
-----# on: 
-----#   schedule:
-----#   - cron: '*/13 * * * *'
----+on: 
----+  schedule:
----+  # - cron: '*/13 * * * *'
---- 
-----# jobs: 
-----#   linkChecker:
-----#     runs-on: ubuntu-18.04
----+jobs: 
----+  linkChecker:
----+    runs-on: ubuntu-18.04
---- 
-----#     steps:
-----#     - uses: actions/checkout@v1
----+    steps:
----+    - uses: actions/checkout@v1
---- 
-----#     - name: Link Checker
-----#       uses: peter-evans/link-checker@v1.0.1
-----#       with:
-----#         args: -v -r ./v6
-----       
-----#     # issue is created and assigned to me, but the error is not logged in the description
-----#     - name: Create Issue From File
-----#       uses: peter-evans/create-issue-from-file@v1.0.1
-----#       env:
-----#         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-----#         ISSUE_TITLE: broken link or image found
-----#         ISSUE_CONTENT_FILEPATH: ./example-content/output.md
-----#         ISSUE_ASSIGNEES: ch264
----+    - name: Link Checker
----+      uses: peter-evans/link-checker@v1.0.1
----+      with:
----+        args: -v -r ./v6
----+    - name: Create Issue From File
----+      uses: peter-evans/create-issue-from-file@v1.0.1
----+      env:
----+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
----+        ISSUE_TITLE: Link Checker Report
----+        ISSUE_CONTENT_FILEPATH: ./link-checker/out.md
----+        ISSUE_LABELS: report, automated issue
----+
----+    # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
----+    #     ISSUE_TITLE: broken link or image found
----+    #     ISSUE_CONTENT_FILEPATH: ./link-checker/out.md
----+    #     ISSUE_ASSIGNEES: ch264
----     
----diff --git a/.github/workflows/ci.yml b/.github/workflows/ci.yml
----index 168fe91..63ef26d 100644
------- a/.github/workflows/ci.yml
----+++ b/.github/workflows/ci.yml
----@@ -22,15 +22,14 @@ jobs:
----         node_modules/.bin/markdownlint ./ --ignore node_modules --ignore v5 
----         # lint only files that changed on branch
----         # git ls-files -m > temp && while read p; do node_modules/.bin/markdownlint "$p"; done < temp | rm temp\n
-----
-----
-----        
----+    - name: h2 changes email
----+      run: bash logFile.sh
----     # - name: run unit tests
----     #   run: |
----     #     npm run test:jest
---- 
-----# this link checker works but runs longer than 20min
-----    - name: broken Link checker
----+# this link checker works but runs longer than 2hours
----+    - name: broken Link checker Scholli
----       uses: ScholliYT/Broken-Links-Crawler-Action@v2.0.0
----       with:
----         website_url: 'https://learning.getpostman.com/'
----diff --git a/0 b/0
----new file mode 100644
----index 0000000..e69de29
----diff --git a/aloglia.ejs b/aloglia.ejs
----new file mode 100644
----index 0000000..a6ed32a
------- /dev/null
----+++ b/aloglia.ejs
----@@ -0,0 +1,167 @@
----+<!-- Algolia Instantsearch -->
----+<!-- <div class="ais-SearchBox">
----+  <form class="ais-SearchBox-form">
----+    <input id="searchbox" class="ais-SearchBox-input"/>
----+    <button class="ais-SearchBox-submit" type="submit" title="Submit the search query."></button>
----+    <button class="ais-SearchBox-reset" type="reset" title="Clear the search query." hidden></button>
----+    <span class="ais-SearchBox-loadingIndicator" hidden>
----+    </span>
----+  </form>
----+  <div id="clear-refinements"></div>
----+  <div id="hits" style='color: white'></div>
----+  <div id="pagination"></div>
----+  <div id="brand-list"></div>
----+</div> -->
----+
----+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/selectize@0.12.6/dist/css/selectize.css"> -->
----+
----+<div class="container" style='background-color: white'>
----+  <h3>InstantSearch.js - Results page with an autocomplete</h3>
----+  <input id="autocomplete" style='border: 3px solid red'></input >
----+  <div id="hits" style='border: 3px solid green'></div>
----+</div>
----+
----+<style>
----+  h1 {
----+    margin-bottom: 1rem;
----+  }
----+
----+  em {
----+    background: cyan;
----+    font-style: normal;
----+  }
----+
----+  .container {
----+    max-width: 960px;
----+    margin: 0 auto;
----+    padding: 1em;
----+  }
----+
----+  .ais-hits {
----+    margin-top: 1em;
----+  }
----+
----+  .hit-name {
----+    margin-bottom: 0.5em;
----+  }
----+
----+  .hit-description {
----+    color: #888;
----+    font-size: 14px;
----+    margin-bottom: 0.5em;
----+  }
----+</style>
----+
----+
----+<script src="https://cdn.jsdelivr.net/npm/selectize@0.12.6/dist/js/standalone/selectize.min.js"></script>
----+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@3.30.0/dist/algoliasearchLite.min.js"></script>
----+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@^4.0.0"></script>
----+
----+
----+<script>
----+  window.setTimeout( function() {
----+  const searchClient = algoliasearch(
----+    '4A5N71XYH0',
----+    '4495d2606ed017c1c724d6210a717cc7'
----+  );
----+
----+  const autocomplete = instantsearch.connectors.connectAutocomplete(
----+    ({ indices, refine, widgetParams }, isFirstRendering) => {
----+      const { container, onSelectChange } = widgetParams;
----+
----+      if (isFirstRendering) {
----+        container.html('<select id="ais-autocomplete"></select>');
----+
----+        container.find('select').selectize({
----+          options: [],
----+          valueField: 'title',
----+          labelField: 'description',
----+          highlight: false,
----+          onType: refine,
----+          onBlur() {
----+            refine(this.getValue());
----+          },
----+          score() {
----+            return function() {
----+              return 1;
----+            };
----+          },
----+          onChange(value) {
----+            onSelectChange(value);
----+            refine(value);
----+          },
----+        });
----+
----+        return;
----+      }
----+
----+      const [select] = container.find('select');
----+
----+      indices.forEach(index => {
----+        select.selectize.clearOptions();
----+        index.results.hits.forEach(h => select.selectize.addOption(h));
----+        select.selectize.refreshOptions(select.selectize.isOpen);
----+      });
----+    }
----+  );
----+
----+  const suggestions = instantsearch({
----+    indexName: 'web',
----+    searchClient,
----+  });
----+
----+  suggestions.addWidget(
----+    instantsearch.widgets.configure({
----+      hitsPerPage: 5,
----+    })
----+  );
----+
----+  suggestions.addWidget(
----+    autocomplete({
----+      container: $('#autocomplete'),
----+      onSelectChange(value) {
----+        search.helper.setQuery(value).search();
----+      },
----+    })
----+  );
----+
----+  const search = instantsearch({
----+    indexName: 'web',
----+    searchClient,
----+  });
----+
----+  search.addWidget(
----+    instantsearch.widgets.configure({
----+      hitsPerPage: 10,
----+    })
----+  );
----+
----+  search.addWidget(
----+    instantsearch.widgets.hits({
----+      container: '#hits',
----+      templates: {
----+        item: `
----+        <h3 class="hit-name h4">
----+          {{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}
----+        </h3>
----+        
----+        <p class="hit-description mb-0">
----+          {{#helpers.highlight}}{ "attribute": "description" }{{/helpers.highlight}}
----+        </p>
----+
----+        <div>
----+          <a class="v5_link" href="{{{url}}}">
----+              Go to: {{{title}}}
----+          </a>
----+        </div>  
----+        `,
----+      },
----+    })
----+  );
----+
----+  suggestions.start();
----+  search.start();
----+
----+}, 3000) // setTimeout finish
----+
----+</script>
----\ No newline at end of file
----diff --git a/email.txt b/email.txt
----new file mode 100644
----index 0000000..03953fe
------- /dev/null
---+Log File - diff --git a/email.txt b/email.txt
---+index 6bdc45f..8e74570 100644
---+--- a/email.txt
--- +++ b/email.txt
----@@ -0,0 +1,54 @@
----+9:-# name: brokenlink
----+10:+name: brokenlink
----+31:-#     - name: Link Checker
----+37:-#     - name: Create Issue From File
----+44:+    - name: Link Checker
----+48:+    - name: Create Issue From File
----+72:     # - name: run unit tests
----+77:-    - name: broken Link checker
----+79:+    - name: broken Link checker Scholli
----+135:+  .hit-name {
----+235:+        <h3 class="hit-name h4">
----+266:+9:-# name: brokenlink
----+267:+10:+name: brokenlink
----+268:+31:-#     - name: Link Checker
----+269:+37:-#     - name: Create Issue From File
----+270:+44:+    - name: Link Checker
----+271:+48:+    - name: Create Issue From File
----+272:+72:     # - name: run unit tests
----+273:+77:-    - name: broken Link checker
----+274:+79:+    - name: broken Link checker Scholli
----+275:+132:+  .hit-name {
----+276:+232:+        <h3 class="hit-name h4">
----+277:+274:+  result=$(grep -n 'name' "$log")
----+278:+296:+-# name: brokenlink
----+279:+297:++name: brokenlink
----+280:+318:+-#     - name: Link Checker
----+281:+324:+-#     - name: Create Issue From File
----+282:+331:++    - name: Link Checker
----+283:+335:++    - name: Create Issue From File
----+284:+359:+     # - name: run unit tests
----+285:+364:+-    - name: broken Link checker
----+286:+366:++    - name: broken Link checker Scholli
----+304:+result=$(grep -n 'name' && '+' "$log")
----+331:+-# name: brokenlink
----+332:++name: brokenlink
----+353:+-#     - name: Link Checker
----+359:+-#     - name: Create Issue From File
----+366:++    - name: Link Checker
----+370:++    - name: Create Issue From File
----+394:+     # - name: run unit tests
----+399:+-    - name: broken Link checker
----+401:++    - name: broken Link checker Scholli
----+454:++  .hit-name {
----+554:++        <h3 class="hit-name h4">
----+596:++  result=$(grep -n 'name' "$log")
----+618:++-# name: brokenlink
----+619:+++name: brokenlink
----+640:++-#     - name: Link Checker
----+646:++-#     - name: Create Issue From File
----+653:+++    - name: Link Checker
----+657:+++    - name: Create Issue From File
----+681:++     # - name: run unit tests
----+686:++-    - name: broken Link checker
----+688:+++    - name: broken Link checker Scholli
+--@@ -1,1497 +1 @@
+---Log File - diff --git a/email.txt b/email.txt
+---index 6bdc45f..8e74570 100644
+------ a/email.txt
+---+++ b/email.txt
+---@@ -1,121 +1 @@
+----9:-# name: brokenlink
+----10:+name: brokenlink
+----31:-#     - name: Link Checker
+----37:-#     - name: Create Issue From File
+----44:+    - name: Link Checker
+----48:+    - name: Create Issue From File
+----72:+    - name: h2 changes email
+----74:     # - name: run unit tests
+----79:-    - name: broken Link checker
+----81:+    - name: broken Link checker Scholli
+----137:+  .hit-name {
+----237:+        <h3 class="hit-name h4">
+----268:+9:-# name: brokenlink
+----269:+10:+name: brokenlink
+----270:+31:-#     - name: Link Checker
+----271:+37:-#     - name: Create Issue From File
+----272:+44:+    - name: Link Checker
+----273:+48:+    - name: Create Issue From File
+----274:+72:     # - name: run unit tests
+----275:+77:-    - name: broken Link checker
+----276:+79:+    - name: broken Link checker Scholli
+----277:+135:+  .hit-name {
+----278:+235:+        <h3 class="hit-name h4">
+----279:+266:+9:-# name: brokenlink
+----280:+267:+10:+name: brokenlink
+----281:+268:+31:-#     - name: Link Checker
+----282:+269:+37:-#     - name: Create Issue From File
+----283:+270:+44:+    - name: Link Checker
+----284:+271:+48:+    - name: Create Issue From File
+----285:+272:+72:     # - name: run unit tests
+----286:+273:+77:-    - name: broken Link checker
+----287:+274:+79:+    - name: broken Link checker Scholli
+----288:+275:+132:+  .hit-name {
+----289:+276:+232:+        <h3 class="hit-name h4">
+----290:+277:+274:+  result=$(grep -n 'name' "$log")
+----291:+278:+296:+-# name: brokenlink
+----292:+279:+297:++name: brokenlink
+----293:+280:+318:+-#     - name: Link Checker
+----294:+281:+324:+-#     - name: Create Issue From File
+----295:+282:+331:++    - name: Link Checker
+----296:+283:+335:++    - name: Create Issue From File
+----297:+284:+359:+     # - name: run unit tests
+----298:+285:+364:+-    - name: broken Link checker
+----299:+286:+366:++    - name: broken Link checker Scholli
+----300:+304:+result=$(grep -n 'name' && '+' "$log")
+----301:+331:+-# name: brokenlink
+----302:+332:++name: brokenlink
+----303:+353:+-#     - name: Link Checker
+----304:+359:+-#     - name: Create Issue From File
+----305:+366:++    - name: Link Checker
+----306:+370:++    - name: Create Issue From File
+----307:+394:+     # - name: run unit tests
+----308:+399:+-    - name: broken Link checker
+----309:+401:++    - name: broken Link checker Scholli
+----310:+454:++  .hit-name {
+----311:+554:++        <h3 class="hit-name h4">
+----312:+596:++  result=$(grep -n 'name' "$log")
+----313:+618:++-# name: brokenlink
+----314:+619:+++name: brokenlink
+----315:+640:++-#     - name: Link Checker
+----316:+646:++-#     - name: Create Issue From File
+----317:+653:+++    - name: Link Checker
+----318:+657:+++    - name: Create Issue From File
+----319:+681:++     # - name: run unit tests
+----320:+686:++-    - name: broken Link checker
+----321:+688:+++    - name: broken Link checker Scholli
+----340:+result=$(grep -n 'name' "$log")
+----365:+-# name: brokenlink
+----366:++name: brokenlink
+----387:+-#     - name: Link Checker
+----393:+-#     - name: Create Issue From File
+----400:++    - name: Link Checker
+----404:++    - name: Create Issue From File
+----428:+     # - name: run unit tests
+----433:+-    - name: broken Link checker
+----435:++    - name: broken Link checker Scholli
+----491:++  .hit-name {
+----591:++        <h3 class="hit-name h4">
+----622:++9:-# name: brokenlink
+----623:++10:+name: brokenlink
+----624:++31:-#     - name: Link Checker
+----625:++37:-#     - name: Create Issue From File
+----626:++44:+    - name: Link Checker
+----627:++48:+    - name: Create Issue From File
+----628:++72:     # - name: run unit tests
+----629:++77:-    - name: broken Link checker
+----630:++79:+    - name: broken Link checker Scholli
+----631:++132:+  .hit-name {
+----632:++232:+        <h3 class="hit-name h4">
+----633:++274:+  result=$(grep -n 'name' "$log")
+----634:++296:+-# name: brokenlink
+----635:++297:++name: brokenlink
+----636:++318:+-#     - name: Link Checker
+----637:++324:+-#     - name: Create Issue From File
+----638:++331:++    - name: Link Checker
+----639:++335:++    - name: Create Issue From File
+----640:++359:+     # - name: run unit tests
+----641:++364:+-    - name: broken Link checker
+----642:++366:++    - name: broken Link checker Scholli
+----660:++result=$(grep -n 'name' && '+' "$log")
+----687:++-# name: brokenlink
+----688:+++name: brokenlink
+----709:++-#     - name: Link Checker
+----715:++-#     - name: Create Issue From File
+----722:+++    - name: Link Checker
+----726:+++    - name: Create Issue From File
+----750:++     # - name: run unit tests
+----755:++-    - name: broken Link checker
+----757:+++    - name: broken Link checker Scholli
+----810:+++  .hit-name {
+----910:+++        <h3 class="hit-name h4">
+----952:+++  result=$(grep -n 'name' "$log")
+----974:+++-# name: brokenlink
+----975:++++name: brokenlink
+----996:+++-#     - name: Link Checker
+----1002:+++-#     - name: Create Issue From File
+----1009:++++    - name: Link Checker
+----1013:++++    - name: Create Issue From File
+----1037:+++     # - name: run unit tests
+----1042:+++-    - name: broken Link checker
+----1044:++++    - name: broken Link checker Scholli
+---+262:+result=$(grep -n 'cag' "$log")
 ---diff --git a/logFile.sh b/logFile.sh
----new file mode 100644
----index 0000000..4cc644a
------- /dev/null
+---index ff7baba..6204d82 100644
+------ a/logFile.sh
 ---+++ b/logFile.sh
----@@ -0,0 +1,23 @@
----+#!/bin/bash
----+
----+log=log_file.txt
----+email=email.txt
----+ 
----+# create log file or overrite if already present
----+printf "Log File - " > $log
----+ 
----+# append git diff to log file
----+git diff master...branch >> $log 
----+
----+# find H2 tag in diff
----+result=$(grep -n 'name' "$log")
----+size=${#result}
----+  if [ $size > 0 ]
----+  then
----+    # append data to email
----+    printf '%s\n' "${result[@]}" > $email
----+    # send mail to email address
----+    mail -s "H2 changes have been made" "christina.hastenrath@getpostman.com" < $email
----+  else
----+    echo no data
----+  fi
+---@@ -7,7 +7,7 @@ email=email.txt
+--- printf "Log File - " > $log
+---  
+--- # append git diff to log file
+----git diff master origin/branch >> $log 
+---+git diff branch >> $log 
+--- # git diff master...branch >> $log 
+--- 
+--- # find H2 tag in diff
 ---diff --git a/log_file.txt b/log_file.txt
----new file mode 100644
----index 0000000..0e4cbe9
------- /dev/null
+---index efdabb3..7c42310 100644
+------ a/log_file.txt
 ---+++ b/log_file.txt
----@@ -0,0 +1,841 @@
----+Log File - diff --git a/.github/brokenlink.yml b/.github/brokenlink.yml
----+index 1350eee..3c248a7 100644
----+--- a/.github/brokenlink.yml
----++++ b/.github/brokenlink.yml
----+@@ -1,29 +1,33 @@
----+ # I am not sure if this actually checks the right links
----++# This link checker does not count 404 pages as broken links. This is how Lichen works, where it is build on. Therefore this is not suitable for our usecase.
----+ 
----+-# name: brokenlink
----++name: brokenlink
----+ 
----+-# on: 
----+-#   schedule:
----+-#   - cron: '*/13 * * * *'
----++on: 
----++  schedule:
----++  # - cron: '*/13 * * * *'
----+ 
----+-# jobs: 
----+-#   linkChecker:
----+-#     runs-on: ubuntu-18.04
----++jobs: 
----++  linkChecker:
----++    runs-on: ubuntu-18.04
----+ 
----+-#     steps:
----+-#     - uses: actions/checkout@v1
----++    steps:
----++    - uses: actions/checkout@v1
----+ 
----+-#     - name: Link Checker
----+-#       uses: peter-evans/link-checker@v1.0.1
----+-#       with:
----+-#         args: -v -r ./v6
----+-       
----+-#     # issue is created and assigned to me, but the error is not logged in the description
----+-#     - name: Create Issue From File
----+-#       uses: peter-evans/create-issue-from-file@v1.0.1
----+-#       env:
----+-#         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
----+-#         ISSUE_TITLE: broken link or image found
----+-#         ISSUE_CONTENT_FILEPATH: ./example-content/output.md
----+-#         ISSUE_ASSIGNEES: ch264
----++    - name: Link Checker
----++      uses: peter-evans/link-checker@v1.0.1
----++      with:
----++        args: -v -r ./v6
----++    - name: Create Issue From File
----++      uses: peter-evans/create-issue-from-file@v1.0.1
----++      env:
----++        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
----++        ISSUE_TITLE: Link Checker Report
----++        ISSUE_CONTENT_FILEPATH: ./link-checker/out.md
----++        ISSUE_LABELS: report, automated issue
----++
----++    # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
----++    #     ISSUE_TITLE: broken link or image found
----++    #     ISSUE_CONTENT_FILEPATH: ./link-checker/out.md
----++    #     ISSUE_ASSIGNEES: ch264
----+     
----+diff --git a/.github/workflows/ci.yml b/.github/workflows/ci.yml
----+index 168fe91..bb92b1a 100644
----+--- a/.github/workflows/ci.yml
----++++ b/.github/workflows/ci.yml
----+@@ -22,15 +22,13 @@ jobs:
----+         node_modules/.bin/markdownlint ./ --ignore node_modules --ignore v5 
----+         # lint only files that changed on branch
----+         # git ls-files -m > temp && while read p; do node_modules/.bin/markdownlint "$p"; done < temp | rm temp\n
----+-
----+-
----+         
----+     # - name: run unit tests
----+     #   run: |
----+     #     npm run test:jest
----+ 
----+-# this link checker works but runs longer than 20min
----+-    - name: broken Link checker
----++# this link checker works but runs longer than 2hours
----++    - name: broken Link checker Scholli
----+       uses: ScholliYT/Broken-Links-Crawler-Action@v2.0.0
----+       with:
----+         website_url: 'https://learning.getpostman.com/'
----+diff --git a/0 b/0
----+new file mode 100644
----+index 0000000..e69de29
----+diff --git a/aloglia.ejs b/aloglia.ejs
----+new file mode 100644
----+index 0000000..a6ed32a
----+--- /dev/null
----++++ b/aloglia.ejs
----+@@ -0,0 +1,167 @@
----++<!-- Algolia Instantsearch -->
----++<!-- <div class="ais-SearchBox">
----++  <form class="ais-SearchBox-form">
----++    <input id="searchbox" class="ais-SearchBox-input"/>
----++    <button class="ais-SearchBox-submit" type="submit" title="Submit the search query."></button>
----++    <button class="ais-SearchBox-reset" type="reset" title="Clear the search query." hidden></button>
----++    <span class="ais-SearchBox-loadingIndicator" hidden>
----++    </span>
----++  </form>
----++  <div id="clear-refinements"></div>
----++  <div id="hits" style='color: white'></div>
----++  <div id="pagination"></div>
----++  <div id="brand-list"></div>
----++</div> -->
----++
----++<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/selectize@0.12.6/dist/css/selectize.css"> -->
----++
----++<div class="container" style='background-color: white'>
----++  <h3>InstantSearch.js - Results page with an autocomplete</h3>
----++  <input id="autocomplete" style='border: 3px solid red'></input >
----++  <div id="hits" style='border: 3px solid green'></div>
----++</div>
----++
----++<style>
----++  h1 {
----++    margin-bottom: 1rem;
----++  }
----++
----++  em {
----++    background: cyan;
----++    font-style: normal;
----++  }
----++
----++  .container {
----++    max-width: 960px;
----++    margin: 0 auto;
----++    padding: 1em;
----++  }
----++
----++  .ais-hits {
----++    margin-top: 1em;
----++  }
----++
----++  .hit-name {
----++    margin-bottom: 0.5em;
----++  }
----++
----++  .hit-description {
----++    color: #888;
----++    font-size: 14px;
----++    margin-bottom: 0.5em;
----++  }
----++</style>
----++
----++
----++<script src="https://cdn.jsdelivr.net/npm/selectize@0.12.6/dist/js/standalone/selectize.min.js"></script>
----++<script src="https://cdn.jsdelivr.net/npm/algoliasearch@3.30.0/dist/algoliasearchLite.min.js"></script>
----++<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@^4.0.0"></script>
----++
----++
----++<script>
----++  window.setTimeout( function() {
----++  const searchClient = algoliasearch(
----++    '4A5N71XYH0',
----++    '4495d2606ed017c1c724d6210a717cc7'
----++  );
----++
----++  const autocomplete = instantsearch.connectors.connectAutocomplete(
----++    ({ indices, refine, widgetParams }, isFirstRendering) => {
----++      const { container, onSelectChange } = widgetParams;
----++
----++      if (isFirstRendering) {
----++        container.html('<select id="ais-autocomplete"></select>');
----++
----++        container.find('select').selectize({
----++          options: [],
----++          valueField: 'title',
----++          labelField: 'description',
----++          highlight: false,
----++          onType: refine,
----++          onBlur() {
----++            refine(this.getValue());
----++          },
----++          score() {
----++            return function() {
----++              return 1;
----++            };
----++          },
----++          onChange(value) {
----++            onSelectChange(value);
----++            refine(value);
----++          },
----++        });
----++
----++        return;
----++      }
----++
----++      const [select] = container.find('select');
----++
----++      indices.forEach(index => {
----++        select.selectize.clearOptions();
----++        index.results.hits.forEach(h => select.selectize.addOption(h));
----++        select.selectize.refreshOptions(select.selectize.isOpen);
----++      });
----++    }
----++  );
----++
----++  const suggestions = instantsearch({
----++    indexName: 'web',
----++    searchClient,
----++  });
----++
----++  suggestions.addWidget(
----++    instantsearch.widgets.configure({
----++      hitsPerPage: 5,
----++    })
----++  );
----++
----++  suggestions.addWidget(
----++    autocomplete({
----++      container: $('#autocomplete'),
----++      onSelectChange(value) {
----++        search.helper.setQuery(value).search();
----++      },
----++    })
----++  );
----++
----++  const search = instantsearch({
----++    indexName: 'web',
----++    searchClient,
----++  });
----++
----++  search.addWidget(
----++    instantsearch.widgets.configure({
----++      hitsPerPage: 10,
----++    })
----++  );
----++
----++  search.addWidget(
----++    instantsearch.widgets.hits({
----++      container: '#hits',
----++      templates: {
----++        item: `
----++        <h3 class="hit-name h4">
----++          {{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}
----++        </h3>
----++        
----++        <p class="hit-description mb-0">
----++          {{#helpers.highlight}}{ "attribute": "description" }{{/helpers.highlight}}
----++        </p>
----++
----++        <div>
----++          <a class="v5_link" href="{{{url}}}">
----++              Go to: {{{title}}}
----++          </a>
----++        </div>  
----++        `,
----++      },
----++    })
----++  );
----++
----++  suggestions.start();
----++  search.start();
----++
----++}, 3000) // setTimeout finish
----++
----++</script>
----+\ No newline at end of file
----+diff --git a/email.txt b/email.txt
----+new file mode 100644
----+index 0000000..ef02232
----+--- /dev/null
----++++ b/email.txt
----+@@ -0,0 +1,21 @@
----++9:-# name: brokenlink
----++10:+name: brokenlink
----++31:-#     - name: Link Checker
----++37:-#     - name: Create Issue From File
----++44:+    - name: Link Checker
----++48:+    - name: Create Issue From File
----++72:     # - name: run unit tests
----++77:-    - name: broken Link checker
----++79:+    - name: broken Link checker Scholli
----++132:+  .hit-name {
----++232:+        <h3 class="hit-name h4">
----++274:+  result=$(grep -n 'name' "$log")
----++296:+-# name: brokenlink
----++297:++name: brokenlink
----++318:+-#     - name: Link Checker
----++324:+-#     - name: Create Issue From File
----++331:++    - name: Link Checker
----++335:++    - name: Create Issue From File
----++359:+     # - name: run unit tests
----++364:+-    - name: broken Link checker
----++366:++    - name: broken Link checker Scholli
----+diff --git a/logFile.sh b/logFile.sh
----+new file mode 100644
----+index 0000000..0454d3b
----+--- /dev/null
----++++ b/logFile.sh
----+@@ -0,0 +1,24 @@
----++#!/bin/bash
----++
----++log=log_file.txt
----++email=email.txt
----++ 
----++# create log file or overrite if already present
----++printf "Log File - " > $log
----++ 
----++# append git diff to log file
----++git diff master...branch >> $log 
----++
----++result=$(grep -n 'name' && '+' "$log")
----++size=${#result}
----++ 
----++  if [ $size > 0 ]
----++  then
----++  # append data to email file
----++  printf '%s\n' "${result[@]}" > $email
----++  # email the file to an email address
----++	mail -s "H2 changes" "christina.hastenrath@getpostman.com" < $email
----++  else
----++    echo no H2 diffs between master and dev
----++	fi
----++
----+diff --git a/log_file.txt b/log_file.txt
----+new file mode 100644
----+index 0000000..b926d6a
----+--- /dev/null
----++++ b/log_file.txt
----+@@ -0,0 +1,469 @@
----++Log File - diff --git a/.github/brokenlink.yml b/.github/brokenlink.yml
----++index 1350eee..3c248a7 100644
----++--- a/.github/brokenlink.yml
----+++++ b/.github/brokenlink.yml
----++@@ -1,29 +1,33 @@
----++ # I am not sure if this actually checks the right links
----+++# This link checker does not count 404 pages as broken links. This is how Lichen works, where it is build on. Therefore this is not suitable for our usecase.
----++ 
----++-# name: brokenlink
----+++name: brokenlink
----++ 
----++-# on: 
----++-#   schedule:
----++-#   - cron: '*/13 * * * *'
----+++on: 
----+++  schedule:
----+++  # - cron: '*/13 * * * *'
----++ 
----++-# jobs: 
----++-#   linkChecker:
----++-#     runs-on: ubuntu-18.04
----+++jobs: 
----+++  linkChecker:
----+++    runs-on: ubuntu-18.04
----++ 
----++-#     steps:
----++-#     - uses: actions/checkout@v1
----+++    steps:
----+++    - uses: actions/checkout@v1
----++ 
----++-#     - name: Link Checker
----++-#       uses: peter-evans/link-checker@v1.0.1
----++-#       with:
----++-#         args: -v -r ./v6
----++-       
----++-#     # issue is created and assigned to me, but the error is not logged in the description
----++-#     - name: Create Issue From File
----++-#       uses: peter-evans/create-issue-from-file@v1.0.1
----++-#       env:
----++-#         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
----++-#         ISSUE_TITLE: broken link or image found
----++-#         ISSUE_CONTENT_FILEPATH: ./example-content/output.md
----++-#         ISSUE_ASSIGNEES: ch264
----+++    - name: Link Checker
----+++      uses: peter-evans/link-checker@v1.0.1
----+++      with:
----+++        args: -v -r ./v6
----+++    - name: Create Issue From File
----+++      uses: peter-evans/create-issue-from-file@v1.0.1
----+++      env:
----+++        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
----+++        ISSUE_TITLE: Link Checker Report
----+++        ISSUE_CONTENT_FILEPATH: ./link-checker/out.md
----+++        ISSUE_LABELS: report, automated issue
----+++
----+++    # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
----+++    #     ISSUE_TITLE: broken link or image found
----+++    #     ISSUE_CONTENT_FILEPATH: ./link-checker/out.md
----+++    #     ISSUE_ASSIGNEES: ch264
----++     
----++diff --git a/.github/workflows/ci.yml b/.github/workflows/ci.yml
----++index 168fe91..bb92b1a 100644
----++--- a/.github/workflows/ci.yml
----+++++ b/.github/workflows/ci.yml
----++@@ -22,15 +22,13 @@ jobs:
----++         node_modules/.bin/markdownlint ./ --ignore node_modules --ignore v5 
----++         # lint only files that changed on branch
----++         # git ls-files -m > temp && while read p; do node_modules/.bin/markdownlint "$p"; done < temp | rm temp\n
----++-
----++-
----++         
----++     # - name: run unit tests
----++     #   run: |
----++     #     npm run test:jest
----++ 
----++-# this link checker works but runs longer than 20min
----++-    - name: broken Link checker
----+++# this link checker works but runs longer than 2hours
----+++    - name: broken Link checker Scholli
----++       uses: ScholliYT/Broken-Links-Crawler-Action@v2.0.0
----++       with:
----++         website_url: 'https://learning.getpostman.com/'
----++diff --git a/aloglia.ejs b/aloglia.ejs
----++new file mode 100644
----++index 0000000..a6ed32a
----++--- /dev/null
----+++++ b/aloglia.ejs
----++@@ -0,0 +1,167 @@
----+++<!-- Algolia Instantsearch -->
----+++<!-- <div class="ais-SearchBox">
----+++  <form class="ais-SearchBox-form">
----+++    <input id="searchbox" class="ais-SearchBox-input"/>
----+++    <button class="ais-SearchBox-submit" type="submit" title="Submit the search query."></button>
----+++    <button class="ais-SearchBox-reset" type="reset" title="Clear the search query." hidden></button>
----+++    <span class="ais-SearchBox-loadingIndicator" hidden>
----+++    </span>
----+++  </form>
----+++  <div id="clear-refinements"></div>
----+++  <div id="hits" style='color: white'></div>
----+++  <div id="pagination"></div>
----+++  <div id="brand-list"></div>
----+++</div> -->
----+++
----+++<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/selectize@0.12.6/dist/css/selectize.css"> -->
----+++
----+++<div class="container" style='background-color: white'>
----+++  <h3>InstantSearch.js - Results page with an autocomplete</h3>
----+++  <input id="autocomplete" style='border: 3px solid red'></input >
----+++  <div id="hits" style='border: 3px solid green'></div>
----+++</div>
----+++
----+++<style>
----+++  h1 {
----+++    margin-bottom: 1rem;
----+++  }
----+++
----+++  em {
----+++    background: cyan;
----+++    font-style: normal;
----+++  }
----+++
----+++  .container {
----+++    max-width: 960px;
----+++    margin: 0 auto;
----+++    padding: 1em;
----+++  }
----+++
----+++  .ais-hits {
----+++    margin-top: 1em;
----+++  }
----+++
----+++  .hit-name {
----+++    margin-bottom: 0.5em;
----+++  }
----+++
----+++  .hit-description {
----+++    color: #888;
----+++    font-size: 14px;
----+++    margin-bottom: 0.5em;
----+++  }
----+++</style>
----+++
----+++
----+++<script src="https://cdn.jsdelivr.net/npm/selectize@0.12.6/dist/js/standalone/selectize.min.js"></script>
----+++<script src="https://cdn.jsdelivr.net/npm/algoliasearch@3.30.0/dist/algoliasearchLite.min.js"></script>
----+++<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@^4.0.0"></script>
----+++
----+++
----+++<script>
----+++  window.setTimeout( function() {
----+++  const searchClient = algoliasearch(
----+++    '4A5N71XYH0',
----+++    '4495d2606ed017c1c724d6210a717cc7'
----+++  );
----+++
----+++  const autocomplete = instantsearch.connectors.connectAutocomplete(
----+++    ({ indices, refine, widgetParams }, isFirstRendering) => {
----+++      const { container, onSelectChange } = widgetParams;
----+++
----+++      if (isFirstRendering) {
----+++        container.html('<select id="ais-autocomplete"></select>');
----+++
----+++        container.find('select').selectize({
----+++          options: [],
----+++          valueField: 'title',
----+++          labelField: 'description',
----+++          highlight: false,
----+++          onType: refine,
----+++          onBlur() {
----+++            refine(this.getValue());
----+++          },
----+++          score() {
----+++            return function() {
----+++              return 1;
----+++            };
----+++          },
----+++          onChange(value) {
----+++            onSelectChange(value);
----+++            refine(value);
----+++          },
----+++        });
----+++
----+++        return;
----+++      }
----+++
----+++      const [select] = container.find('select');
----+++
----+++      indices.forEach(index => {
----+++        select.selectize.clearOptions();
----+++        index.results.hits.forEach(h => select.selectize.addOption(h));
----+++        select.selectize.refreshOptions(select.selectize.isOpen);
----+++      });
----+++    }
----+++  );
----+++
----+++  const suggestions = instantsearch({
----+++    indexName: 'web',
----+++    searchClient,
----+++  });
----+++
----+++  suggestions.addWidget(
----+++    instantsearch.widgets.configure({
----+++      hitsPerPage: 5,
----+++    })
----+++  );
----+++
----+++  suggestions.addWidget(
----+++    autocomplete({
----+++      container: $('#autocomplete'),
----+++      onSelectChange(value) {
----+++        search.helper.setQuery(value).search();
----+++      },
----+++    })
----+++  );
----+++
----+++  const search = instantsearch({
----+++    indexName: 'web',
----+++    searchClient,
----+++  });
----+++
----+++  search.addWidget(
----+++    instantsearch.widgets.configure({
----+++      hitsPerPage: 10,
----+++    })
----+++  );
----+++
----+++  search.addWidget(
----+++    instantsearch.widgets.hits({
----+++      container: '#hits',
----+++      templates: {
----+++        item: `
----+++        <h3 class="hit-name h4">
----+++          {{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}
----+++        </h3>
----+++        
----+++        <p class="hit-description mb-0">
----+++          {{#helpers.highlight}}{ "attribute": "description" }{{/helpers.highlight}}
----+++        </p>
----+++
----+++        <div>
----+++          <a class="v5_link" href="{{{url}}}">
----+++              Go to: {{{title}}}
----+++          </a>
----+++        </div>  
----+++        `,
----+++      },
----+++    })
----+++  );
----+++
----+++  suggestions.start();
----+++  search.start();
----+++
----+++}, 3000) // setTimeout finish
----+++
----+++</script>
----++\ No newline at end of file
----++diff --git a/logFile.sh b/logFile.sh
----++new file mode 100644
----++index 0000000..0832c45
----++--- /dev/null
----+++++ b/logFile.sh
----++@@ -0,0 +1,19 @@
----+++#!/bin/bash
----+++
----+++log=log_file.txt
----+++
----+++ 
----+++# create log file or overrite if already present
----+++printf "Log File - " > $log
----+++ 
----+++# append git diff to log file
----+++git diff master...branch >> $log 
----+++
----+++  result=$(grep -n 'name' "$log")
----+++  if "$result" = true
----+++  then
----+++		mail -s "H2 changes were found" "christina.hastenrath@getpostman.com" < "$result"
----+++  else
----+++    echo no H2 changes
----+++	fi
----+++
----++diff --git a/log_file.txt b/log_file.txt
----++new file mode 100644
----++index 0000000..69479be
----++--- /dev/null
----+++++ b/log_file.txt
----++@@ -0,0 +1,132 @@
----+++Log File - diff --git a/.github/brokenlink.yml b/.github/brokenlink.yml
----+++index 1350eee..3c248a7 100644
----+++--- a/.github/brokenlink.yml
----++++++ b/.github/brokenlink.yml
----+++@@ -1,29 +1,33 @@
----+++ # I am not sure if this actually checks the right links
----++++# This link checker does not count 404 pages as broken links. This is how Lichen works, where it is build on. Therefore this is not suitable for our usecase.
----+++ 
----+++-# name: brokenlink
----++++name: brokenlink
----+++ 
----+++-# on: 
----+++-#   schedule:
----+++-#   - cron: '*/13 * * * *'
----++++on: 
----++++  schedule:
----++++  # - cron: '*/13 * * * *'
----+++ 
----+++-# jobs: 
----+++-#   linkChecker:
----+++-#     runs-on: ubuntu-18.04
----++++jobs: 
----++++  linkChecker:
----++++    runs-on: ubuntu-18.04
----+++ 
----+++-#     steps:
----+++-#     - uses: actions/checkout@v1
----++++    steps:
----++++    - uses: actions/checkout@v1
----+++ 
----+++-#     - name: Link Checker
----+++-#       uses: peter-evans/link-checker@v1.0.1
----+++-#       with:
----+++-#         args: -v -r ./v6
----+++-       
----+++-#     # issue is created and assigned to me, but the error is not logged in the description
----+++-#     - name: Create Issue From File
----+++-#       uses: peter-evans/create-issue-from-file@v1.0.1
----+++-#       env:
----+++-#         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
----+++-#         ISSUE_TITLE: broken link or image found
----+++-#         ISSUE_CONTENT_FILEPATH: ./example-content/output.md
----+++-#         ISSUE_ASSIGNEES: ch264
----++++    - name: Link Checker
----++++      uses: peter-evans/link-checker@v1.0.1
----++++      with:
----++++        args: -v -r ./v6
----++++    - name: Create Issue From File
----++++      uses: peter-evans/create-issue-from-file@v1.0.1
----++++      env:
----++++        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
----++++        ISSUE_TITLE: Link Checker Report
----++++        ISSUE_CONTENT_FILEPATH: ./link-checker/out.md
----++++        ISSUE_LABELS: report, automated issue
----++++
----++++    # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
----++++    #     ISSUE_TITLE: broken link or image found
----++++    #     ISSUE_CONTENT_FILEPATH: ./link-checker/out.md
----++++    #     ISSUE_ASSIGNEES: ch264
----+++     
----+++diff --git a/.github/workflows/ci.yml b/.github/workflows/ci.yml
----+++index 168fe91..bb92b1a 100644
----+++--- a/.github/workflows/ci.yml
----++++++ b/.github/workflows/ci.yml
----+++@@ -22,15 +22,13 @@ jobs:
----+++         node_modules/.bin/markdownlint ./ --ignore node_modules --ignore v5 
----+++         # lint only files that changed on branch
----+++         # git ls-files -m > temp && while read p; do node_modules/.bin/markdownlint "$p"; done < temp | rm temp\n
----+++-
----+++-
----+++         
----+++     # - name: run unit tests
----+++     #   run: |
----+++     #     npm run test:jest
----+++ 
----+++-# this link checker works but runs longer than 20min
----+++-    - name: broken Link checker
----++++# this link checker works but runs longer than 2hours
----++++    - name: broken Link checker Scholli
----+++       uses: ScholliYT/Broken-Links-Crawler-Action@v2.0.0
----+++       with:
----+++         website_url: 'https://learning.getpostman.com/'
----+++diff --git a/package-lock.json b/package-lock.json
----+++index 9945277..024be58 100644
----+++--- a/package-lock.json
----++++++ b/package-lock.json
----+++@@ -3130,9 +3130,9 @@
----+++       "dev": true
----+++     },
----+++     "handlebars": {
----+++-      "version": "4.5.1",
----+++-      "resolved": "https://registry.npmjs.org/handlebars/-/handlebars-4.5.1.tgz",
----+++-      "integrity": "sha512-C29UoFzHe9yM61lOsIlCE5/mQVGrnIOrOq7maQl76L7tYPCgC1og0Ajt6uWnX4ZTxBPnjw+CUvawphwCfJgUnA==",
----++++      "version": "4.5.3",
----++++      "resolved": "https://registry.npmjs.org/handlebars/-/handlebars-4.5.3.tgz",
----++++      "integrity": "sha512-3yPecJoJHK/4c6aZhSvxOyG4vJKDshV36VHp0iVCDVh7o9w2vwi3NSnL2MMPj3YdduqaBcu7cGbggJQM0br9xA==",
----+++       "dev": true,
----+++       "requires": {
----+++         "neo-async": "^2.6.0",
----+++@@ -5789,9 +5789,9 @@
----+++       "integrity": "sha512-8Y75pvTYkLJW2hWQHXxoqRgV7qb9B+9vFEtidML+7koHUFapnVJAZ6cKs+Qjz5Aw3aZWHMC6u0wJE3At+nSGwA=="
----+++     },
----+++     "uglify-js": {
----+++-      "version": "3.6.5",
----+++-      "resolved": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.6.5.tgz",
----+++-      "integrity": "sha512-7L3W+Npia1OCr5Blp4/Vw83tK1mu5gnoIURtT1fUVfQ3Kf8WStWV6NJz0fdoBJZls0KlweruRTLVe6XLafmy5g==",
----++++      "version": "3.7.0",
----++++      "resolved": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.7.0.tgz",
----++++      "integrity": "sha512-PC/ee458NEMITe1OufAjal65i6lB58R1HWMRcxwvdz1UopW0DYqlRL3xdu3IcTvTXsB02CRHykidkTRL+A3hQA==",
----+++       "dev": true,
----+++       "optional": true,
----+++       "requires": {
----+++diff --git a/test.md b/test.md
----+++index bf976fa..7b8ff91 100644
----+++--- a/test.md
----++++++ b/test.md
----+++@@ -16,4 +16,4 @@ this is the test
----+++ 
----+++ for the last line
----+++ 
----+++-https://learning.getpostman-beta.com/docs/postman/launching-postman/introduction/ere
----++++<https://learning.getpostman-beta.com/docs/postman/launching-postman/introduction/ere>
----+++diff --git a/v6/enterprise/Intro.md b/v6/enterprise/Intro.md
----+++index 22f0bfc..5afce92 100644
----+++--- a/v6/enterprise/Intro.md
----++++++ b/v6/enterprise/Intro.md
----+++@@ -5,4 +5,4 @@ also modified
----+++ 
----+++ d
----+++ 
----+++-https://learning.getpostman.com/docs/postman/launching-postman/introduction/de
----++++<https://learning.getpostman.com/docs/postman/launching-postman/introduction/de>
----++diff --git a/package-lock.json b/package-lock.json
----++index 9945277..024be58 100644
----++--- a/package-lock.json
----+++++ b/package-lock.json
----++@@ -3130,9 +3130,9 @@
----++       "dev": true
----++     },
----++     "handlebars": {
----++-      "version": "4.5.1",
----++-      "resolved": "https://registry.npmjs.org/handlebars/-/handlebars-4.5.1.tgz",
----++-      "integrity": "sha512-C29UoFzHe9yM61lOsIlCE5/mQVGrnIOrOq7maQl76L7tYPCgC1og0Ajt6uWnX4ZTxBPnjw+CUvawphwCfJgUnA==",
----+++      "version": "4.5.3",
----+++      "resolved": "https://registry.npmjs.org/handlebars/-/handlebars-4.5.3.tgz",
----+++      "integrity": "sha512-3yPecJoJHK/4c6aZhSvxOyG4vJKDshV36VHp0iVCDVh7o9w2vwi3NSnL2MMPj3YdduqaBcu7cGbggJQM0br9xA==",
----++       "dev": true,
----++       "requires": {
----++         "neo-async": "^2.6.0",
----++@@ -5789,9 +5789,9 @@
----++       "integrity": "sha512-8Y75pvTYkLJW2hWQHXxoqRgV7qb9B+9vFEtidML+7koHUFapnVJAZ6cKs+Qjz5Aw3aZWHMC6u0wJE3At+nSGwA=="
----++     },
----++     "uglify-js": {
----++-      "version": "3.6.5",
----++-      "resolved": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.6.5.tgz",
----++-      "integrity": "sha512-7L3W+Npia1OCr5Blp4/Vw83tK1mu5gnoIURtT1fUVfQ3Kf8WStWV6NJz0fdoBJZls0KlweruRTLVe6XLafmy5g==",
----+++      "version": "3.7.0",
----+++      "resolved": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.7.0.tgz",
----+++      "integrity": "sha512-PC/ee458NEMITe1OufAjal65i6lB58R1HWMRcxwvdz1UopW0DYqlRL3xdu3IcTvTXsB02CRHykidkTRL+A3hQA==",
----++       "dev": true,
----++       "optional": true,
----++       "requires": {
----++diff --git a/test.md b/test.md
----++index bf976fa..7b8ff91 100644
----++--- a/test.md
----+++++ b/test.md
----++@@ -16,4 +16,4 @@ this is the test
----++ 
----++ for the last line
----++ 
----++-https://learning.getpostman-beta.com/docs/postman/launching-postman/introduction/ere
----+++<https://learning.getpostman-beta.com/docs/postman/launching-postman/introduction/ere>
----++diff --git a/v6/enterprise/Intro.md b/v6/enterprise/Intro.md
----++index 22f0bfc..5afce92 100644
----++--- a/v6/enterprise/Intro.md
----+++++ b/v6/enterprise/Intro.md
----++@@ -5,4 +5,4 @@ also modified
----++ 
----++ d
----++ 
----++-https://learning.getpostman.com/docs/postman/launching-postman/introduction/de
----+++<https://learning.getpostman.com/docs/postman/launching-postman/introduction/de>
----+diff --git a/package-lock.json b/package-lock.json
----+index 9945277..024be58 100644
----+--- a/package-lock.json
----++++ b/package-lock.json
----+@@ -3130,9 +3130,9 @@
----+       "dev": true
----+     },
----+     "handlebars": {
----+-      "version": "4.5.1",
----+-      "resolved": "https://registry.npmjs.org/handlebars/-/handlebars-4.5.1.tgz",
----+-      "integrity": "sha512-C29UoFzHe9yM61lOsIlCE5/mQVGrnIOrOq7maQl76L7tYPCgC1og0Ajt6uWnX4ZTxBPnjw+CUvawphwCfJgUnA==",
----++      "version": "4.5.3",
----++      "resolved": "https://registry.npmjs.org/handlebars/-/handlebars-4.5.3.tgz",
----++      "integrity": "sha512-3yPecJoJHK/4c6aZhSvxOyG4vJKDshV36VHp0iVCDVh7o9w2vwi3NSnL2MMPj3YdduqaBcu7cGbggJQM0br9xA==",
----+       "dev": true,
----+       "requires": {
----+         "neo-async": "^2.6.0",
----+@@ -5789,9 +5789,9 @@
----+       "integrity": "sha512-8Y75pvTYkLJW2hWQHXxoqRgV7qb9B+9vFEtidML+7koHUFapnVJAZ6cKs+Qjz5Aw3aZWHMC6u0wJE3At+nSGwA=="
----+     },
----+     "uglify-js": {
----+-      "version": "3.6.5",
----+-      "resolved": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.6.5.tgz",
----+-      "integrity": "sha512-7L3W+Npia1OCr5Blp4/Vw83tK1mu5gnoIURtT1fUVfQ3Kf8WStWV6NJz0fdoBJZls0KlweruRTLVe6XLafmy5g==",
----++      "version": "3.7.0",
----++      "resolved": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.7.0.tgz",
----++      "integrity": "sha512-PC/ee458NEMITe1OufAjal65i6lB58R1HWMRcxwvdz1UopW0DYqlRL3xdu3IcTvTXsB02CRHykidkTRL+A3hQA==",
----+       "dev": true,
----+       "optional": true,
----+       "requires": {
----+diff --git a/test.md b/test.md
----+index bf976fa..7b8ff91 100644
----+--- a/test.md
----++++ b/test.md
----+@@ -16,4 +16,4 @@ this is the test
----+ 
----+ for the last line
----+ 
----+-https://learning.getpostman-beta.com/docs/postman/launching-postman/introduction/ere
----++<https://learning.getpostman-beta.com/docs/postman/launching-postman/introduction/ere>
----+diff --git a/v6/enterprise/Intro.md b/v6/enterprise/Intro.md
----+index 22f0bfc..5afce92 100644
----+--- a/v6/enterprise/Intro.md
----++++ b/v6/enterprise/Intro.md
----+@@ -5,4 +5,4 @@ also modified
----+ 
----+ d
----+ 
----+-https://learning.getpostman.com/docs/postman/launching-postman/introduction/de
----++<https://learning.getpostman.com/docs/postman/launching-postman/introduction/de>
----diff --git a/package-lock.json b/package-lock.json
----index 9945277..024be58 100644
------- a/package-lock.json
----+++ b/package-lock.json
----@@ -3130,9 +3130,9 @@
----       "dev": true
----     },
----     "handlebars": {
-----      "version": "4.5.1",
-----      "resolved": "https://registry.npmjs.org/handlebars/-/handlebars-4.5.1.tgz",
-----      "integrity": "sha512-C29UoFzHe9yM61lOsIlCE5/mQVGrnIOrOq7maQl76L7tYPCgC1og0Ajt6uWnX4ZTxBPnjw+CUvawphwCfJgUnA==",
----+      "version": "4.5.3",
----+      "resolved": "https://registry.npmjs.org/handlebars/-/handlebars-4.5.3.tgz",
----+      "integrity": "sha512-3yPecJoJHK/4c6aZhSvxOyG4vJKDshV36VHp0iVCDVh7o9w2vwi3NSnL2MMPj3YdduqaBcu7cGbggJQM0br9xA==",
----       "dev": true,
----       "requires": {
----         "neo-async": "^2.6.0",
----@@ -5789,9 +5789,9 @@
----       "integrity": "sha512-8Y75pvTYkLJW2hWQHXxoqRgV7qb9B+9vFEtidML+7koHUFapnVJAZ6cKs+Qjz5Aw3aZWHMC6u0wJE3At+nSGwA=="
----     },
----     "uglify-js": {
-----      "version": "3.6.5",
-----      "resolved": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.6.5.tgz",
-----      "integrity": "sha512-7L3W+Npia1OCr5Blp4/Vw83tK1mu5gnoIURtT1fUVfQ3Kf8WStWV6NJz0fdoBJZls0KlweruRTLVe6XLafmy5g==",
----+      "version": "3.7.0",
----+      "resolved": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.7.0.tgz",
----+      "integrity": "sha512-PC/ee458NEMITe1OufAjal65i6lB58R1HWMRcxwvdz1UopW0DYqlRL3xdu3IcTvTXsB02CRHykidkTRL+A3hQA==",
----       "dev": true,
----       "optional": true,
----       "requires": {
----diff --git a/test.md b/test.md
----index bf976fa..7b8ff91 100644
------- a/test.md
----+++ b/test.md
----@@ -16,4 +16,4 @@ this is the test
---- 
---- for the last line
---- 
-----https://learning.getpostman-beta.com/docs/postman/launching-postman/introduction/ere
----+<https://learning.getpostman-beta.com/docs/postman/launching-postman/introduction/ere>
----diff --git a/v6/enterprise/Intro.md b/v6/enterprise/Intro.md
----index 22f0bfc..5afce92 100644
------- a/v6/enterprise/Intro.md
----+++ b/v6/enterprise/Intro.md
----@@ -5,4 +5,4 @@ also modified
---- 
---- d
---- 
-----https://learning.getpostman.com/docs/postman/launching-postman/introduction/de
----+<https://learning.getpostman.com/docs/postman/launching-postman/introduction/de>
---+@@ -1,121 +1 @@
---+-9:-# name: brokenlink
---+-10:+name: brokenlink
---+-31:-#     - name: Link Checker
---+-37:-#     - name: Create Issue From File
---+-44:+    - name: Link Checker
---+-48:+    - name: Create Issue From File
---+-72:+    - name: h2 changes email
---+-74:     # - name: run unit tests
---+-79:-    - name: broken Link checker
---+-81:+    - name: broken Link checker Scholli
---+-137:+  .hit-name {
---+-237:+        <h3 class="hit-name h4">
---+-268:+9:-# name: brokenlink
---+-269:+10:+name: brokenlink
---+-270:+31:-#     - name: Link Checker
---+-271:+37:-#     - name: Create Issue From File
---+-272:+44:+    - name: Link Checker
---+-273:+48:+    - name: Create Issue From File
---+-274:+72:     # - name: run unit tests
---+-275:+77:-    - name: broken Link checker
---+-276:+79:+    - name: broken Link checker Scholli
---+-277:+135:+  .hit-name {
---+-278:+235:+        <h3 class="hit-name h4">
---+-279:+266:+9:-# name: brokenlink
---+-280:+267:+10:+name: brokenlink
---+-281:+268:+31:-#     - name: Link Checker
---+-282:+269:+37:-#     - name: Create Issue From File
---+-283:+270:+44:+    - name: Link Checker
---+-284:+271:+48:+    - name: Create Issue From File
---+-285:+272:+72:     # - name: run unit tests
---+-286:+273:+77:-    - name: broken Link checker
---+-287:+274:+79:+    - name: broken Link checker Scholli
---+-288:+275:+132:+  .hit-name {
---+-289:+276:+232:+        <h3 class="hit-name h4">
---+-290:+277:+274:+  result=$(grep -n 'name' "$log")
---+-291:+278:+296:+-# name: brokenlink
---+-292:+279:+297:++name: brokenlink
---+-293:+280:+318:+-#     - name: Link Checker
---+-294:+281:+324:+-#     - name: Create Issue From File
---+-295:+282:+331:++    - name: Link Checker
---+-296:+283:+335:++    - name: Create Issue From File
---+-297:+284:+359:+     # - name: run unit tests
---+-298:+285:+364:+-    - name: broken Link checker
---+-299:+286:+366:++    - name: broken Link checker Scholli
---+-300:+304:+result=$(grep -n 'name' && '+' "$log")
---+-301:+331:+-# name: brokenlink
---+-302:+332:++name: brokenlink
---+-303:+353:+-#     - name: Link Checker
---+-304:+359:+-#     - name: Create Issue From File
---+-305:+366:++    - name: Link Checker
---+-306:+370:++    - name: Create Issue From File
---+-307:+394:+     # - name: run unit tests
---+-308:+399:+-    - name: broken Link checker
---+-309:+401:++    - name: broken Link checker Scholli
---+-310:+454:++  .hit-name {
---+-311:+554:++        <h3 class="hit-name h4">
---+-312:+596:++  result=$(grep -n 'name' "$log")
---+-313:+618:++-# name: brokenlink
---+-314:+619:+++name: brokenlink
---+-315:+640:++-#     - name: Link Checker
---+-316:+646:++-#     - name: Create Issue From File
---+-317:+653:+++    - name: Link Checker
---+-318:+657:+++    - name: Create Issue From File
---+-319:+681:++     # - name: run unit tests
---+-320:+686:++-    - name: broken Link checker
---+-321:+688:+++    - name: broken Link checker Scholli
---+-340:+result=$(grep -n 'name' "$log")
---+-365:+-# name: brokenlink
---+-366:++name: brokenlink
---+-387:+-#     - name: Link Checker
---+-393:+-#     - name: Create Issue From File
---+-400:++    - name: Link Checker
---+-404:++    - name: Create Issue From File
---+-428:+     # - name: run unit tests
---+-433:+-    - name: broken Link checker
---+-435:++    - name: broken Link checker Scholli
---+-491:++  .hit-name {
---+-591:++        <h3 class="hit-name h4">
---+-622:++9:-# name: brokenlink
---+-623:++10:+name: brokenlink
---+-624:++31:-#     - name: Link Checker
---+-625:++37:-#     - name: Create Issue From File
---+-626:++44:+    - name: Link Checker
---+-627:++48:+    - name: Create Issue From File
---+-628:++72:     # - name: run unit tests
---+-629:++77:-    - name: broken Link checker
---+-630:++79:+    - name: broken Link checker Scholli
---+-631:++132:+  .hit-name {
---+-632:++232:+        <h3 class="hit-name h4">
---+-633:++274:+  result=$(grep -n 'name' "$log")
---+-634:++296:+-# name: brokenlink
---+-635:++297:++name: brokenlink
---+-636:++318:+-#     - name: Link Checker
---+-637:++324:+-#     - name: Create Issue From File
---+-638:++331:++    - name: Link Checker
---+-639:++335:++    - name: Create Issue From File
---+-640:++359:+     # - name: run unit tests
---+-641:++364:+-    - name: broken Link checker
---+-642:++366:++    - name: broken Link checker Scholli
---+-660:++result=$(grep -n 'name' && '+'
+---@@ -1,1247 +1,105 @@
+----Log File - diff --git a/.github/brokenlink.yml b/.github/brokenlink.yml
+----index 1350eee..3c248a7 100644
+------- a/.github/brokenlink.yml
+----+++ b/.github/brokenlink.yml
+----@@ -1,29 +1,33 @@
+---- # I am not sure if this actually checks the right links
+----+# This link checker does not count 404 pages as broken links. This is how Lichen works, where it is build on. Therefore this is not suitable for our usecase.
+---- 
+-----# name: brokenlink
+----+name: brokenlink
+---- 
+-----# on: 
+-----#   schedule:
+-----#   - cron: '*/13 * * * *'
+----+on: 
+----+  schedule:
+----+  # - cron: '*/13 * * * *'
+---- 
+-----# jobs: 
+-----#   linkChecker:
+-----#     runs-on: ubuntu-18.04
+----+jobs: 
+----+  linkChecker:
+----+    runs-on: ubuntu-18.04
+---- 
+-----#     steps:
+-----#     - uses: actions/checkout@v1
+----+    steps:
+----+    - uses: actions/checkout@v1
+---- 
+-----#     - name: Link Checker
+-----#       uses: peter-evans/link-checker@v1.0.1
+-----#       with:
+-----#         args: -v -r ./v6
+-----       
+-----#     # issue is created and assigned to me, but the error is not logged in the description
+-----#     - name: Create Issue From File
+-----#       uses: peter-evans/create-issue-from-file@v1.0.1
+-----#       env:
+-----#         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+-----#         ISSUE_TITLE: broken link or image found
+-----#         ISSUE_CONTENT_FILEPATH: ./example-content/output.md
+-----#         ISSUE_ASSIGNEES: ch264
+----+    - name: Link Checker
+----+      uses: peter-evans/link-checker@v1.0.1
+----+      with:
+----+        args: -v -r ./v6
+----+    - name: Create Issue From File
+----+      uses: peter-evans/create-issue-from-file@v1.0.1
+----+      env:
+----+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+----+        ISSUE_TITLE: Link Checker Report
+----+        ISSUE_CONTENT_FILEPATH: ./link-checker/out.md
+----+        ISSUE_LABELS: report, automated issue
+----+
+----+    # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+----+    #     ISSUE_TITLE: broken link or image found
+----+    #     ISSUE_CONTENT_FILEPATH: ./link-checker/out.md
+----+    #     ISSUE_ASSIGNEES: ch264
+----     
+----diff --git a/.github/workflows/ci.yml b/.github/workflows/ci.yml
+----index 168fe91..63ef26d 100644
+------- a/.github/workflows/ci.yml
+----+++ b/.github/workflows/ci.yml
+----@@ -22,15 +22,14 @@ jobs:
+----         node_modules/.bin/markdownlint ./ --ignore node_modules --ignore v5 
+----         # lint only files that changed on branch
+----         # git ls-files -m > temp && while read p; do node_modules/.bin/markdownlint "$p"; done < temp | rm temp\n
+-----
+-----
+-----        
+----+    - name: h2 changes email
+----+      run: bash logFile.sh
+----     # - name: run unit tests
+----     #   run: |
+----     #     npm run test:jest
+---- 
+-----# this link checker works but runs longer than 20min
+-----    - name: broken Link checker
+----+# this link checker works but runs longer than 2hours
+----+    - name: broken Link checker Scholli
+----       uses: ScholliYT/Broken-Links-Crawler-Action@v2.0.0
+----       with:
+----         website_url: 'https://learning.getpostman.com/'
+----diff --git a/0 b/0
+----new file mode 100644
+----index 0000000..e69de29
+----diff --git a/aloglia.ejs b/aloglia.ejs
+----new file mode 100644
+----index 0000000..a6ed32a
+------- /dev/null
+----+++ b/aloglia.ejs
+----@@ -0,0 +1,167 @@
+----+<!-- Algolia Instantsearch -->
+----+<!-- <div class="ais-SearchBox">
+----+  <form class="ais-SearchBox-form">
+----+    <input id="searchbox" class="ais-SearchBox-input"/>
+----+    <button class="ais-SearchBox-submit" type="submit" title="Submit the search query."></button>
+----+    <button class="ais-SearchBox-reset" type="reset" title="Clear the search query." hidden></button>
+----+    <span class="ais-SearchBox-loadingIndicator" hidden>
+----+    </span>
+----+  </form>
+----+  <div id="clear-refinements"></div>
+----+  <div id="hits" style='color: white'></div>
+----+  <div id="pagination"></div>
+----+  <div id="brand-list"></div>
+----+</div> -->
+----+
+----+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/selectize@0.12.6/dist/css/selectize.css"> -->
+----+
+----+<div class="container" style='background-color: white'>
+----+  <h3>InstantSearch.js - Results page with an autocomplete</h3>
+----+  <input id="autocomplete" style='border: 3px solid red'></input >
+----+  <div id="hits" style='border: 3px solid green'></div>
+----+</div>
+----+
+----+<style>
+----+  h1 {
+----+    margin-bottom: 1rem;
+----+  }
+----+
+----+  em {
+----+    background: cyan;
+----+    font-style: normal;
+----+  }
+----+
+----+  .container {
+----+    max-width: 960px;
+----+    margin: 0 auto;
+----+    padding: 1em;
+----+  }
+----+
+----+  .ais-hits {
+----+    margin-top: 1em;
+----+  }
+----+
+----+  .hit-name {
+----+    margin-bottom: 0.5em;
+----+  }
+----+
+----+  .hit-description {
+----+    color: #888;
+----+    font-size: 14px;
+----+    margin-bottom: 0.5em;
+----+  }
+----+</style>
+----+
+----+
+----+<script src="https://cdn.jsdelivr.net/npm/selectize@0.12.6/dist/js/standalone/selectize.min.js"></script>
+----+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@3.30.0/dist/algoliasearchLite.min.js"></script>
+----+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@^4.0.0"></script>
+----+
+----+
+----+<script>
+----+  window.setTimeout( function() {
+----+  const searchClient = algoliasearch(
+----+    '4A5N71XYH0',
+----+    '4495d2606ed017c1c724d6210a717cc7'
+----+  );
+----+
+----+  const autocomplete = instantsearch.connectors.connectAutocomplete(
+----+    ({ indices, refine, widgetParams }, isFirstRendering) => {
+----+      const { container, onSelectChange } = widgetParams;
+----+
+----+      if (isFirstRendering) {
+----+        container.html('<select id="ais-autocomplete"></select>');
+----+
+----+        container.find('select').selectize({
+----+          options: [],
+----+          valueField: 'title',
+----+          labelField: 'description',
+----+          highlight: false,
+----+          onType: refine,
+----+          onBlur() {
+----+            refine(this.getValue());
+----+          },
+----+          score() {
+----+            return function() {
+----+              return 1;
+----+            };
+----+          },
+----+          onChange(value) {
+----+            onSelectChange(value);
+----+            refine(value);
+----+          },
+----+        });
+----+
+----+        return;
+----+      }
+----+
+----+      const [select] = container.find('select');
+----+
+----+      indices.forEach(index => {
+----+        select.selectize.clearOptions();
+----+        index.results.hits.forEach(h => select.selectize.addOption(h));
+----+        select.selectize.refreshOptions(select.selectize.isOpen);
+----+      });
+----+    }
+----+  );
+----+
+----+  const suggestions = instantsearch({
+----+    indexName: 'web',
+----+    searchClient,
+----+  });
+----+
+----+  suggestions.addWidget(
+----+    instantsearch.widgets.configure({
+----+      hitsPerPage: 5,
+----+    })
+----+  );
+----+
+----+  suggestions.addWidget(
+----+    autocomplete({
+----+      container: $('#autocomplete'),
+----+      onSelectChange(value) {
+----+        search.helper.setQuery(value).search();
+----+      },
+----+    })
+----+  );
+----+
+----+  const search = instantsearch({
+----+    indexName: 'web',
+----+    searchClient,
+----+  });
+----+
+----+  search.addWidget(
+----+    instantsearch.widgets.configure({
+----+      hitsPerPage: 10,
+----+    })
+----+  );
+----+
+----+  search.addWidget(
+----+    instantsearch.widgets.hits({
+----+      container: '#hits',
+----+      templates: {
+----+        item: `
+----+        <h3 class="hit-name h4">
+----+          {{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}
+----+        </h3>
+----+        
+----+        <p class="hit-description mb-0">
+----+          {{#helpers.highlight}}{ "attribute": "description" }{{/helpers.highlight}}
+----+        </p>
+----+
+----+        <div>
+----+          <a class="v5_link" href="{{{url}}}">
+----+              Go to: {{{title}}}
+----+          </a>
+----+        </div>  
+----+        `,
+----+      },
+----+    })
+----+  );
+----+
+----+  suggestions.start();
+----+  search.start();
+----+
+----+}, 3000) // setTimeout finish
+----+
+----+</script>
+----\ No newline at end of file
+----diff --git a/email.txt b/email.txt
+----new file mode 100644
+----index 0000000..03953fe
+------- /dev/null
+---+Log File - diff --git a/email.txt b/email.txt
+---+index 6bdc45f..8e74570 100644
+---+--- a/email.txt
+--- +++ b/email.txt
+----@@ -0,0 +1,54 @@
+----+9:-# name: brokenlink
+----+10:+name: brokenlink
+----+31:-#     - name: Link Checker
+----+37:-#     - name: Create Issue From File
+----+44:+    - name: Link Checker
+----+48:+    - name: Create Issue From File
+----+72:     # - name: run unit tests
+----+77:-    - name: broken Link checker
+----+79:+    - name: broken Link checker Scholli
+----+135:+  .hit-name {
+----+235:+        <h3 class="hit-name h4">
+----+266:+9:-# name: brokenlink
+----+267:+10:+name: brokenlink
+----+268:+31:-#     - name: Link Checker
+----+269:+37:-#     - name: Create Issue From File
+----+270:+44:+    - name: Link Checker
+----+271:+48:+    - name: Create Issue From File
+----+272:+72:     # - name: run unit tests
+----+273:+77:-    - name: broken Link checker
+----+274:+79:+    - name: broken Link checker Scholli
+----+275:+132:+  .hit-name {
+----+276:+232:+        <h3 class="hit-name h4">
+----+277:+274:+  result=$(grep -n 'name' "$log")
+----+278:+296:+-# name: brokenlink
+----+279:+297:++name: brokenlink
+----+280:+318:+-#     - name: Link Checker
+----+281:+324:+-#     - name: Create Issue From File
+----+282:+331:++    - name: Link Checker
+----+283:+335:++    - name: Create Issue From File
+----+284:+359:+     # - name: run unit tests
+----+285:+364:+-    - name: broken Link checker
+----+286:+366:++    - name: broken Link checker Scholli
+----+304:+result=$(grep -n 'name' && '+' "$log")
+----+331:+-# name: brokenlink
+----+332:++name: brokenlink
+----+353:+-#     - name: Link Checker
+----+359:+-#     - name: Create Issue From File
+----+366:++    - name: Link Checker
+----+370:++    - name: Create Issue From File
+----+394:+     # - name: run unit tests
+----+399:+-    - name: broken Link checker
+----+401:++    - name: broken Link checker Scholli
+----+454:++  .hit-name {
+----+554:++        <h3 class="hit-name h4">
+----+596:++  result=$(grep -n 'name' "$log")
+----+618:++-# name: brokenlink
+----+619:+++name: brokenlink
+----+640:++-#     - name: Link Checker
+----+646:++-#     - name: Create Issue From File
+----+653:+++    - name: Link Checker
+----+657:+++    - name: Create Issue From File
+----+681:++     # - name: run unit tests
+----+686:++-    - name: broken Link checker
+----+688:+++    - name: broken Link checker Scholli
+----diff --git a/logFile.sh b/logFile.sh
+----new file mode 100644
+----index 0000000..4cc644a
+------- /dev/null
+----+++ b/logFile.sh
+----@@ -0,0 +1,23 @@
+----+#!/bin/bash
+----+
+----+log=log_file.txt
+----+email=email.txt
+----+ 
+----+# create log file or overrite if already present
+----+printf "Log File - " > $log
+----+ 
+----+# append git diff to log file
+----+git diff master...branch >> $log 
+----+
+----+# find H2 tag in diff
+----+result=$(grep -n 'name' "$log")
+----+size=${#result}
+----+  if [ $size > 0 ]
+----+  then
+----+    # append data to email
+----+    printf '%s\n' "${result[@]}" > $email
+----+    # send mail to email address
+----+    mail -s "H2 changes have been made" "christina.hastenrath@getpostman.com" < $email
+----+  else
+----+    echo no data
+----+  fi
+----diff --git a/log_file.txt b/log_file.txt
+----new file mode 100644
+----index 0000000..0e4cbe9
+------- /dev/null
+----+++ b/log_file.txt
+----@@ -0,0 +1,841 @@
+----+Log File - diff --git a/.github/brokenlink.yml b/.github/brokenlink.yml
+----+index 1350eee..3c248a7 100644
+----+--- a/.github/brokenlink.yml
+----++++ b/.github/brokenlink.yml
+----+@@ -1,29 +1,33 @@
+----+ # I am not sure if this actually checks the right links
+----++# This link checker does not count 404 pages as broken links. This is how Lichen works, where it is build on. Therefore this is not suitable for our usecase.
+----+ 
+----+-# name: brokenlink
+----++name: brokenlink
+----+ 
+----+-# on: 
+----+-#   schedule:
+----+-#   - cron: '*/13 * * * *'
+----++on: 
+----++  schedule:
+----++  # - cron: '*/13 * * * *'
+----+ 
+----+-# jobs: 
+----+-#   linkChecker:
+----+-#     runs-on: ubuntu-18.04
+----++jobs: 
+----++  linkChecker:
+----++    runs-on: ubuntu-18.04
+----+ 
+----+-#     steps:
+----+-#     - uses: actions/checkout@v1
+----++    steps:
+----++    - uses: actions/checkout@v1
+----+ 
+----+-#     - name: Link Checker
+----+-#       uses: peter-evans/link-checker@v1.0.1
+----+-#       with:
+----+-#         args: -v -r ./v6
+----+-       
+----+-#     # issue is created and assigned to me, but the error is not logged in the description
+----+-#     - name: Create Issue From File
+----+-#       uses: peter-evans/create-issue-from-file@v1.0.1
+----+-#       env:
+----+-#         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+----+-#         ISSUE_TITLE: broken link or image found
+----+-#         ISSUE_CONTENT_FILEPATH: ./example-content/output.md
+----+-#         ISSUE_ASSIGNEES: ch264
+----++    - name: Link Checker
+----++      uses: peter-evans/link-checker@v1.0.1
+----++      with:
+----++        args: -v -r ./v6
+----++    - name: Create Issue From File
+----++      uses: peter-evans/create-issue-from-file@v1.0.1
+----++      env:
+----++        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+----++        ISSUE_TITLE: Link Checker Report
+----++        ISSUE_CONTENT_FILEPATH: ./link-checker/out.md
+----++        ISSUE_LABELS: report, automated issue
+----++
+----++    # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+----++    #     ISSUE_TITLE: broken link or image found
+----++    #     ISSUE_CONTENT_FILEPATH: ./link-checker/out.md
+----++    #     ISSUE_ASSIGNEES: ch264
+----+     
+----+diff --git a/.github/workflows/ci.yml b/.github/workflows/ci.yml
+----+index 168fe91..bb92b1a 100644
+----+--- a/.github/workflows/ci.yml
+----++++ b/.github/workflows/ci.yml
+----+@@ -22,15 +22,13 @@ jobs:
+----+         node_modules/.bin/markdownlint ./ --ignore node_modules --ignore v5 
+----+         # lint only files that changed on branch
+----+         # git ls-files -m > temp && while read p; do node_modules/.bin/markdownlint "$p"; done < temp | rm temp\n
+----+-
+----+-
+----+         
+----+     # - name: run unit tests
+----+     #   run: |
+----+     #     npm run test:jest
+----+ 
+----+-# this link checker works but runs longer than 20min
+----+-    - name: broken Link checker
+----++# this link checker works but runs longer than 2hours
+----++    - name: broken Link checker Scholli
+----+       uses: ScholliYT/Broken-Links-Crawler-Action@v2.0.0
+----+       with:
+----+         website_url: 'https://learning.getpostman.com/'
+----+diff --git a/0 b/0
+----+new file mode 100644
+----+index 0000000..e69de29
+----+diff --git a/aloglia.ejs b/aloglia.ejs
+----+new file mode 100644
+----+index 0000000..a6ed32a
+----+--- /dev/null
+----++++ b/aloglia.ejs
+----+@@ -0,0 +1,167 @@
+----++<!-- Algolia Instantsearch -->
+----++<!-- <div class="ais-SearchBox">
+----++  <form class="ais-SearchBox-form">
+----++    <input id="searchbox" class="ais-SearchBox-input"/>
+----++    <button class="ais-SearchBox-submit" type="submit" title="Submit the search query."></button>
+----++    <button class="ais-SearchBox-reset" type="reset" title="Clear the search query." hidden></button>
+----++    <span class="ais-SearchBox-loadingIndicator" hidden>
+----++    </span>
+----++  </form>
+----++  <div id="clear-refinements"></div>
+----++  <div id="hits" style='color: white'></div>
+----++  <div id="pagination"></div>
+----++  <div id="brand-list"></div>
+----++</div> -->
+----++
+----++<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/selectize@0.12.6/dist/css/selectize.css"> -->
+----++
+----++<div class="container" style='background-color: white'>
+----++  <h3>InstantSearch.js - Results page with an autocomplete</h3>
+----++  <input id="autocomplete" style='border: 3px solid red'></input >
+----++  <div id="hits" style='border: 3px solid green'></div>
+----++</div>
+----++
+----++<style>
+----++  h1 {
+----++    margin-bottom: 1rem;
+----++  }
+----++
+----++  em {
+----++    background: cyan;
+----++    font-style: normal;
+----++  }
+----++
+----++  .container {
+----++    max-width: 960px;
+----++    margin: 0 auto;
+----++    padding: 1em;
+----++  }
+----++
+----++  .ais-hits {
+----++    margin-top: 1em;
+----++  }
+----++
+----++  .hit-name {
+----++    margin-bottom: 0.5em;
+----++  }
+----++
+----++  .hit-description {
+----++    color: #888;
+----++    font-size: 14px;
+----++    margin-bottom: 0.5em;
+----++  }
+----++</style>
+----++
+----++
+----++<script src="https://cdn.jsdelivr.net/npm/selectize@0.12.6/dist/js/standalone/selectize.min.js"></script>
+----++<script src="https://cdn.jsdelivr.net/npm/algoliasearch@3.30.0/dist/algoliasearchLite.min.js"></script>
+----++<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@^4.0.0"></script>
+----++
+----++
+----++<script>
+----++  window.setTimeout( function() {
+----++  const searchClient = algoliasearch(
+----++    '4A5N71XYH0',
+----++    '4495d2606ed017c1c724d6210a717cc7'
+----++  );
+----++
+----++  const autocomplete = instantsearch.connectors.connectAutocomplete(
+----++    ({ indices, refine, widgetParams }, isFirstRendering) => {
+----++      const { container, onSelectChange } = widgetParams;
+----++
+----++      if (isFirstRendering) {
+----++        container.html('<select id="ais-autocomplete"></select>');
+----++
+----++        container.find('select').selectize({
+----++          options: [],
+----++          valueField: 'title',
+----++          labelField: 'description',
+----++          highlight: false,
+----++          onType: refine,
+----++          onBlur() {
+----++            refine(this.getValue());
+----++          },
+----++          score() {
+----++            return function() {
+----++              return 1;
+----++            };
+----++          },
+----++          onChange(value) {
+----++            onSelectChange(value);
+----++            refine(value);
+----++          },
+----++        });
+----++
+----++        return;
+----++      }
+----++
+----++      const [select] = container.find('select');
+----++
+----++      indices.forEach(index => {
+----++        select.selectize.clearOptions();
+----++        index.results.hits.forEach(h => select.selectize.addOption(h));
+----++        select.selectize.refreshOptions(select.selectize.isOpen);
+----++      });
+----++    }
+----++  );
+----++
+----++  const suggestions = instantsearch({
+----++    indexName: 'web',
+----++    searchClient,
+----++  });
+----++
+----++  suggestions.addWidget(
+----++    instantsearch.widgets.configure({
+----++      hitsPerPage: 5,
+----++    })
+----++  );
+----++
+----++  suggestions.addWidget(
+----++    autocomplete({
+----++      container: $('#autocomplete'),
+----++      onSelectChange(value) {
+----++        search.helper.setQuery(value).search();
+----++      },
+----++    })
+----++  );
+----++
+----++  const search = instantsearch({
+----++    indexName: 'web',
+----++    searchClient,
+----++  });
+----++
+----++  search.addWidget(
+----++    instantsearch.widgets.configure({
+----++      hitsPerPage: 10,
+----++    })
+----++  );
+----++
+----++  search.addWidget(
+----++    instantsearch.widgets.hits({
+----++      container: '#hits',
+----++      templates: {
+----++        item: `
+----++        <h3 class="hit-name h4">
+----++          {{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}
+----++        </h3>
+----++        
+----++        <p class="hit-description mb-0">
+----++          {{#helpers.highlight}}{ "attribute": "description" }{{/helpers.highlight}}
+----++        </p>
+----++
+----++        <div>
+----++          <a class="v5_link" href="{{{url}}}">
+----++              Go to: {{{title}}}
+----++          </a>
+----++        </div>  
+----++        `,
+----++      },
+----++    })
+----++  );
+----++
+----++  suggestions.start();
+----++  search.start();
+----++
+----++}, 3000) // setTimeout finish
+----++
+----++</script>
+----+\ No newline at end of file
+----+diff --git a/email.txt b/email.txt
+----+new file mode 100644
+----+index 0000000..ef02232
+----+--- /dev/null
+----++++ b/email.txt
+----+@@ -0,0 +1,21 @@
+----++9:-# name: brokenlink
+----++10:+name: brokenlink
+----++31:-#     - name: Link Checker
+----++37:-#     - name: Create Issue From File
+----++44:+    - name: Link Checker
+----++48:+    - name: Create Issue From File
+----++72:     # - name: run unit tests
+----++77:-    - name: broken Link checker
+----++79:+    - name: broken Link checker Scholli
+----++132:+  .hit-name {
+----++232:+        <h3 class="hit-name h4">
+----++274:+  result=$(grep -n 'name' "$log")
+----++296:+-# name: brokenlink
+----++297:++name: brokenlink
+----++318:+-#     - name: Link Checker
+----++324:+-#     - name: Create Issue From File
+----++331:++    - name: Link Checker
+----++335:++    - name: Create Issue From File
+----++359:+     # - name: run unit tests
+----++364:+-    - name: broken Link checker
+----++366:++    - name: broken Link checker Scholli
+----+diff --git a/logFile.sh b/logFile.sh
+----+new file mode 100644
+----+index 0000000..0454d3b
+----+--- /dev/null
+----++++ b/logFile.sh
+----+@@ -0,0 +1,24 @@
+----++#!/bin/bash
+----++
+----++log=log_file.txt
+----++email=email.txt
+----++ 
+----++# create log file or overrite if already present
+----++printf "Log File - " > $log
+----++ 
+----++# append git diff to log file
+----++git diff master...branch >> $log 
+----++
+----++result=$(grep -n 'name' && '+' "$log")
+----++size=${#result}
+----++ 
+----++  if [ $size > 0 ]
+----++  then
+----++  # append data to email file
+----++  printf '%s\n' "${result[@]}" > $email
+----++  # email the file to an email address
+----++	mail -s "H2 changes" "christina.hastenrath@getpostman.com" < $email
+----++  else
+----++    echo no H2 diffs between master and dev
+----++	fi
+----++
+----+diff --git a/log_file.txt b/log_file.txt
+----+new file mode 100644
+----+index 0000000..b926d6a
+----+--- /dev/null
+----++++ b/log_file.txt
+----+@@ -0,0 +1,469 @@
+----++Log File - diff --git a/.github/brokenlink.yml b/.github/brokenlink.yml
+----++index 1350eee..3c248a7 100644
+----++--- a/.github/brokenlink.yml
+----+++++ b/.github/brokenlink.yml
+----++@@ -1,29 +1,33 @@
+----++ # I am not sure if this actually checks the right links
+----+++# This link checker does not count 404 pages as broken links. This is how Lichen works, where it is build on. Therefore this is not suitable for our usecase.
+----++ 
+----++-# name: brokenlink
+----+++name: brokenlink
+----++ 
+----++-# on: 
+----++-#   schedule:
+----++-#   - cron: '*/13 * * * *'
+----+++on: 
+----+++  schedule:
+----+++  # - cron: '*/13 * * * *'
+----++ 
+----++-# jobs: 
+----++-#   linkChecker:
+----++-#     runs-on: ubuntu-18.04
+----+++jobs: 
+----+++  linkChecker:
+----+++    runs-on: ubuntu-18.04
+----++ 
+----++-#     steps:
+----++-#     - uses: actions/checkout@v1
+----+++    steps:
+----+++    - uses: actions/checkout@v1
+----++ 
+----++-#     - name: Link Checker
+----++-#       uses: peter-evans/link-checker@v1.0.1
+----++-#       with:
+----++-#         args: -v -r ./v6
+----++-       
+----++-#     # issue is created and assigned to me, but the error is not logged in the description
+----++-#     - name: Create Issue From File
+----++-#       uses: peter-evans/create-issue-from-file@v1.0.1
+----++-#       env:
+----++-#         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+----++-#         ISSUE_TITLE: broken link or image found
+----++-#         ISSUE_CONTENT_FILEPATH: ./example-content/output.md
+----++-#         ISSUE_ASSIGNEES: ch264
+----+++    - name: Link Checker
+----+++      uses: peter-evans/link-checker@v1.0.1
+----+++      with:
+----+++        args: -v -r ./v6
+----+++    - name: Create Issue From File
+----+++      uses: peter-evans/create-issue-from-file@v1.0.1
+----+++      env:
+----+++        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+----+++        ISSUE_TITLE: Link Checker Report
+----+++        ISSUE_CONTENT_FILEPATH: ./link-checker/out.md
+----+++        ISSUE_LABELS: report, automated issue
+----+++
+----+++    # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+----+++    #     ISSUE_TITLE: broken link or image found
+----+++    #     ISSUE_CONTENT_FILEPATH: ./link-checker/out.md
+----+++    #     ISSUE_ASSIGNEES: ch264
+----++     
+----++diff --git a/.github/workflows/ci.yml b/.github/workflows/ci.yml
+----++index 168fe91..bb92b1a 100644
+----++--- a/.github/workflows/ci.yml
+----+++++ b/.github/workflows/ci.yml
+----++@@ -22,15 +22,13 @@ jobs:
+----++         node_modules/.bin/markdownlint ./ --ignore node_modules --ignore v5 
+----++         # lint only files that changed on branch
+----++         # git ls-files -m > temp && while read p; do node_modules/.bin/markdownlint "$p"; done < temp | rm temp\n
+----++-
+----++-
+----++         
+----++     # - name: run unit tests
+----++     #   run: |
+----++     #     npm run test:jest
+----++ 
+----++-# this link checker works but runs longer than 20min
+----++-    - name: broken Link checker
+----+++# this link checker works but runs longer than 2hours
+----+++    - name: broken Link checker Scholli
+----++       uses: ScholliYT/Broken-Links-Crawler-Action@v2.0.0
+----++       with:
+----++         website_url: 'https://learning.getpostman.com/'
+----++diff --git a/aloglia.ejs b/aloglia.ejs
+----++new file mode 100644
+----++index 0000000..a6ed32a
+----++--- /dev/null
+----+++++ b/aloglia.ejs
+----++@@ -0,0 +1,167 @@
+----+++<!-- Algolia Instantsearch -->
+----+++<!-- <div class="ais-SearchBox">
+----+++  <form class="ais-SearchBox-form">
+----+++    <input id="searchbox" class="ais-SearchBox-input"/>
+----+++    <button class="ais-SearchBox-submit" type="submit" title="Submit the search query."></button>
+----+++    <button class="ais-SearchBox-reset" type="reset" title="Clear the search query." hidden></button>
+----+++    <span class="ais-SearchBox-loadingIndicator" hidden>
+----+++    </span>
+----+++  </form>
+----+++  <div id="clear-refinements"></div>
+----+++  <div id="hits" style='color: white'></div>
+----+++  <div id="pagination"></div>
+----+++  <div id="brand-list"></div>
+----+++</div> -->
+----+++
+----+++<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/selectize@0.12.6/dist/css/selectize.css"> -->
+----+++
+----+++<div class="container" style='background-color: white'>
+----+++  <h3>InstantSearch.js - Results page with an autocomplete</h3>
+----+++  <input id="autocomplete" style='border: 3px solid red'></input >
+----+++  <div id="hits" style='border: 3px solid green'></div>
+----+++</div>
+----+++
+----+++<style>
+----+++  h1 {
+----+++    margin-bottom: 1rem;
+----+++  }
+----+++
+----+++  em {
+----+++    background: cyan;
+----+++    font-style: normal;
+----+++  }
+----+++
+----+++  .container {
+----+++    max-width: 960px;
+----+++    margin: 0 auto;
+----+++    padding: 1em;
+----+++  }
+----+++
+----+++  .ais-hits {
+----+++    margin-top: 1em;
+----+++  }
+----+++
+----+++  .hit-name {
+----+++    margin-bottom: 0.5em;
+----+++  }
+----+++
+----+++  .hit-description {
+----+++    color: #888;
+----+++    font-size: 14px;
+----+++    margin-bottom: 0.5em;
+----+++  }
+----+++</style>
+----+++
+----+++
+----+++<script src="https://cdn.jsdelivr.net/npm/selectize@0.12.6/dist/js/standalone/selectize.min.js"></script>
+----+++<script src="https://cdn.jsdelivr.net/npm/algoliasearch@3.30.0/dist/algoliasearchLite.min.js"></script>
+----+++<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@^4.0.0"></script>
+----+++
+----+++
+----+++<script>
+----+++  window.setTimeout( function() {
+----+++  const searchClient = algoliasearch(
+----+++    '4A5N71XYH0',
+----+++    '4495d2606ed017c1c724d6210a717cc7'
+----+++  );
+----+++
+----+++  const autocomplete = instantsearch.connectors.connectAutocomplete(
+----+++    ({ indices, refine, widgetParams }, isFirstRendering) => {
+----+++      const { container, onSelectChange } = widgetParams;
+----+++
+----+++      if (isFirstRendering) {
+----+++        container.html('<select id="ais-autocomplete"></select>');
+----+++
+----+++        container.find('select').selectize({
+----+++          options: [],
+----+++          valueField: 'title',
+----+++          labelField: 'description',
+----+++          highlight: false,
+----+++          onType: refine,
+----+++          onBlur() {
+----+++            refine(this.getValue());
+----+++          },
+----+++          score() {
+----+++            return function() {
+----+++              return 1;
+----+++            };
+----+++          },
+----+++          onChange(value) {
+----+++            onSelectChange(value);
+----+++            refine(value);
+----+++          },
+----+++        });
+----+++
+----+++        return;
+----+++      }
+----+++
+----+++      const [select] = container.find('select');
+----+++
+----+++      indices.forEach(index => {
+----+++        select.selectize.clearOptions();
+----+++        index.results.hits.forEach(h => select.selectize.addOption(h));
+----+++        select.selectize.refreshOptions(select.selectize.isOpen);
+----+++      });
+----+++    }
+----+++  );
+----+++
+----+++  const suggestions = instantsearch({
+----+++    indexName: 'web',
+----+++    searchClient,
+----+++  });
+----+++
+----+++  suggestions.addWidget(
+----+++    instantsearch.widgets.configure({
+----+++      hitsPerPage: 5,
+----+++    })
+----+++  );
+----+++
+----+++  suggestions.addWidget(
+----+++    autocomplete({
+----+++      container: $('#autocomplete'),
+----+++      onSelectChange(value) {
+----+++        search.helper.setQuery(value).search();
+----+++      },
+----+++    })
+----+++  );
+----+++
+----+++  const search = instantsearch({
+----+++    indexName: 'web',
+----+++    searchClient,
+----+++  });
+----+++
+----+++  search.addWidget(
+----+++    instantsearch.widgets.configure({
+----+++      hitsPerPage: 10,
+----+++    })
+----+++  );
+----+++
+----+++  search.addWidget(
+----+++    instantsearch.widgets.hits({
+----+++      container: '#hits',
+----+++      templates: {
+----+++        item: `
+----+++        <h3 class="hit-name h4">
+----+++          {{#helpers.highlight}}{ "attribute": "title" }{{/helpers.highlight}}
+----+++        </h3>
+----+++        
+----+++        <p class="hit-description mb-0">
+----+++          {{#helpers.highlight}}{ "attribute": "description" }{{/helpers.highlight}}
+----+++        </p>
+----+++
+----+++        <div>
+----+++          <a class="v5_link" href="{{{url}}}">
+----+++              Go to: {{{title}}}
+----+++          </a>
+----+++        </div>  
+----+++        `,
+----+++      },
+----+++    })
+----+++  );
+----+++
+----+++  suggestions.start();
+----+++  search.start();
+----+++
+----+++}, 3000) // setTimeout finish
+----+++
+----+++</script>
+----++\ No newline at end of file
+----++diff --git a/logFile.sh b/logFile.sh
+----++new file mode 100644
+----++index 0000000..0832c45
+----++--- /dev/null
+----+++++ b/logFile.sh
+----++@@ -0,0 +1,19 @@
+----+++#!/bin/bash
+----+++
+----+++log=log_file.txt
+----+++
+----+++ 
+----+++# create log file or overrite if already present
+----+++printf "Log File - " > $log
+----+++ 
+----+++# append git diff to log file
+----+++git diff master...branch >> $log 
+----+++
+----+++  result=$(grep -n 'name' "$log")
+----+++  if "$result" = true
+----+++  then
+----+++		mail -s "H2 changes were found" "christina.hastenrath@getpostman.com" < "$result"
+----+++  else
+----+++    echo no H2 changes
+----+++	fi
+----+++
+----++diff --git a/log_file.txt b/log_file.txt
+----++new file mode 100644
+----++index 0000000..69479be
+----++--- /dev/null
+----+++++ b/log_file.txt
+----++@@ -0,0 +1,132 @@
+----+++Log File - diff --git a/.github/brokenlink.yml b/.github/brokenlink.yml
+----+++index 1350eee..3c248a7 100644
+----+++--- a/.github/brokenlink.yml
+----++++++ b/.github/brokenlink.yml
+----+++@@ -1,29 +1,33 @@
+----+++ # I am not sure if this actually checks the right links
+----++++# This link checker does not count 404 pages as broken links. This is how Lichen works, where it is build on. Therefore this is not suitable for our usecase.
+----+++ 
+----+++-# name: brokenlink
+----++++name: brokenlink
+----+++ 
+----+++-# on: 
+----+++-#   schedule:
+----+++-#   - cron: '*/13 * * * *'
+----++++on: 
+----++++  schedule:
+----++++  # - cron: '*/13 * * * *'
+----+++ 
+----+++-# jobs: 
+----+++-#   linkChecker:
+----+++-#     runs-on: ubuntu-18.04
+----++++jobs: 
+----++++  linkChecker:
+----++++    runs-on: ubuntu-18.04
+----+++ 
+----+++-#     steps:
+----+++-#     - uses: actions/checkout@v1
+----++++    steps:
+----++++    - uses: actions/checkout@v1
+----+++ 
+----+++-#     - name: Link Checker
+----+++-#       uses: peter-evans/link-checker@v1.0.1
+----+++-#       with:
+----+++-#         args: -v -r ./v6
+----+++-       
+----+++-#     # issue is created and assigned to me, but the error is not logged in the description
+----+++-#     - name: Create Issue From File
+----+++-#       uses: peter-evans/create-issue-from-file@v1.0.1
+----+++-#       env:
+----+++-#         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+----+++-#         ISSUE_TITLE: broken link or image found
+----+++-#         ISSUE_CONTENT_FILEPATH: ./example-content/output.md
+----+++-#         ISSUE_ASSIGNEES: ch264
+----++++    - name: Link Checker
+----++++      uses: peter-evans/link-checker@v1.0.1
+----++++      with:
+----++++        args: -v -r ./v6
+----++++    - name: Create Issue From File
+----++++      uses: peter-evans/create-issue-from-file@v1.0.1
+----++++      env:
+----++++        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+----++++        ISSUE_TITLE: Link Checker Report
+----++++        ISSUE_CONTENT_FILEPATH: ./link-checker/out.md
+----++++        ISSUE_LABELS: report, automated issue
+----++++
+----++++    # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+----++++    #     ISSUE_TITLE: broken link or image found
+----++++    #     ISSUE_CONTENT_FILEPATH: ./link-checker/out.md
+----++++    #     ISSUE_ASSIGNEES: ch264
+----+++     
+----+++diff --git a/.github/workflows/ci.yml b/.github/workflows/ci.yml
+----+++index 168fe91..bb92b1a 100644
+----+++--- a/.github/workflows/ci.yml
+----++++++ b/.github/workflows/ci.yml
+----+++@@ -22,15 +22,13 @@ jobs:
+----+++         node_modules/.bin/markdownlint ./ --ignore node_modules --ignore v5 
+----+++         # lint only files that changed on branch
+----+++         # git ls-files -m > temp && while read p; do node_modules/.bin/markdownlint "$p"; done < temp | rm temp\n
+----+++-
+----+++-
+----+++         
+----+++     # - name: run unit tests
+----+++     #   run: |
+----+++     #     npm run test:jest
+----+++ 
+----+++-# this link checker works but runs longer than 20min
+----+++-    - name: broken Link checker
+----++++# this link checker works but runs longer than 2hours
+----++++    - name: broken Link checker Scholli
+----+++       uses: ScholliYT/Broken-Links-Crawler-Action@v2.0.0
+----+++       with:
+----+++         website_url: 'https://learning.getpostman.com/'
+----+++diff --git a/package-lock.json b/package-lock.json
+----+++index 9945277..024be58 100644
+----+++--- a/package-lock.json
+----++++++ b/package-lock.json
+----+++@@ -3130,9 +3130,9 @@
+----+++       "dev": true
+----+++     },
+----+++     "handlebars": {
+----+++-      "version": "4.5.1",
+----+++-      "resolved": "https://registry.npmjs.org/handlebars/-/handlebars-4.5.1.tgz",
+----+++-      "integrity": "sha512-C29UoFzHe9yM61lOsIlCE5/mQVGrnIOrOq7maQl76L7tYPCgC1og0Ajt6uWnX4ZTxBPnjw+CUvawphwCfJgUnA==",
+----++++      "version": "4.5.3",
+----++++      "resolved": "https://registry.npmjs.org/handlebars/-/handlebars-4.5.3.tgz",
+----++++      "integrity": "sha512-3yPecJoJHK/4c6aZhSvxOyG4vJKDshV36VHp0iVCDVh7o9w2vwi3NSnL2MMPj3YdduqaBcu7cGbggJQM0br9xA==",
+----+++       "dev": true,
+----+++       "requires": {
+----+++         "neo-async": "^2.6.0",
+----+++@@ -5789,9 +5789,9 @@
+----+++       "integrity": "sha512-8Y75pvTYkLJW2hWQHXxoqRgV7qb9B+9vFEtidML+7koHUFapnVJAZ6cKs+Qjz5Aw3aZWHMC6u0wJE3At+nSGwA=="
+----+++     },
+----+++     "uglify-js": {
+----+++-      "version": "3.6.5",
+----+++-      "resolved": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.6.5.tgz",
+----+++-      "integrity": "sha512-7L3W+Npia1OCr5Blp4/Vw83tK1mu5gnoIURtT1fUVfQ3Kf8WStWV6NJz0fdoBJZls0KlweruRTLVe6XLafmy5g==",
+----++++      "version": "3.7.0",
+----++++      "resolved": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.7.0.tgz",
+----++++      "integrity": "sha512-PC/ee458NEMITe1OufAjal65i6lB58R1HWMRcxwvdz1UopW0DYqlRL3xdu3IcTvTXsB02CRHykidkTRL+A3hQA==",
+----+++       "dev": true,
+----+++       "optional": true,
+----+++       "requires": {
+----+++diff --git a/test.md b/test.md
+----+++index bf976fa..7b8ff91 100644
+----+++--- a/test.md
+----++++++ b/test.md
+----+++@@ -16,4 +16,4 @@ this is the test
+----+++ 
+----+++ for the last line
+----+++ 
+----+++-https://learning.getpostman-beta.com/docs/postman/launching-postman/introduction/ere
+----++++<https://learning.getpostman-beta.com/docs/postman/launching-postman/introduction/ere>
+----+++diff --git a/v6/enterprise/Intro.md b/v6/enterprise/Intro.md
+----+++index 22f0bfc..5afce92 100644
+----+++--- a/v6/enterprise/Intro.md
+----++++++ b/v6/enterprise/Intro.md
+----+++@@ -5,4 +5,4 @@ also modified
+----+++ 
+----+++ d
+----+++ 
+----+++-https://learning.getpostman.com/docs/postman/launching-postman/introduction/de
+----++++<https://learning.getpostman.com/docs/postman/launching-postman/introduction/de>
+----++diff --git a/package-lock.json b/package-lock.json
+----++index 9945277..024be58 100644
+----++--- a/package-lock.json
+----+++++ b/package-lock.json
+----++@@ -3130,9 +3130,9 @@
+----++       "dev": true
+----++     },
+----++     "handlebars": {
+----++-      "version": "4.5.1",
+----++-      "resolved": "https://registry.npmjs.org/handlebars/-/handlebars-4.5.1.tgz",
+----++-      "integrity": "sha512-C29UoFzHe9yM61lOsIlCE5/mQVGrnIOrOq7maQl76L7tYPCgC1og0Ajt6uWnX4ZTxBPnjw+CUvawphwCfJgUnA==",
+----+++      "version": "4.5.3",
+----+++      "resolved": "https://registry.npmjs.org/handlebars/-/handlebars-4.5.3.tgz",
+----+++      "integrity": "sha512-3yPecJoJHK/4c6aZhSvxOyG4vJKDshV36VHp0iVCDVh7o9w2vwi3NSnL2MMPj3YdduqaBcu7cGbggJQM0br9xA==",
+----++       "dev": true,
+----++       "requires": {
+----++         "neo-async": "^2.6.0",
+----++@@ -5789,9 +5789,9 @@
+----++       "integrity": "sha512-8Y75pvTYkLJW2hWQHXxoqRgV7qb9B+9vFEtidML+7koHUFapnVJAZ6cKs+Qjz5Aw3aZWHMC6u0wJE3At+nSGwA=="
+----++     },
+----++     "uglify-js": {
+----++-      "version": "3.6.5",
+----++-      "resolved": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.6.5.tgz",
+----++-      "integrity": "sha512-7L3W+Npia1OCr5Blp4/Vw83tK1mu5gnoIURtT1fUVfQ3Kf8WStWV6NJz0fdoBJZls0KlweruRTLVe6XLafmy5g==",
+----+++      "version": "3.7.0",
+----+++      "resolved": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.7.0.tgz",
+----+++      "integrity": "sha512-PC/ee458NEMITe1OufAjal65i6lB58R1HWMRcxwvdz1UopW0DYqlRL3xdu3IcTvTXsB02CRHykidkTRL+A3hQA==",
+----++       "dev": true,
+----++       "optional": true,
+----++       "requires": {
+----++diff --git a/test.md b/test.md
+----++index bf976fa..7b8ff91 100644
+----++--- a/test.md
+----+++++ b/test.md
+----++@@ -16,4 +16,4 @@ this is the test
+----++ 
+----++ for the last line
+----++ 
+----++-https://learning.getpostman-beta.com/docs/postman/launching-postman/introduction/ere
+----+++<https://learning.getpostman-beta.com/docs/postman/launching-postman/introduction/ere>
+----++diff --git a/v6/enterprise/Intro.md b/v6/enterprise/Intro.md
+----++index 22f0bfc..5afce92 100644
+----++--- a/v6/enterprise/Intro.md
+----+++++ b/v6/enterprise/Intro.md
+----++@@ -5,4 +5,4 @@ also modified
+----++ 
+----++ d
+----++ 
+----++-https://learning.getpostman.com/docs/postman/launching-postman/introduction/de
+----+++<https://learning.getpostman.com/docs/postman/launching-postman/introduction/de>
+----+diff --git a/package-lock.json b/package-lock.json
+----+index 9945277..024be58 100644
+----+--- a/package-lock.json
+----++++ b/package-lock.json
+----+@@ -3130,9 +3130,9 @@
+----+       "dev": true
+----+     },
+----+     "handlebars": {
+----+-      "version": "4.5.1",
+----+-      "resolved": "https://registry.npmjs.org/handlebars/-/handlebars-4.5.1.tgz",
+----+-      "integrity": "sha512-C29UoFzHe9yM61lOsIlCE5/mQVGrnIOrOq7maQl76L7tYPCgC1og0Ajt6uWnX4ZTxBPnjw+CUvawphwCfJgUnA==",
+----++      "version": "4.5.3",
+----++      "resolved": "https://registry.npmjs.org/handlebars/-/handlebars-4.5.3.tgz",
+----++      "integrity": "sha512-3yPecJoJHK/4c6aZhSvxOyG4vJKDshV36VHp0iVCDVh7o9w2vwi3NSnL2MMPj3YdduqaBcu7cGbggJQM0br9xA==",
+----+       "dev": true,
+----+       "requires": {
+----+         "neo-async": "^2.6.0",
+----+@@ -5789,9 +5789,9 @@
+----+       "integrity": "sha512-8Y75pvTYkLJW2hWQHXxoqRgV7qb9B+9vFEtidML+7koHUFapnVJAZ6cKs+Qjz5Aw3aZWHMC6u0wJE3At+nSGwA=="
+----+     },
+----+     "uglify-js": {
+----+-      "version": "3.6.5",
+----+-      "resolved": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.6.5.tgz",
+----+-      "integrity": "sha512-7L3W+Npia1OCr5Blp4/Vw83tK1mu5gnoIURtT1fUVfQ3Kf8WStWV6NJz0fdoBJZls0KlweruRTLVe6XLafmy5g==",
+----++      "version": "3.7.0",
+----++      "resolved": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.7.0.tgz",
+----++      "integrity": "sha512-PC/ee458NEMITe1OufAjal65i6lB58R1HWMRcxwvdz1UopW0DYqlRL3xdu3IcTvTXsB02CRHykidkTRL+A3hQA==",
+----+       "dev": true,
+----+       "optional": true,
+----+       "requires": {
+----+diff --git a/test.md b/test.md
+----+index bf976fa..7b8ff91 100644
+----+--- a/test.md
+----++++ b/test.md
+----+@@ -16,4 +16,4 @@ this is the test
+----+ 
+----+ for the last line
+----+ 
+----+-https://learning.getpostman-beta.com/docs/postman/launching-postman/introduction/ere
+----++<https://learning.getpostman-beta.com/docs/postman/launching-postman/introduction/ere>
+----+diff --git a/v6/enterprise/Intro.md b/v6/enterprise/Intro.md
+----+index 22f0bfc..5afce92 100644
+----+--- a/v6/enterprise/Intro.md
+----++++ b/v6/enterprise/Intro.md
+----+@@ -5,4 +5,4 @@ also modified
+----+ 
+----+ d
+----+ 
+----+-https://learning.getpostman.com/docs/postman/launching-postman/introduction/de
+----++<https://learning.getpostman.com/docs/postman/launching-postman/introduction/de>
+----diff --git a/package-lock.json b/package-lock.json
+----index 9945277..024be58 100644
+------- a/package-lock.json
+----+++ b/package-lock.json
+----@@ -3130,9 +3130,9 @@
+----       "dev": true
+----     },
+----     "handlebars": {
+-----      "version": "4.5.1",
+-----      "resolved": "https://registry.npmjs.org/handlebars/-/handlebars-4.5.1.tgz",
+-----      "integrity": "sha512-C29UoFzHe9yM61lOsIlCE5/mQVGrnIOrOq7maQl76L7tYPCgC1og0Ajt6uWnX4ZTxBPnjw+CUvawphwCfJgUnA==",
+----+      "version": "4.5.3",
+----+      "resolved": "https://registry.npmjs.org/handlebars/-/handlebars-4.5.3.tgz",
+----+      "integrity": "sha512-3yPecJoJHK/4c6aZhSvxOyG4vJKDshV36VHp0iVCDVh7o9w2vwi3NSnL2MMPj3YdduqaBcu7cGbggJQM0br9xA==",
+----       "dev": true,
+----       "requires": {
+----         "neo-async": "^2.6.0",
+----@@ -5789,9 +5789,9 @@
+----       "integrity": "sha512-8Y75pvTYkLJW2hWQHXxoqRgV7qb9B+9vFEtidML+7koHUFapnVJAZ6cKs+Qjz5Aw3aZWHMC6u0wJE3At+nSGwA=="
+----     },
+----     "uglify-js": {
+-----      "version": "3.6.5",
+-----      "resolved": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.6.5.tgz",
+-----      "integrity": "sha512-7L3W+Npia1OCr5Blp4/Vw83tK1mu5gnoIURtT1fUVfQ3Kf8WStWV6NJz0fdoBJZls0KlweruRTLVe6XLafmy5g==",
+----+      "version": "3.7.0",
+----+      "resolved": "https://registry.npmjs.org/uglify-js/-/uglify-js-3.7.0.tgz",
+----+      "integrity": "sha512-PC/ee458NEMITe1OufAjal65i6lB58R1HWMRcxwvdz1UopW0DYqlRL3xdu3IcTvTXsB02CRHykidkTRL+A3hQA==",
+----       "dev": true,
+----       "optional": true,
+----       "requires": {
+----diff --git a/test.md b/test.md
+----index bf976fa..7b8ff91 100644
+------- a/test.md
+----+++ b/test.md
+----@@ -16,4 +16,4 @@ this is the test
+---- 
+---- for the last line
+---- 
+-----https://learning.getpostman-beta.com/docs/postman/launching-postman/introduction/ere
+----+<https://learning.getpostman-beta.com/docs/postman/launching-postman/introduction/ere>
+----diff --git a/v6/enterprise/Intro.md b/v6/enterprise/Intro.md
+----index 22f0bfc..5afce92 100644
+------- a/v6/enterprise/Intro.md
+----+++ b/v6/enterprise/Intro.md
+----@@ -5,4 +5,4 @@ also modified
+---- 
+---- d
+---- 
+-----https://learning.getpostman.com/docs/postman/launching-postman/introduction/de
+----+<https://learning.getpostman.com/docs/postman/launching-postman/introduction/de>
+---+@@ -1,121 +1 @@
+---+-9:-# name: brokenlink
+---+-10:+name: brokenlink
+---+-31:-#     - name: Link Checker
+---+-37:-#     - name: Create Issue From File
+---+-44:+    - name: Link Checker
+---+-48:+    - name: Create Issue From File
+---+-72:+    - name: h2 changes email
+---+-74:     # - name: run unit tests
+---+-79:-    - name: broken Link checker
+---+-81:+    - name: broken Link checker Scholli
+---+-137:+  .hit-name {
+---+-237:+        <h3 class="hit-name h4">
+---+-268:+9:-# name: brokenlink
+---+-269:+10:+name: brokenlink
+---+-270:+31:-#     - name: Link Checker
+---+-271:+37:-#     - name: Create Issue From File
+---+-272:+44:+    - name: Link Checker
+---+-273:+48:+    - name: Create Issue From File
+---+-274:+72:     # - name: run unit tests
+---+-275:+77:-    - name: broken Link checker
+---+-276:+79:+    - name: broken Link checker Scholli
+---+-277:+135:+  .hit-name {
+---+-278:+235:+        <h3 class="hit-name h4">
+---+-279:+266:+9:-# name: brokenlink
+---+-280:+267:+10:+name: brokenlink
+---+-281:+268:+31:-#     - name: Link Checker
+---+-282:+269:+37:-#     - name: Create Issue From File
+---+-283:+270:+44:+    - name: Link Checker
+---+-284:+271:+48:+    - name: Create Issue From File
+---+-285:+272:+72:     # - name: run unit tests
+---+-286:+273:+77:-    - name: broken Link checker
+---+-287:+274:+79:+    - name: broken Link checker Scholli
+---+-288:+275:+132:+  .hit-name {
+---+-289:+276:+232:+        <h3 class="hit-name h4">
+---+-290:+277:+274:+  result=$(grep -n 'name' "$log")
+---+-291:+278:+296:+-# name: brokenlink
+---+-292:+279:+297:++name: brokenlink
+---+-293:+280:+318:+-#     - name: Link Checker
+---+-294:+281:+324:+-#     - name: Create Issue From File
+---+-295:+282:+331:++    - name: Link Checker
+---+-296:+283:+335:++    - name: Create Issue From File
+---+-297:+284:+359:+     # - name: run unit tests
+---+-298:+285:+364:+-    - name: broken Link checker
+---+-299:+286:+366:++    - name: broken Link checker Scholli
+---+-300:+304:+result=$(grep -n 'name' && '+' "$log")
+---+-301:+331:+-# name: brokenlink
+---+-302:+332:++name: brokenlink
+---+-303:+353:+-#     - name: Link Checker
+---+-304:+359:+-#     - name: Create Issue From File
+---+-305:+366:++    - name: Link Checker
+---+-306:+370:++    - name: Create Issue From File
+---+-307:+394:+     # - name: run unit tests
+---+-308:+399:+-    - name: broken Link checker
+---+-309:+401:++    - name: broken Link checker Scholli
+---+-310:+454:++  .hit-name {
+---+-311:+554:++        <h3 class="hit-name h4">
+---+-312:+596:++  result=$(grep -n 'name' "$log")
+---+-313:+618:++-# name: brokenlink
+---+-314:+619:+++name: brokenlink
+---+-315:+640:++-#     - name: Link Checker
+---+-316:+646:++-#     - name: Create Issue From File
+---+-317:+653:+++    - name: Link Checker
+---+-318:+657:+++    - name: Create Issue From File
+---+-319:+681:++     # - name: run unit tests
+---+-320:+686:++-    - name: broken Link checker
+---+-321:+688:+++    - name: broken Link checker Scholli
+---+-340:+result=$(grep -n 'name' "$log")
+---+-365:+-# name: brokenlink
+---+-366:++name: brokenlink
+---+-387:+-#     - name: Link Checker
+---+-393:+-#     - name: Create Issue From File
+---+-400:++    - name: Link Checker
+---+-404:++    - name: Create Issue From File
+---+-428:+     # - name: run unit tests
+---+-433:+-    - name: broken Link checker
+---+-435:++    - name: broken Link checker Scholli
+---+-491:++  .hit-name {
+---+-591:++        <h3 class="hit-name h4">
+---+-622:++9:-# name: brokenlink
+---+-623:++10:+name: brokenlink
+---+-624:++31:-#     - name: Link Checker
+---+-625:++37:-#     - name: Create Issue From File
+---+-626:++44:+    - name: Link Checker
+---+-627:++48:+    - name: Create Issue From File
+---+-628:++72:     # - name: run unit tests
+---+-629:++77:-    - name: broken Link checker
+---+-630:++79:+    - name: broken Link checker Scholli
+---+-631:++132:+  .hit-name {
+---+-632:++232:+        <h3 class="hit-name h4">
+---+-633:++274:+  result=$(grep -n 'name' "$log")
+---+-634:++296:+-# name: brokenlink
+---+-635:++297:++name: brokenlink
+---+-636:++318:+-#     - name: Link Checker
+---+-637:++324:+-#     - name: Create Issue From File
+---+-638:++331:++    - name: Link Checker
+---+-639:++335:++    - name: Create Issue From File
+---+-640:++359:+     # - name: run unit tests
+---+-641:++364:+-    - name: broken Link checker
+---+-642:++366:++    - name: broken Link checker Scholli
+---+-660:++result=$(grep -n 'name' && '+'
+---\ No newline at end of file
+--+Log File - 
 --\ No newline at end of file
 -+Log File - 
 -\ No newline at end of file
-+Log File - 
+-diff --git a/package-lock.json b/package-lock.json
+-index 660170f..009265a 100644
+---- a/package-lock.json
+-+++ b/package-lock.json
+-@@ -1304,6 +1304,11 @@
+-       "integrity": "sha512-7evsyfH1cLOCdAzZAd43Cic04yKydNx0cF+7tiA19p1XnLLPU4dpCQOqpjqwokFe//vS0QqfqqjCS2JkiIs0cA==",
+-       "dev": true
+-     },
+-+    "addressparser": {
+-+      "version": "1.0.1",
+-+      "resolved": "https://registry.npmjs.org/addressparser/-/addressparser-1.0.1.tgz",
+-+      "integrity": "sha1-R6++GiqSYhkdtoOOT9HTm0CCF0Y="
+-+    },
+-     "ajv": {
+-       "version": "6.10.2",
+-       "resolved": "https://registry.npmjs.org/ajv/-/ajv-6.10.2.tgz",
+-@@ -1699,6 +1704,36 @@
+-       "integrity": "sha512-MQcXEUbCKtEo7bhqEs6560Hyd4XaovZlO/k9V3hjVUF/zwW7KBVdSK4gIt/bzwS9MbR5qob+F5jusZsb0YQK2A==",
+-       "dev": true
+-     },
+-+    "buildmail": {
+-+      "version": "3.10.0",
+-+      "resolved": "https://registry.npmjs.org/buildmail/-/buildmail-3.10.0.tgz",
+-+      "integrity": "sha1-xoJtcW55RbtvaxQ0tTmF4CmgMVk=",
+-+      "requires": {
+-+        "addressparser": "1.0.1",
+-+        "libbase64": "0.1.0",
+-+        "libmime": "2.1.0",
+-+        "libqp": "1.1.0",
+-+        "nodemailer-fetch": "1.6.0",
+-+        "nodemailer-shared": "1.1.0"
+-+      },
+-+      "dependencies": {
+-+        "iconv-lite": {
+-+          "version": "0.4.13",
+-+          "resolved": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.13.tgz",
+-+          "integrity": "sha1-H4irpKsLFQjoMSrMOTRfNumS4vI="
+-+        },
+-+        "libmime": {
+-+          "version": "2.1.0",
+-+          "resolved": "https://registry.npmjs.org/libmime/-/libmime-2.1.0.tgz",
+-+          "integrity": "sha1-Ubx23iKDFh65BRxLyArtcT5P0c0=",
+-+          "requires": {
+-+            "iconv-lite": "0.4.13",
+-+            "libbase64": "0.1.0",
+-+            "libqp": "1.1.0"
+-+          }
+-+        }
+-+      }
+-+    },
+-     "cache-base": {
+-       "version": "1.0.1",
+-       "resolved": "https://registry.npmjs.org/cache-base/-/cache-base-1.0.1.tgz",
+-@@ -2117,6 +2152,14 @@
+-       "integrity": "sha512-Dj6Wk3tWyTE+Fo1rW8v0Xhwk80um6yFYKbuAxc9c3EZxIHFDYwbi34Uk42u1CdnIiVorvt4RmlSDjIPyzGC2ew==",
+-       "dev": true
+-     },
+-+    "dkim-signer": {
+-+      "version": "0.2.2",
+-+      "resolved": "https://registry.npmjs.org/dkim-signer/-/dkim-signer-0.2.2.tgz",
+-+      "integrity": "sha1-qoHsBx7u02IngbqpIgRNeADl8wg=",
+-+      "requires": {
+-+        "libmime": "^2.0.3"
+-+      }
+-+    },
+-     "domexception": {
+-       "version": "1.0.1",
+-       "resolved": "https://registry.npmjs.org/domexception/-/domexception-1.0.1.tgz",
+-@@ -4223,6 +4266,33 @@
+-         "type-check": "~0.3.2"
+-       }
+-     },
+-+    "libbase64": {
+-+      "version": "0.1.0",
+-+      "resolved": "https://registry.npmjs.org/libbase64/-/libbase64-0.1.0.tgz",
+-+      "integrity": "sha1-YjUag5VjrF/1vSbxL2Dpgwu3UeY="
+-+    },
+-+    "libmime": {
+-+      "version": "2.1.3",
+-+      "resolved": "https://registry.npmjs.org/libmime/-/libmime-2.1.3.tgz",
+-+      "integrity": "sha1-JQF8pataHpiq2+JyUBfPHUikKgw=",
+-+      "requires": {
+-+        "iconv-lite": "0.4.15",
+-+        "libbase64": "0.1.0",
+-+        "libqp": "1.1.0"
+-+      },
+-+      "dependencies": {
+-+        "iconv-lite": {
+-+          "version": "0.4.15",
+-+          "resolved": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.15.tgz",
+-+          "integrity": "sha1-/iZaIYrGpXz+hUkn6dBMGYJe3es="
+-+        }
+-+      }
+-+    },
+-+    "libqp": {
+-+      "version": "1.1.0",
+-+      "resolved": "https://registry.npmjs.org/libqp/-/libqp-1.1.0.tgz",
+-+      "integrity": "sha1-9ebgatdLeU+1tbZpiL9yjvHe2+g="
+-+    },
+-     "linkify-it": {
+-       "version": "2.2.0",
+-       "resolved": "https://registry.npmjs.org/linkify-it/-/linkify-it-2.2.0.tgz",
+-@@ -4282,6 +4352,32 @@
+-         "js-tokens": "^3.0.0 || ^4.0.0"
+-       }
+-     },
+-+    "mailcomposer": {
+-+      "version": "3.12.0",
+-+      "resolved": "https://registry.npmjs.org/mailcomposer/-/mailcomposer-3.12.0.tgz",
+-+      "integrity": "sha1-nF4RiKqOHGLsi4a9Q0aBArY56Pk=",
+-+      "requires": {
+-+        "buildmail": "3.10.0",
+-+        "libmime": "2.1.0"
+-+      },
+-+      "dependencies": {
+-+        "iconv-lite": {
+-+          "version": "0.4.13",
+-+          "resolved": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.13.tgz",
+-+          "integrity": "sha1-H4irpKsLFQjoMSrMOTRfNumS4vI="
+-+        },
+-+        "libmime": {
+-+          "version": "2.1.0",
+-+          "resolved": "https://registry.npmjs.org/libmime/-/libmime-2.1.0.tgz",
+-+          "integrity": "sha1-Ubx23iKDFh65BRxLyArtcT5P0c0=",
+-+          "requires": {
+-+            "iconv-lite": "0.4.13",
+-+            "libbase64": "0.1.0",
+-+            "libqp": "1.1.0"
+-+          }
+-+        }
+-+      }
+-+    },
+-     "make-dir": {
+-       "version": "2.1.0",
+-       "resolved": "https://registry.npmjs.org/make-dir/-/make-dir-2.1.0.tgz",
+-@@ -4560,6 +4656,19 @@
+-         }
+-       }
+-     },
+-+    "nodemailer-fetch": {
+-+      "version": "1.6.0",
+-+      "resolved": "https://registry.npmjs.org/nodemailer-fetch/-/nodemailer-fetch-1.6.0.tgz",
+-+      "integrity": "sha1-ecSQihwPXzdbc/6IjamCj23JY6Q="
+-+    },
+-+    "nodemailer-shared": {
+-+      "version": "1.1.0",
+-+      "resolved": "https://registry.npmjs.org/nodemailer-shared/-/nodemailer-shared-1.1.0.tgz",
+-+      "integrity": "sha1-z1mU4v0mjQD1zw+nZ6CBae2wfsA=",
+-+      "requires": {
+-+        "nodemailer-fetch": "1.6.0"
+-+      }
+-+    },
+-     "normalize-package-data": {
+-       "version": "2.5.0",
+-       "resolved": "https://registry.npmjs.org/normalize-package-data/-/normalize-package-data-2.5.0.tgz",
+-@@ -5319,6 +5428,15 @@
+-       "integrity": "sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==",
+-       "dev": true
+-     },
+-+    "sendmail": {
+-+      "version": "1.6.1",
+-+      "resolved": "https://registry.npmjs.org/sendmail/-/sendmail-1.6.1.tgz",
+-+      "integrity": "sha512-lIhvnjSi5e5jL8wA1GPP6j2QVlx6JOEfmdn0QIfmuJdmXYGmJ375kcOU0NSm/34J+nypm4sa1AXrYE5w3uNIIA==",
+-+      "requires": {
+-+        "dkim-signer": "0.2.2",
+-+        "mailcomposer": "3.12.0"
+-+      }
+-+    },
+-     "set-blocking": {
+-       "version": "2.0.0",
+-       "resolved": "https://registry.npmjs.org/set-blocking/-/set-blocking-2.0.0.tgz",
+-diff --git a/package.json b/package.json
+-index 1e7df51..668c194 100644
+---- a/package.json
+-+++ b/package.json
+-@@ -2,6 +2,7 @@
+-   "dependencies": {
+-     "lodash": "^4.17.13",
+-     "markdownlint-cli": "^0.18.0",
+-+    "sendmail": "^1.6.1",
+-     "yum": "^0.1.1"
+-   },
+-   "scripts": {
++@@ -11,12 +11,12 @@ git diff branch >> $log
++ # git diff master...branch >> $log 
++ 
++ # find H2 tag in diff
 \ No newline at end of file
-diff --git a/package-lock.json b/package-lock.json
-index 660170f..009265a 100644
---- a/package-lock.json
-+++ b/package-lock.json
-@@ -1304,6 +1304,11 @@
-       "integrity": "sha512-7evsyfH1cLOCdAzZAd43Cic04yKydNx0cF+7tiA19p1XnLLPU4dpCQOqpjqwokFe//vS0QqfqqjCS2JkiIs0cA==",
-       "dev": true
-     },
-+    "addressparser": {
-+      "version": "1.0.1",
-+      "resolved": "https://registry.npmjs.org/addressparser/-/addressparser-1.0.1.tgz",
-+      "integrity": "sha1-R6++GiqSYhkdtoOOT9HTm0CCF0Y="
-+    },
-     "ajv": {
-       "version": "6.10.2",
-       "resolved": "https://registry.npmjs.org/ajv/-/ajv-6.10.2.tgz",
-@@ -1699,6 +1704,36 @@
-       "integrity": "sha512-MQcXEUbCKtEo7bhqEs6560Hyd4XaovZlO/k9V3hjVUF/zwW7KBVdSK4gIt/bzwS9MbR5qob+F5jusZsb0YQK2A==",
-       "dev": true
-     },
-+    "buildmail": {
-+      "version": "3.10.0",
-+      "resolved": "https://registry.npmjs.org/buildmail/-/buildmail-3.10.0.tgz",
-+      "integrity": "sha1-xoJtcW55RbtvaxQ0tTmF4CmgMVk=",
-+      "requires": {
-+        "addressparser": "1.0.1",
-+        "libbase64": "0.1.0",
-+        "libmime": "2.1.0",
-+        "libqp": "1.1.0",
-+        "nodemailer-fetch": "1.6.0",
-+        "nodemailer-shared": "1.1.0"
-+      },
-+      "dependencies": {
-+        "iconv-lite": {
-+          "version": "0.4.13",
-+          "resolved": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.13.tgz",
-+          "integrity": "sha1-H4irpKsLFQjoMSrMOTRfNumS4vI="
-+        },
-+        "libmime": {
-+          "version": "2.1.0",
-+          "resolved": "https://registry.npmjs.org/libmime/-/libmime-2.1.0.tgz",
-+          "integrity": "sha1-Ubx23iKDFh65BRxLyArtcT5P0c0=",
-+          "requires": {
-+            "iconv-lite": "0.4.13",
-+            "libbase64": "0.1.0",
-+            "libqp": "1.1.0"
-+          }
-+        }
-+      }
-+    },
-     "cache-base": {
-       "version": "1.0.1",
-       "resolved": "https://registry.npmjs.org/cache-base/-/cache-base-1.0.1.tgz",
-@@ -2117,6 +2152,14 @@
-       "integrity": "sha512-Dj6Wk3tWyTE+Fo1rW8v0Xhwk80um6yFYKbuAxc9c3EZxIHFDYwbi34Uk42u1CdnIiVorvt4RmlSDjIPyzGC2ew==",
-       "dev": true
-     },
-+    "dkim-signer": {
-+      "version": "0.2.2",
-+      "resolved": "https://registry.npmjs.org/dkim-signer/-/dkim-signer-0.2.2.tgz",
-+      "integrity": "sha1-qoHsBx7u02IngbqpIgRNeADl8wg=",
-+      "requires": {
-+        "libmime": "^2.0.3"
-+      }
-+    },
-     "domexception": {
-       "version": "1.0.1",
-       "resolved": "https://registry.npmjs.org/domexception/-/domexception-1.0.1.tgz",
-@@ -4223,6 +4266,33 @@
-         "type-check": "~0.3.2"
-       }
-     },
-+    "libbase64": {
-+      "version": "0.1.0",
-+      "resolved": "https://registry.npmjs.org/libbase64/-/libbase64-0.1.0.tgz",
-+      "integrity": "sha1-YjUag5VjrF/1vSbxL2Dpgwu3UeY="
-+    },
-+    "libmime": {
-+      "version": "2.1.3",
-+      "resolved": "https://registry.npmjs.org/libmime/-/libmime-2.1.3.tgz",
-+      "integrity": "sha1-JQF8pataHpiq2+JyUBfPHUikKgw=",
-+      "requires": {
-+        "iconv-lite": "0.4.15",
-+        "libbase64": "0.1.0",
-+        "libqp": "1.1.0"
-+      },
-+      "dependencies": {
-+        "iconv-lite": {
-+          "version": "0.4.15",
-+          "resolved": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.15.tgz",
-+          "integrity": "sha1-/iZaIYrGpXz+hUkn6dBMGYJe3es="
-+        }
-+      }
-+    },
-+    "libqp": {
-+      "version": "1.1.0",
-+      "resolved": "https://registry.npmjs.org/libqp/-/libqp-1.1.0.tgz",
-+      "integrity": "sha1-9ebgatdLeU+1tbZpiL9yjvHe2+g="
-+    },
-     "linkify-it": {
-       "version": "2.2.0",
-       "resolved": "https://registry.npmjs.org/linkify-it/-/linkify-it-2.2.0.tgz",
-@@ -4282,6 +4352,32 @@
-         "js-tokens": "^3.0.0 || ^4.0.0"
-       }
-     },
-+    "mailcomposer": {
-+      "version": "3.12.0",
-+      "resolved": "https://registry.npmjs.org/mailcomposer/-/mailcomposer-3.12.0.tgz",
-+      "integrity": "sha1-nF4RiKqOHGLsi4a9Q0aBArY56Pk=",
-+      "requires": {
-+        "buildmail": "3.10.0",
-+        "libmime": "2.1.0"
-+      },
-+      "dependencies": {
-+        "iconv-lite": {
-+          "version": "0.4.13",
-+          "resolved": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.4.13.tgz",
-+          "integrity": "sha1-H4irpKsLFQjoMSrMOTRfNumS4vI="
-+        },
-+        "libmime": {
-+          "version": "2.1.0",
-+          "resolved": "https://registry.npmjs.org/libmime/-/libmime-2.1.0.tgz",
-+          "integrity": "sha1-Ubx23iKDFh65BRxLyArtcT5P0c0=",
-+          "requires": {
-+            "iconv-lite": "0.4.13",
-+            "libbase64": "0.1.0",
-+            "libqp": "1.1.0"
-+          }
-+        }
-+      }
-+    },
-     "make-dir": {
-       "version": "2.1.0",
-       "resolved": "https://registry.npmjs.org/make-dir/-/make-dir-2.1.0.tgz",
-@@ -4560,6 +4656,19 @@
-         }
-       }
-     },
-+    "nodemailer-fetch": {
-+      "version": "1.6.0",
-+      "resolved": "https://registry.npmjs.org/nodemailer-fetch/-/nodemailer-fetch-1.6.0.tgz",
-+      "integrity": "sha1-ecSQihwPXzdbc/6IjamCj23JY6Q="
-+    },
-+    "nodemailer-shared": {
-+      "version": "1.1.0",
-+      "resolved": "https://registry.npmjs.org/nodemailer-shared/-/nodemailer-shared-1.1.0.tgz",
-+      "integrity": "sha1-z1mU4v0mjQD1zw+nZ6CBae2wfsA=",
-+      "requires": {
-+        "nodemailer-fetch": "1.6.0"
-+      }
-+    },
-     "normalize-package-data": {
-       "version": "2.5.0",
-       "resolved": "https://registry.npmjs.org/normalize-package-data/-/normalize-package-data-2.5.0.tgz",
-@@ -5319,6 +5428,15 @@
-       "integrity": "sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==",
-       "dev": true
-     },
-+    "sendmail": {
-+      "version": "1.6.1",
-+      "resolved": "https://registry.npmjs.org/sendmail/-/sendmail-1.6.1.tgz",
-+      "integrity": "sha512-lIhvnjSi5e5jL8wA1GPP6j2QVlx6JOEfmdn0QIfmuJdmXYGmJ375kcOU0NSm/34J+nypm4sa1AXrYE5w3uNIIA==",
-+      "requires": {
-+        "dkim-signer": "0.2.2",
-+        "mailcomposer": "3.12.0"
-+      }
-+    },
-     "set-blocking": {
-       "version": "2.0.0",
-       "resolved": "https://registry.npmjs.org/set-blocking/-/set-blocking-2.0.0.tgz",
-diff --git a/package.json b/package.json
-index 1e7df51..668c194 100644
---- a/package.json
-+++ b/package.json
-@@ -2,6 +2,7 @@
-   "dependencies": {
-     "lodash": "^4.17.13",
-     "markdownlint-cli": "^0.18.0",
-+    "sendmail": "^1.6.1",
-     "yum": "^0.1.1"
-   },
-   "scripts": {
