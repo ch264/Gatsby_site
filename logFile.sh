@@ -7,18 +7,19 @@ email=email.txt
 printf "Log File - " > $log
  
 # append git diff to log file
-git diff master...branch >> $log 
+git diff branch >> $log 
+# git diff master...branch >> $log 
 
-result=$(grep -n 'name' && '+' "$log")
+# find H2 tag in diff
+result=$(grep -n '###' "$log")
 size=${#result}
- 
   if [ $size > 0 ]
   then
-  # append data to email file
-  printf '%s\n' "${result[@]}" > $email
-  # email the file to an email address
-	mail -s "H2 changes" "christina.hastenrath@getpostman.com" < $email
+    # # append data to email
+    printf '%s\n' "${result[@]}" > $email
+    # # send mail to email address
+    # mail -s "H2 changes have been made" "christina.hastenrath@getpostman.com" < $email
+    node email.js
   else
-    echo no H2 diffs between master and dev
-	fi
-
+    echo no data
+  fi
