@@ -5,4 +5,4 @@ also modified
 
 d
 
-<https://learning.getpostman.com/docs/postman/launching-postman/introduction/de>
+<https://learning.getpostman.com/docs/postman/launching-postman/introduction>

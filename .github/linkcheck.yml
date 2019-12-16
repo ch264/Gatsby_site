@@ -1,7 +1,12 @@
+name: checkerrrr
+
 on:
-  pull_request:
-    branches:
-    - master
+  schedule:
+  # * is a special character in YAML so you have to quote this string
+  - cron:  '*/10 * * * *'
+  paths:
+  - '*.md'
+
 name: Testing linkcheck
 jobs:
   markdown-link-check:
@@ -9,4 +14,4 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: md-linkcheck
-      uses: ocular-d/md-linkcheck-action@1.0.1
+      uses: ocular-d/md-linkcheck-action@1.0.2
