@@ -1,7 +1,8 @@
 {
   "dependencies": {
     "lodash": "^4.17.13",
-    "markdownlint-cli": "^0.18.0"
+    "markdownlint-cli": "^0.18.0",
+    "sendmail": "^1.6.1"
   },
   "scripts": {
     "test": "bash mdlint.sh",
