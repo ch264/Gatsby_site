@@ -11,7 +11,7 @@ git diff develop >> $log
 # git diff master...develop >> $log 
 
 # find H2 tag in diff
-result=$(grep -n 'Issue' "$log")
+result=$(grep -n '##' "$log")
 size=${#result}
   if [ $size > 0 ]
   then
