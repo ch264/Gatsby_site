@@ -1,13 +1,9 @@
 name: CI
 
 on: 
-  push:
+  pull_request:
     branches:
-    - develop
-# on: 
-#   pull_request:
-#     branches:
-#     - master
+    - master
 
 jobs:
   build:
@@ -50,3 +46,6 @@ jobs:
     # - name: run unit tests
     #   run: |
     #     npm run test:jest
+
+
+
