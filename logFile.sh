@@ -7,7 +7,7 @@ email=email.txt
 printf "Log File - " > $log
  
 # append git diff to log file
-git diff branch >> $log 
+git diff develop >> $log 
 # git diff master...branch >> $log 
 
 # find H2 tag in diff
