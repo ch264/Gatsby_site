@@ -24,6 +24,9 @@ jobs:
         # git ls-files -m > temp && while read p; do node_modules/.bin/markdownlint "$p"; done < temp | rm temp\n
     - name: h2 changes email
       run: bash logFile.sh
+    - uses: actions/hello-world-action@v1
+      with:
+        who-to-greet: 'christina'
     # - name: run unit tests
     #   run: |
     #     npm run test:jest
