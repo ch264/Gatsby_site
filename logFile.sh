@@ -7,11 +7,11 @@ email=email.txt
 printf "Log File - " > $log
  
 # append git diff to log file
-git diff master >> $log 
-# git diff master...branch >> $log 
+git diff develop >> $log 
+# git diff master...develop >> $log 
 
 # find H2 tag in diff
-result=$(grep -n '###' "$log")
+result=$(grep -n '##' "$log")
 size=${#result}
   if [ $size > 0 ]
   then

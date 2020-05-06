@@ -3,7 +3,7 @@ const sendmail = require('sendmail')();
 sendmail({
   from: 'christina.hastenrath@getpostman.com',
   to: 'christina.hastenrath@getpostman.com',
-  subject: 'test sendmail',
+  subject: 'Here are the latest H2 changes',
   attachments: [
     {
       path: './email.txt'
