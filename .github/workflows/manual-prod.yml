@@ -1,7 +1,8 @@
 name: manually re-running actions
 
-on: repository_dispatch:
-  types: prod-dpeloy
+on: 
+  repository_dispatch:
+    types: prod-deploy
 
 jobs:
 
