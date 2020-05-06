@@ -1,12 +1,15 @@
 name: manually re-running actions
 
-on: repository_dispatch
+on: repository_dispatch:
+  types: prod-dpeloy
 
 jobs:
 
   manual_deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: prod-deploy
+        run: echo prod-deploy
       - name: Checkout master
         uses: actions/checkout@v1
         with:
