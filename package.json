@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "@actions/core": "^1.2.6",
+    "@actions/core": "^1.9.1",
     "lodash": "^4.17.19",
     "markdownlint-cli": "^0.18.0",
     "sendmail": "^1.6.1",
